@@ -1,0 +1,26 @@
+{
+  "name" : "bootstrap-react-components",
+  "version" : "0.1.0",
+  "description" : "Bootstrap components for react.",
+  "main" : "index.js",
+  "scripts" : {
+	"test" : "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository" : {
+	"type" : "git",
+	"url" : "git+https://github.com/JimBarrows/Bootstrap-React-Components.git"
+  },
+  "author" : {
+	"name" : "Jim Barrows",
+	"email" : "Jim.Barrows@gmail.com"
+  },
+  "license" : "Apache-2.0",
+  "bugs" : {
+	"url" : "https://github.com/JimBarrows/Bootstrap-React-Components/issues"
+  },
+  "homepage" : "https://github.com/JimBarrows/Bootstrap-React-Components#readme",
+  "dependencies" : {
+	"react" : "^15.3.0",
+	"react-datetime" : "^2.5.0"
+  }
+}
