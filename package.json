@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-react-components",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Bootstrap components for react.",
   "main": "index.js",
   "scripts": {
