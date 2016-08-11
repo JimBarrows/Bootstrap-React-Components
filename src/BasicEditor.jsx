@@ -1,7 +1,7 @@
 'use strict';
 import React from "react";
 import {ContentState, Editor, EditorState, RichUtils} from "draft-js";
-import ButtonGroup from "./ButtonGroup.js";
+import ButtonGroup from "./ButtonGroup.jsx";
 
 export default class BasicEditor extends React.Component {
 

@@ -9,7 +9,7 @@ module.exports = {
 		loaders: [
 			{test: /\.css$/, loader: "style-loader!css-loader"},
 			{
-				test: /\.js?$/,
+				test: /\.jsx$/,
 				loader: 'babel',
 				exclude: /(node_modules|bower_components)/,
 				query: {
@@ -34,8 +34,7 @@ module.exports = {
 			{test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml"}]
 	}
 	, output: {
-		path: __dirname + "/src/"
-		, filename: "client.min.js"
+		path: __dirname, filename: "index.min.js"
 	}
 	, plugins: debug ? [] : [
 		new webpack.optimize.DedupePlugin()

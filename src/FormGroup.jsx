@@ -1,5 +1,5 @@
 import React from "react";
-import Alert from "./DangerAlert.js";
+import Alert from "./DangerAlert.jsx";
 
 export default class FormGroup extends React.Component {
 

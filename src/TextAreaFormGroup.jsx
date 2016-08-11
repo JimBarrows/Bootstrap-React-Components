@@ -1,7 +1,7 @@
 'use strict';
 import React from "react";
-import FormGroup from "./FormGroup.js";
-import BasicEditor from "./BasicEditor.js";
+import FormGroup from "./FormGroup.jsx";
+import BasicEditor from "./BasicEditor.jsx";
 
 export default class TextAreaFormGroup extends React.Component {
 
