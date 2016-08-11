@@ -5,10 +5,10 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
-import PageHeader from "./PageHeader.jsx";
+import PageHeader from "./PageHeader.js";
 import "bootstrap/dist/css/bootstrap.css";
 import "font-awesome/css/font-awesome.min.css";
-import TextAreaFormGroup from "./TextAreaFormGroup.jsx";
+import TextAreaFormGroup from "./TextAreaFormGroup.js";
 
 const app = document.getElementById('app');
 ReactDOM.render(
