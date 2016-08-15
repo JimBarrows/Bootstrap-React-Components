@@ -11,7 +11,6 @@ import FormGroup from "./src/FormGroup";
 import PageHeader from "./src/PageHeader";
 import Panel from "./src/Panel";
 import SelectFormGroup from "./src/SelectFormGroup";
-import TablePanel from "./src/TablePanel";
 import TextAreaFormGroup from "./src/TextAreaFormGroup";
 import TextFormGroup from "./src/TextFormGroup";
 

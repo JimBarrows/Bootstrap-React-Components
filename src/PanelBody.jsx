@@ -1,11 +1,11 @@
 'use strict';
 import React from "react";
 
-export default class Panel extends React.Component {
+export default class PanelBody extends React.Component {
 
 	render() {
 		return (
-				<div class="panel panel-default">
+				<div class="panel-body">
 					{this.props.children}
 				</div>
 		);
