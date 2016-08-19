@@ -83,3 +83,5 @@ fabric.properties
 # Optional npm cache directory
 
 # Optional REPL history
+.idea/
+distribution/
