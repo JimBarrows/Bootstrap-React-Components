@@ -43,7 +43,6 @@ module.exports = {
 	ReloadButton,
 	SelectFormGroup,
 	StripedTable,
-	TablePanel,
 	TextAreaFormGroup,
 	TextFormGroup
 };
