@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-react-components",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "description": "Bootstrap components for react.",
   "main": "./distribution/index.js",
   "scripts": {
@@ -46,8 +46,8 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-	"babel-plugin-react-html-attrs" : "^2.0.0",
-	"babel-plugin-transform-class-properties" : "^6.11.5",
+    "babel-plugin-react-html-attrs": "^2.0.0",
+    "babel-plugin-transform-class-properties": "^6.11.5",
     "babel-plugin-transform-react-jsx": "^6.8.0",
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.6.3"
