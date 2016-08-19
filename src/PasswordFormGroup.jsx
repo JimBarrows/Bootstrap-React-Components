@@ -1,6 +1,6 @@
 'use strict';
 import React from "react";
-import FormGroup from "bootstrap-react-components/src/FormGroup";
+import FormGroup from "./FormGroup";
 
 
 export default class PasswordFormGroup extends React.Component {
