@@ -1,7 +1,7 @@
 'use strict';
 import React from "react";
 import DatePicker from "react-datetime";
-import Alert from "bootstrap-react-components/src/DangerAlert";
+import DangerAlert from "./DangerAlert";
 
 
 require('react-datetime/css/react-datetime.css');
@@ -30,7 +30,7 @@ export default class DateRangeFormGroup extends React.Component {
 							<DatePicker id={thruName} name={thruName} value={thruValue} onChange={onChange}/>
 						</div>
 					</div>
-					<Alert error={error}/>
+					<DangerAlert error={error}/>
 				</div>
 		);
 	}
