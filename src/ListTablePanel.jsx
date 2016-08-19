@@ -9,7 +9,7 @@ export default class ListTablePanel extends React.Component {
 	render() {
 		let {title, name, onReloadClick, onAddClick} = this.props;
 		return (
-				<ListPanel title={title} name={name} onReloadClick={onReloadClick} onAddclick={onAddClick}>
+				<ListPanel title={title} name={name} onReloadClick={onReloadClick} onAddClick={onAddClick}>
 					<StripedTable>
 						{this.props.children}
 					</StripedTable>
