@@ -6,7 +6,7 @@ export default class DangerAlert extends React.Component {
 		const {error, id}      = this.props;
 		let optionalAttributes = [];
 		if (id) {
-			optionalAttributes.push(id);
+			optionalAttributes.push({id});
 		}
 		var Alert = null;
 		if (error) {
