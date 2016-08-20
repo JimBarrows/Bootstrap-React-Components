@@ -8,10 +8,10 @@ require('react-datetime/css/react-datetime.css');
 export default class DatePickerFormGroup extends React.Component {
 
 	render() {
-		let {label, name, onChange, error, value} = this.props;
+		let {label, id, onChange, error, value} = this.props;
 		return (
-				<FormGroup label={label} name={name} error={error}>
-					<DatePicker id={name} value={value} onChange={onChange}/>
+				<FormGroup label={label} id={id} error={error}>
+					<DatePicker id={id} value={value} onChange={onChange}/>
 				</FormGroup>
 		);
 	}

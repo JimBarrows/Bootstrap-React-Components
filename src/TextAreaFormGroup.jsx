@@ -6,10 +6,10 @@ import BasicEditor from "./BasicEditor";
 export default class TextAreaFormGroup extends React.Component {
 
 	render() {
-		let {label, name, onChange, error, value, disabled} = this.props;
+		let {label, id, onChange, error, value, disabled} = this.props;
 		return (
-				<FormGroup label={label} name={name} error={error}>
-					<BasicEditor id={name} onChange={onChange} value={value} disabled={disabled}/>
+				<FormGroup label={label} id={id} error={error}>
+					<BasicEditor id={id} onChange={onChange} value={value} disabled={disabled}/>
 				</FormGroup>
 		);
 	}

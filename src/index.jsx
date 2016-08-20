@@ -9,7 +9,7 @@ import ButtonGroup from "./ButtonGroup";
 import CheckboxFormGroup from "./CheckboxFormGroup";
 import DangerAlert from "./DangerAlert";
 import DatePickerFormGroup from "./DatePickerFormGroup";
-import DateRangFormGroup from "./DateRangeFormGroup";
+import DateRangeFormGroup from "./DateRangeFormGroup";
 import FormGroup from "./FormGroup";
 import ListPanel from "./ListPanel";
 import ListTablePanel from "./ListTablePanel";
@@ -31,7 +31,7 @@ module.exports = {
 	CheckboxFormGroup,
 	DangerAlert,
 	DatePickerFormGroup,
-	DateRangFormGroup,
+	DateRangeFormGroup,
 	FormGroup,
 	ListPanel,
 	ListTablePanel,

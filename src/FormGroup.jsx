@@ -1,5 +1,5 @@
 import React from "react";
-import Alert from "./DangerAlert";
+import DangerAlert from "./DangerAlert";
 
 export default class FormGroup extends React.Component {
 
@@ -8,17 +8,17 @@ export default class FormGroup extends React.Component {
 	}
 
 	render() {
-		let {label, name, error} = this.props;
-		let validationStatus     = "";
+		let {label, id, error} = this.props;
+		let validationStatus   = "";
 		if (error) {
 			validationStatus = "has-error";
 		}
 
 		return (
-				<div class={"form-group " + validationStatus}>
-					<label class="control-label" for={name}>{label}</label>
+				<div id={id + "FormGroup"} class={"form-group " + validationStatus}>
+					<label id={id + "Label"} class="control-label" for={id}>{label}</label>
 					{this.props.children}
-					<Alert error={error}/>
+					<DangerAlert id={id + "DangerAlert"} error={error}/>
 				</div>
 		);
 	}

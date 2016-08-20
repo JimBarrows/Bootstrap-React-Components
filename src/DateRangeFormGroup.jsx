@@ -1,7 +1,7 @@
 'use strict';
 import React from "react";
 import DatePicker from "react-datetime";
-import DangerAlert from "./DangerAlert";
+import FormGroup from "./FormGroup";
 
 
 require('react-datetime/css/react-datetime.css');
@@ -10,16 +10,13 @@ require('react-datetime/css/react-datetime.css');
 export default class DateRangeFormGroup extends React.Component {
 
 	render() {
-		let {label, name, onChange, error, fromValue, thruValue} = this.props;
-		let fromName                                             = name + "From";
-		let thruName                                             = name + "Thru";
-		let validationStatus                                     = "";
-		if (error) {
-			validationStatus = "has-error";
-		}
+		let {label, id, onChange, error, fromValue, thruValue} = this.props;
+		let fromName                                           = id + "From";
+		let thruName                                           = id + "Thru";
+
 		return (
 
-				<div class={"form-group " + validationStatus}>
+				<FormGroup error={error} id={id} label={label}>
 					<div class="row">
 						<div class="col-md-6">
 							<label class="control-label" for={fromName}>{label} From</label>
@@ -30,8 +27,7 @@ export default class DateRangeFormGroup extends React.Component {
 							<DatePicker id={thruName} name={thruName} value={thruValue} onChange={onChange}/>
 						</div>
 					</div>
-					<DangerAlert error={error}/>
-				</div>
+				</FormGroup>
 		);
 	}
 }

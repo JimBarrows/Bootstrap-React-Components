@@ -8,7 +8,6 @@ export default class BasicEditor extends React.Component {
 	constructor(props) {
 		super(props);
 		let editorState = EditorState.createEmpty();
-		console.log("props.value: ", props.value);
 		if (props.value) {
 			editorState = EditorState.createWithContent(ContentState.createFromText(props.value));
 		}
@@ -42,15 +41,16 @@ export default class BasicEditor extends React.Component {
 		let {id, value, disabled} = this.props;
 
 		return (
-				<div>
+				<div id={id + "Component"}>
 					<ButtonGroup>
-						<button class="btn btn-default btn-xs" onClick={this._onBoldClick.bind(this)}>
+						<button id={id + "BoldButton"} class="btn btn-default btn-xs" onClick={this._onBoldClick.bind(this)}>
 							<span class="glyphicon glyphicon-bold" aria-hidden="true"></span>
 						</button>
-						<button class="btn btn-default btn-xs" onClick={this._onUnderlineClick.bind(this)}>
+						<button id={id + "UnderlineButton"} class="btn btn-default btn-xs"
+						        onClick={this._onUnderlineClick.bind(this)}>
 							<span class="fa fa-underline" aria-hidden="true"></span>
 						</button>
-						<button class="btn btn-default btn-xs" onClick={this._onItalicClick.bind(this)}>
+						<button id={id + "ItalicButton"} class="btn btn-default btn-xs" onClick={this._onItalicClick.bind(this)}>
 							<span class="glyphicon glyphicon-italic" aria-hidden="true"></span>
 						</button>
 					</ButtonGroup>

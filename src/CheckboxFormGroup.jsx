@@ -1,26 +1,26 @@
 'use strict';
 import React from "react";
-import Alert from "./DangerAlert";
+import DangerAlert from "./DangerAlert";
 
 
 export default class CheckboxFormGroup extends React.Component {
 
 	render() {
-		let {label, placeholder, name, onChange, error, value} = this.props;
-		let validationStatus                                   = "";
+		let {label, placeholder, id, onChange, error, value} = this.props;
+		let validationStatus                                 = "";
 		if (error) {
 			validationStatus = "has-error";
 		}
 		return (
-				<div class={"form-group " + validationStatus}>
-					<label >
-						<input type="checkbox" id={name} name={name} placeholder={placeholder}
+				<div id={id + "FormGroup"} class={"form-group " + validationStatus}>
+					<label id={id + "Label"}>
+						<input type="checkbox" id={id} placeholder={placeholder}
 						       onChange={onChange}
-						       value={name}
+						       value={id}
 						       checked={value}/>
 						{label}
 					</label>
-					<Alert error={error}/>
+					<DangerAlert id={id + "DangerAlert"} error={error}/>
 				</div>
 		);
 	}
