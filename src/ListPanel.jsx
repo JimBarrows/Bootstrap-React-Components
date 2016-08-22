@@ -10,19 +10,18 @@ import ReloadButton from "./ReloadButton";
 export default class ListPanel extends React.Component {
 
 	render() {
-		let {name, title, onReloadClick, onAddClick} = this.props;
-		let reloadButtonId                           = name + "ReloadButton";
-		let addButtonId                              = name + "AddButton";
+		let {id, name, onAddClick, title} = this.props;
+		let addButtonId                   = name + id + "AddButton";
 		return (
-				<Panel>
-					<PanelHeader>
+				<Panel id={id }>
+					<PanelHeader id={id}>
 						<div class="panel-title pull-left">{title}</div>
 						<div class="btn-group pull-right">
 							<ReloadButton id={reloadButtonId} onClick={onReloadClick}/>
 							<AddButton id={addButtonId} onClick={onAddClick}/>
 						</div>
 					</PanelHeader>
-					<PanelBody>
+					<PanelBody id={id}>
 						{this.props.children}
 					</PanelBody>
 				</Panel>

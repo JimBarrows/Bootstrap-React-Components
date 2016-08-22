@@ -4,8 +4,9 @@ import React from "react";
 export default class PanelBody extends React.Component {
 
 	render() {
+		let {id} = this.props;
 		return (
-				<div class="panel-body">
+				<div id={id + "PanelBody"} class="panel-body">
 					{this.props.children}
 				</div>
 		);
