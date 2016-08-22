@@ -4,7 +4,6 @@ import Panel from "./Panel";
 import PanelHeader from "./PanelHeader";
 import PanelBody from "./PanelBody";
 import AddButton from "./AddButton";
-import ReloadButton from "./ReloadButton";
 
 
 export default class ListPanel extends React.Component {
@@ -17,7 +16,6 @@ export default class ListPanel extends React.Component {
 					<PanelHeader id={id}>
 						<div class="panel-title pull-left">{title}</div>
 						<div class="btn-group pull-right">
-							<ReloadButton id={reloadButtonId} onClick={onReloadClick}/>
 							<AddButton id={addButtonId} onClick={onAddClick}/>
 						</div>
 					</PanelHeader>
