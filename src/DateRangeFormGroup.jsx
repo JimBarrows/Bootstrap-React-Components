@@ -9,22 +9,47 @@ require('react-datetime/css/react-datetime.css');
 
 export default class DateRangeFormGroup extends React.Component {
 
+	constructor(props) {
+		super(props);
+		this.fromName = id + "From";
+		this.thruName = id + "Thru";
+	}
+
+	fromChange(selectedDate) {
+		this.props.onChange({
+			target: {
+				id: this.fromName,
+				value: selectedDate
+			}
+		})
+	}
+
+	thruChange(selectedDate) {
+		this.props.onChange({
+			target: {
+				id: this.thruName,
+				value: selectedDate
+			}
+		})
+	}
+
 	render() {
-		let {label, id, onChange, error, fromValue, thruValue} = this.props;
-		let fromName                                           = id + "From";
-		let thruName                                           = id + "Thru";
+		let {label, id, error, fromValue, thruValue} = this.props;
+
 
 		return (
 
 				<FormGroup error={error} id={id} label={label}>
 					<div class="row">
 						<div class="col-md-6">
-							<label class="control-label" for={fromName}>{label} From</label>
-							<DatePicker id={fromName} name={fromName} value={fromValue} onChange={onChange}/>
+							<label class="control-label" for={this.fromName}>From</label>
+							<DatePicker id={this.fromName} name={this.fromName} value={fromValue}
+							            onChange={this.fromChange.bind(this)}/>
 						</div>
 						<div class="col-md-6">
 							<label class="control-label" for={thruName}>Thru</label>
-							<DatePicker id={thruName} name={thruName} value={thruValue} onChange={onChange}/>
+							<DatePicker id={this.thruName} name={this.thruName} value={thruValue}
+							            onChange={this.thruChange.bind(this)}/>
 						</div>
 					</div>
 				</FormGroup>
