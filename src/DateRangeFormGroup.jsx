@@ -11,8 +11,8 @@ export default class DateRangeFormGroup extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.fromName = id + "From";
-		this.thruName = id + "Thru";
+		this.fromName = this.props.id + "From";
+		this.thruName = this.props.id + "Thru";
 	}
 
 	fromChange(selectedDate) {
