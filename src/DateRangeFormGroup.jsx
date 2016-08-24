@@ -47,7 +47,7 @@ export default class DateRangeFormGroup extends React.Component {
 							            onChange={this.fromChange.bind(this)}/>
 						</div>
 						<div class="col-md-6">
-							<label class="control-label" for={thruName}>Thru</label>
+							<label class="control-label" for={this.thruName}>Thru</label>
 							<DatePicker id={this.thruName} name={this.thruName} value={thruValue}
 							            onChange={this.thruChange.bind(this)}/>
 						</div>
