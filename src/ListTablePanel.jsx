@@ -7,9 +7,9 @@ import StripedTable from "./StripedTable";
 export default class ListTablePanel extends React.Component {
 
 	render() {
-		let {title, id, onReloadClick, onAddClick} = this.props;
+		let {title, id, onAddClick} = this.props;
 		return (
-				<ListPanel title={title} id={id} onReloadClick={onReloadClick} onAddClick={onAddClick}>
+				<ListPanel title={title} id={id} onAddClick={onAddClick}>
 					<StripedTable id={id}>
 						{this.props.children}
 					</StripedTable>
