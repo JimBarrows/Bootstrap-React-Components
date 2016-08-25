@@ -34,7 +34,7 @@ export default class DateRangeFormGroup extends React.Component {
 	}
 
 	render() {
-		let {label, id, error, fromValue, thruValue, format} = this.props;
+		let {label, id, error, fromValue, thruValue, dateFormat} = this.props;
 
 
 		return (
@@ -44,12 +44,12 @@ export default class DateRangeFormGroup extends React.Component {
 						<div class="col-md-6">
 							<label class="control-label" for={this.fromName}>From</label>
 							<DatePicker id={this.fromName} name={this.fromName} value={fromValue}
-							            onChange={this.fromChange.bind(this)} format={format}/>
+							            onChange={this.fromChange.bind(this)} dateFormat={dateFormat}/>
 						</div>
 						<div class="col-md-6">
 							<label class="control-label" for={this.thruName}>Thru</label>
 							<DatePicker id={this.thruName} name={this.thruName} value={thruValue}
-							            onChange={this.thruChange.bind(this)} format={format}/>
+							            onChange={this.thruChange.bind(this)} dateFormat={dateFormat}/>
 						</div>
 					</div>
 				</FormGroup>
