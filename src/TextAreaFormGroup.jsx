@@ -1,5 +1,5 @@
 'use strict';
-import {FormGroup} from "bootstrap-react-components";
+import FormGroup from "./FormGroup";
 import React from "react";
 import RichTextEditor from "react-rte";
 
