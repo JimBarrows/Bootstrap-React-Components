@@ -9,13 +9,12 @@ export default class TextAreaFormGroup extends React.Component {
 		super(props);
 		let value = null;
 		if (props.value) {
-			this.state = {
-				value: RichTextEditor.createValueFromString(props.value)
-			}
+			value = RichTextEditor.createValueFromString(props.value)
 		} else {
-			this.state = {
-				value: RichTextEditor.createEmptyValue()
-			}
+			value = RichTextEditor.createEmptyValue()
+		}
+		this.state = {
+			value
 		}
 	}
 
@@ -35,7 +34,7 @@ export default class TextAreaFormGroup extends React.Component {
 		let {label, id, error} = this.props;
 		return (
 				<FormGroup label={label} id={id} error={error}>
-					<RichTextEditor id={id} onChange={this.changeThis} value={this.state.value}/>
+					<RichTextEditor onChange={this.changeThis.bind(this)} value={this.state.value}/>
 				</FormGroup>
 		);
 	}
