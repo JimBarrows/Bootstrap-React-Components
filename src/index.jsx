@@ -4,7 +4,6 @@
 'use strict';
 
 import AddButton from "./AddButton";
-import BasicEditor from "./BasicEditor";
 import ButtonGroup from "./ButtonGroup";
 import CheckboxFormGroup from "./CheckboxFormGroup";
 import DangerAlert from "./DangerAlert";
