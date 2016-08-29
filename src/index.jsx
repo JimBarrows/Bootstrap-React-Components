@@ -25,7 +25,6 @@ import TextFormGroup from "./TextFormGroup";
 
 module.exports = {
 	AddButton,
-	BasicEditor,
 	ButtonGroup,
 	CheckboxFormGroup,
 	DangerAlert,
