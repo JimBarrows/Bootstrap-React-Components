@@ -19,7 +19,7 @@ export default class TextAreaFormGroup extends React.Component {
 		}
 	}
 
-	changeThis = (value) => {
+	changeThis(value) {
 		this.setState({value});
 		if (this.props.onChange) {
 			this.props.onChange({
