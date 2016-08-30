@@ -5,17 +5,15 @@ import RichTextEditor from "react-rte";
 
 export default class TextAreaFormGroup extends React.Component {
 
+	componentWillReceiveProps(props) {
+		this.updateStateFromProps(props);
+
+	}
+
 	constructor(props) {
 		super(props);
-		let value = null;
-		if (props.value) {
-			value = RichTextEditor.createValueFromString(props.value, "markdown");
-		} else {
-			value = RichTextEditor.createEmptyValue();
-		}
-		this.state = {
-			value
-		}
+		console.log("TextAreaFormGroup.constructor props: ", props);
+		this.updateStateFromProps(props);
 	}
 
 	changeThis(value) {
@@ -37,5 +35,17 @@ export default class TextAreaFormGroup extends React.Component {
 					<RichTextEditor onChange={this.changeThis.bind(this)} value={this.state.value}/>
 				</FormGroup>
 		);
+	}
+
+	updateStateFromProps(props) {
+		let value = null;
+		if (props.value) {
+			value = RichTextEditor.createValueFromString(props.value, "markdown");
+		} else {
+			value = RichTextEditor.createEmptyValue();
+		}
+		this.state = {
+			value
+		}
 	}
 }
