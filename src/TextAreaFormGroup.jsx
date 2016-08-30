@@ -12,7 +12,6 @@ export default class TextAreaFormGroup extends React.Component {
 
 	constructor(props) {
 		super(props);
-		console.log("TextAreaFormGroup.constructor props: ", props);
 		this.updateStateFromProps(props);
 	}
 
