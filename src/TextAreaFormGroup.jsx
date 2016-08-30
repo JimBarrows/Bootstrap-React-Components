@@ -9,9 +9,9 @@ export default class TextAreaFormGroup extends React.Component {
 		super(props);
 		let value = null;
 		if (props.value) {
-			value = RichTextEditor.createValueFromString(props.value)
+			value = RichTextEditor.createValueFromString(props.value, "markdown");
 		} else {
-			value = RichTextEditor.createEmptyValue()
+			value = RichTextEditor.createEmptyValue();
 		}
 		this.state = {
 			value
