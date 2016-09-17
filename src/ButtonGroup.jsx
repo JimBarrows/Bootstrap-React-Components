@@ -4,8 +4,9 @@ import React from "react";
 export default class ButtonGroup extends React.Component {
 
 	render() {
+		let {id} = this.props;
 		return (
-				<div class="btn-group" role="group" aria-label="...">
+				<div id={id + "ButtonGroup"} class="btn-group" role="group" aria-label="...">
 					{this.props.children}
 				</div>
 		);
