@@ -34,20 +34,22 @@ export default class DateRangeFormGroup extends React.Component {
 	}
 
 	render() {
-		let {label, id, error, fromValue, thruValue, dateFormat} = this.props;
-
-
+		let {dateFormat, disabled, error, fromValue, id, label, onChange, placeholder, required, thruValue, value} = this.props;
+		let requiredText                                                                                           = "";
+		if (required) {
+			requiredText = (<small class="text-deanger">Required</small>)
+		}
 		return (
 
-				<FormGroup error={error} id={id} label={label}>
+				<FormGroup error={error} id={id} label={label} required={required}>
 					<div class="row">
 						<div class="col-md-6">
-							<label class="control-label" for={this.fromName}>From</label>
+							<label class="control-label" for={this.fromName}>From {requiredText}</label>
 							<DatePicker id={this.fromName} name={this.fromName} value={fromValue}
 							            onChange={this.fromChange.bind(this)} dateFormat={dateFormat} timeFormat={false}/>
 						</div>
 						<div class="col-md-6">
-							<label class="control-label" for={this.thruName}>Thru</label>
+							<label class="control-label" for={this.thruName}>Thru {requiredText}</label>
 							<DatePicker id={this.thruName} name={this.thruName} value={thruValue}
 							            onChange={this.thruChange.bind(this)} dateFormat={dateFormat} timeFormat={false}/>
 						</div>

@@ -17,9 +17,17 @@ export default class EditableCell extends React.Component {
 	};
 
 	render() {
-		let {id, onChange, type, value}     = this.props;
-		let input                           = this.state.edit ?
-				<input id={id} type={type} defaultValue={value} onChange={onChange}/> :
+		let {disabled, error, id, label, onChange, placeholder, required, type, value}     = this.props;
+		let input                                                                          = this.state.edit ?
+				<input
+						class="form-control"
+						disabled={disabled}
+						id={id}
+						onChange={onChange}
+						placeholder={placeholder}
+						required={required}
+						type={type}
+						value={value}/> :
 				<span id={id + "Value"}>{value}</span>;
 		return (<td id={id + "Cell"}>{input}</td>);
 	}

@@ -5,11 +5,17 @@ import FormGroup from "./FormGroup";
 export default class TextFormGroup extends React.Component {
 
 	render() {
-		let {label, id, onChange, error, value, placeholder, disabled} = this.props;
+		let {disabled, error, id, label, onChange, placeholder, required, value} = this.props;
 		return (
-				<FormGroup label={label} id={id} error={error}>
-					<input type="text" class="form-control" id={id} placeholder={placeholder} onChange={onChange}
-					       value={value} disabled={disabled}/>
+				<FormGroup label={label} id={id} error={error} required={required}>
+					<input class="form-control"
+					       disabled={disabled}
+					       id={id}
+					       onChange={onChange}
+					       placeholder={placeholder}
+					       required={required}
+					       type="text"
+					       value={value}/>
 				</FormGroup>
 		);
 	}
