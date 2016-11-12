@@ -23,7 +23,6 @@
   "homepage" : "https://github.com/JimBarrows/Bootstrap-React-Components#readme",
   "peerDependencies" : {
 	"css-loader" : "^0.23.1",
-	"draft-js" : "^0.8.0",
 	"file-loader" : "^0.9.0",
 	"style-loader" : "^0.13.1",
 	"url-loader" : "^0.5.7",
@@ -32,6 +31,7 @@
   },
   "dependencies" : {
 	"bootstrap" : "^3.3.7",
+	"draft-js" : "^0.8.0",
 	"font-awesome" : "^4.7.0",
 	"moment" : "^2.14.1",
 	"react-datetime" : "^2.6.0",
