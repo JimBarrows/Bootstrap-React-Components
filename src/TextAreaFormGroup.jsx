@@ -3,7 +3,7 @@ import FormGroup from "./FormGroup";
 import React from "react";
 import RichTextEditor, {createEmptyValue} from "react-rte";
 
-import type {EditorValue} from 'react-rte';
+import {EditorValue} from 'react-rte';
 
 export default class TextAreaFormGroup extends React.Component {
 
