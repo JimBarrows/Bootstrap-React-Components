@@ -1,7 +1,9 @@
 'use strict';
 import FormGroup from "./FormGroup";
 import React from "react";
-import RichTextEditor from "react-rte";
+import RichTextEditor, {createEmptyValue} from "react-rte";
+
+import type {EditorValue} from 'react-rte';
 
 export default class TextAreaFormGroup extends React.Component {
 
@@ -13,6 +15,9 @@ export default class TextAreaFormGroup extends React.Component {
 	constructor(props) {
 		super(props);
 		this.updateStateFromProps(props);
+		this.state = {
+			value: createEmptyValue()
+		}
 	}
 
 	changeThis(value) {
