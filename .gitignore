@@ -85,3 +85,5 @@ fabric.properties
 # Optional REPL history
 .idea/
 distribution/
+
+features/support/html/js/
