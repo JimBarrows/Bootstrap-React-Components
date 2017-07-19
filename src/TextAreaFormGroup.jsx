@@ -36,11 +36,7 @@ export default class TextAreaFormGroup extends React.Component {
 		let {cssClass, disabled, error, id, label, onChange, placeholder, required, value} = this.props;
 		return (
 				<FormGroup label={label} id={id} error={error} required={required}>
-<<<<<<< HEAD
-					<RichTextEditor class={cssClass} id={id} onChange={this.changeThis.bind(this)} value={this.state.value}/>
-=======
 					<RichTextEditor webDriverTestID={id} onChange={this.changeThis.bind(this)} value={this.state.value}/>
->>>>>>> 8da079b7960a788ed81f21251f566b657354657a
 				</FormGroup>
 		);
 	}
