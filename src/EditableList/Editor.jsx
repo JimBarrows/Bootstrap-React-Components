@@ -1,4 +1,4 @@
-import {PageHeader} from "bootstrap-react-components";
+import PageHeader from "../PageHeader";
 import React from "react";
 
 class Editor extends React.Component {

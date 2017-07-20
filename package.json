@@ -5,9 +5,11 @@
   "main": "./distribution/index.js",
   "scripts": {
     "build": "babel src --presets babel-preset-es2015 --out-dir distribution",
-    "build:docker" : "cd features/support;docker build --tag bootstrap-react-components-test --rm .",
+    "build:docker": "cd features/support;docker build --tag bootstrap-react-components-test --rm .",
+    "dev:src": "watch 'babel src --presets babel-preset-es2015 --out-dir features/support/html/js' ./src",
+    "dev:harness": "webpack --progress --colors --watch -d --config features/support/webpack.config.js",
     "prepublish": "npm run build",
-		"test:host:start": "docker run --rm -p 80:80 --name bootstrap-react-components-test-host -d -v $PWD/features/support/html:/usr/share/nginx/html bootstrap-react-components-test",
+    "test:host:start": "docker run --rm -p 80:80 --name bootstrap-react-components-test-host -d -v $PWD/features/support/html:/usr/share/nginx/html bootstrap-react-components-test",
     "test:host:stop": "docker stop bootstrap-react-components-test-host",
     "test:src": "babel src --presets babel-preset-es2015 --out-dir features/support/html/js",
     "test:harness": "webpack --progress --colors -d --config features/support/webpack.config.js",
@@ -35,6 +37,9 @@
     "file-loader": "^0.9.0",
     "font-awesome": "^4.7.0",
     "moment": "^2.14.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-rte": "^0.11.0",
     "react-datetime": "^2.6.0",
     "react-rte": "^0.11.0",
     "style-loader": "^0.13.1",
@@ -59,8 +64,8 @@
     "cucumber": "^2.3.1",
     "eslint": "^4.0.0",
     "eslint-plugin-babel": "^4.1.1",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
+
+    "style-loader": "^0.13.2",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   }

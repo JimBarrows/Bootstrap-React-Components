@@ -1,5 +1,6 @@
-import {PageHeader} from "bootstrap-react-components";
 import React from "react";
+
+import PageHeader from "../PageHeader";
 
 class Item extends React.Component {
 

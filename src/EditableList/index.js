@@ -1,3 +1,3 @@
 export {default as Item} from "./Item";
-export {default as EditableList} from "./List";
-export {default as ItemEditor} from "./Editor";
+export {default as List} from "./List";
+export {default as Editor} from "./Editor";
