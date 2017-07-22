@@ -5,7 +5,7 @@ import EditButton from "./EditButton";
 import RemoveButton from "./RemoveButton";
 import SaveButton from "./SaveButton";
 
-export default class RowControlButtons extends React.Component {
+class RowControlButtons extends React.Component {
 
 	render() {
 		let {editing, edit, id, save, remove} = this.props;
@@ -22,3 +22,5 @@ export default class RowControlButtons extends React.Component {
 		return buttonGroup;
 	}
 }
+
+export default RowControlButtons;

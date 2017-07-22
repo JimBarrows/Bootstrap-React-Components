@@ -1,43 +1,45 @@
-import PageHeader from "../PageHeader";
 import React from "react";
 
 class Editor extends React.Component {
 
-	cancel() {
-		this.props.cancel();
+	cancel( ) {
+		this.props.cancel( );
 	}
 
-	componentWillMount() {
-		this.propsToState(this.props);
+	componentWillMount( ) {
+		this.propsToState( this.props );
 	}
 
-	componentWillReceiveProps(nextProps) {
-		this.propsToState(nextProps);
+	componentWillReceiveProps( nextProps ) {
+		this.propsToState( nextProps );
 	}
 
+	isValid( ) {
+		return false;
+	}
 
-	propsToState(props) {
+	propsToState( props ) {
 		this.setState({
 			...props
 		});
 	}
 
-	render() {
+	onSubmit( e ) {
+		e.preventDefault( );
+		if (this.isValid( )) {
+			this.props.onSubmit(this.stateToItem( ));
+		}
+	}
+
+	render( ) {
 		return (
-				<div id="EditorPage">
-					<PageHeader id="Editor">
-						<h1>Editor</h1>
-					</PageHeader>
-				</div>
+			<form id="defaultForm" onSubmit={this.onSubmit.bind( this )}>
+				<p>Override this method</p>
+			</form>
 		);
 	}
 
-	save(event) {
-		event.preventDefault();
-		this.props.save(this.stateToItem());
-	}
-
-	stateToItem() {
+	stateToItem( ) {
 		return this.state;
 	}
 

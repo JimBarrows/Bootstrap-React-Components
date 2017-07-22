@@ -2,7 +2,7 @@
 import React from "react";
 import FormGroup from "./FormGroup";
 
-export default class TextFormGroup extends React.Component {
+class TextFormGroup extends React.Component {
 
 	render() {
 		let {disabled, error, id, label, onChange, placeholder, required, value} = this.props;
@@ -20,3 +20,5 @@ export default class TextFormGroup extends React.Component {
 		);
 	}
 }
+
+export default TextFormGroup;
