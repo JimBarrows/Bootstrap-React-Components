@@ -6,41 +6,20 @@ class Editor extends React.Component {
 		this.props.cancel( );
 	}
 
-	componentWillMount( ) {
-		this.propsToState( this.props );
-	}
-
-	componentWillReceiveProps( nextProps ) {
-		this.propsToState( nextProps );
-	}
-
-	isValid( ) {
-		return false;
-	}
-
-	propsToState( props ) {
-		this.setState({
-			...props
-		});
-	}
-
 	onSubmit( e ) {
 		e.preventDefault( );
-		if (this.isValid( )) {
-			this.props.onSubmit(this.stateToItem( ));
-		}
+		this.props.onSubmit( e );
 	}
 
 	render( ) {
+		let { id } = this.props;
 		return (
 			<form id="defaultForm" onSubmit={this.onSubmit.bind( this )}>
-				<p>Override this method</p>
+				{this.props.children}
+				<button id={"submit_form_" + id} type="submit" class="btn btn-success">Save</button>
+				<button id={"cancel_form_" + id} onClick={this.cancel} class="btn btn-success">Cancel</button>
 			</form>
 		);
-	}
-
-	stateToItem( ) {
-		return this.state;
 	}
 
 }

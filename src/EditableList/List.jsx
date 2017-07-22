@@ -1,84 +1,54 @@
 import React from "react";
+import Viewer from "./Viewer";
+import Editor from "./Editor";
 
 class List extends React.Component {
 
-	add() {
-		this.setState({
-			adding: true
-		})
+	add( ) {
+		this.setState({ adding: true });
+		this.props.onSelected({});
 	}
 
-	addItem(item) {
-		let list = [...this.state.list, item];
+	addButton() {
+		let {id}=this.props;
+		return <button id={"addButton_" + id} type="button" class="btn btn-default btn-xs" onClick={this.add.bind( this )}>
+			<span class="glyphicon glyphicon-plus" aria-hidden="true"/>Add
+		</button>
+	}
+
+	constructor( props ) {
+		super( props );
+		this.state = {
+			adding: false
+		}
+	}
+
+	form() {
+		let {id, formElements, selected} =this.props;
+		return <Editor id={"list_editor_ " + id} onSubmit={this.onSubmit.bind(this)}>{formElements(selected)}</Editor>
+	}
+
+	onSubmit(e) {
 		this.setState({
-			list,
 			adding: false
 		});
-		this.props.addItem(item);
+		this.props.onSubmit(e);
+	}
+	render( ) {
+		let { body, header, id, list, selected, viewer } = this.props;
+		let {adding} = this.state;
+		return <div id={"list_ " + id}>
+						{adding?this.form():this.addButton()}
+						<div id={"list_group_" + id} class="list-group">{list.map( ( i, index ) => <Viewer key={index} body={body( i )} header={header( i )} id={id}/> )}</div>
+					</div>
+
+	}
+	removeItem( item ) {
+		this.props.removeItem( item );
 	}
 
-	buttonEditOrNothing(buttonName, editor) {
-		let {allowEditing, adding}       = this.state;
-		if (allowEditing) {
-			if (adding) {
-				return editor
-
-			} else {
-				return (<button type="button" class="btn btn-default btn-xs" onClick={this.add.bind(this)}>
-					<span
-							class="glyphicon glyphicon-plus"
-							aria-hidden="true"/>{buttonName}
-				</button>)
-			}
-		} else {
-			return "";
-		}
-	}
-
-	componentWillMount() {
-		this.propsToState(this.props);
-	}
-
-	componentWillReceiveProps(nextProps) {
-		this.propsToState(nextProps);
-	}
-
-	constructor(props) {
-		super(props);
-		this.state = {
-			adding: false,
-			allowEditing: false,
-		}
-	}
-
-	propsToState(props) {
-		let {list, adding, allowEditing}  = props;
-		this.setState({
-			list,
-			adding,
-			allowEditing
-		});
-	}
-
-	removeItem(item) {
-		let list = this.state.list.filter((r) => this.itemEqualsItem(r, item));
-		this.setState({
-			list
-		});
-		this.props.removeItem(list);
-	}
-
-	itemEqualsItem(left, right) {
-		return left === right;
-	}
-
-	updateItem(item) {
-		let index              = this.state.list.findIndex((r) => this.itemEqualsItem(item, r));
-		this.state.list[index] = item;
-		this.setState({
-			list: this.state.list
-		});
-		this.props.updateItem(item);
+	updateItem( item ) {
+		this.props.updateItem( item );
 	}
 }
 

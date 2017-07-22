@@ -5,30 +5,9 @@ import { TextFormGroup, NumberFormGroup } from "../../../src/";
 class DataEditor extends Editor {
 
 	ageChange( e ) {
-		this.setState({ age: e.target.value })
+		this.props.ageChange( this.props.item, e.target.value);
 	}
 
-  componentWillMount() {
-    this.propsToState(this.props);
-  }
-
-  componentWillReceiveProps(nextProps) {
-    this.propsToState(nextProps);
-  }
-
-  propsToState(props) {
-    if( props.item) {
-    this.setState({
-      name: props.item.name,
-      age: props.item.age
-    });
-  } else {
-    this.setState({
-      name: '',
-      age: 0
-    })
-  }
-  }
 	isValid( ) {
 		if ( !this.state.name ) {
 			this.setState({ nameError: "Name is required" });
@@ -42,11 +21,12 @@ class DataEditor extends Editor {
 	}
 
 	nameChange( e ) {
-		this.setState({ name: e.target.value })
+		this.props.nameChange( this.props.item, e.target.value);
 	}
 
 	render( ) {
-		let { nameError, ageError, name, age } = this.state;
+		let { nameError, ageError } = this.props;
+		let {name, age} = this.props.item;
 		return (
 			<div id="DataEditor">
 				<form id="dataEditorForm" onSubmit={this.onSubmit.bind( this )}>

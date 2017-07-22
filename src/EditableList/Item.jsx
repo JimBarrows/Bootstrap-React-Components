@@ -12,14 +12,6 @@ class Item extends React.Component {
 		}
 	}
 
-	componentWillMount() {
-		this.propsToState(this.props);
-	}
-
-	componentWillReceiveProps(nextProps) {
-		this.propsToState(nextProps);
-	}
-
 	editing(e) {
 		this.setState({
 			editing: true
@@ -30,22 +22,13 @@ class Item extends React.Component {
 		return "";
 	}
 
-	propsToState(props) {
-		let {allowEditing, editing, item}                 = props;
-		this.setState({
-			allowEditing,
-			editing,
-			item
-		});
-	}
-
 	remove() {
 		this.props.remove(this.state.item);
 	}
 
 	render() {
-		let {item, editing, allowEditing} = this.state;
-		let element                       = (editing && allowEditing) ? this.editor(item) : this.viewer(item);
+		let {editing} = this.state;
+		let element                       = (editing && this.props.allowEditing) ? this.editor(this.props.item) : this.viewer(this.props.item);
 		return element;
 	}
 

@@ -7,7 +7,7 @@ import RemoveButton from "../../../src/RemoveButton";
 
 class DataItem extends Item {
   editor(item) {
-    return <DataEditor item={item} onSubmit={this.save.bind(this)}/>;
+    return <DataEditor item={item} allowEditing={this.props.allowEditing} onSubmit={this.save.bind(this)}/>;
   }
 
   viewer(item) {
