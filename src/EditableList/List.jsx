@@ -15,11 +15,19 @@ class List extends React.Component {
 		</button>
 	}
 
-	componentWillReceiveProps(nextProps) {
-		let { current, isNew, item } = nextProps;
+	addItem(item) {
+		this.props.addItem(item);
 		this.setState({
-			adding: isNew(item),
-			selected: current
+			adding: false,
+			selected: {}
+		})
+
+	}
+
+	addItemCancel() {
+		this.setState({
+			adding: false,
+			selected: {}
 		})
 	}
 
@@ -32,8 +40,13 @@ class List extends React.Component {
 	}
 
 	form( ) {
-		let { id, formElements, onChange} = this.props;
-		return <Editor id={"list_editor_ " + id} onChange={onChange} onSubmit={this.onSubmit.bind( this )} formElements={formElements} item={this.state.selected}/>
+		let { formElements, onChange} = this.props;
+		return <Editor id={"new_item"}
+										onCancel={this.addItemCancel.bind(this)}
+										onChange={onChange}
+										onSubmit={this.addItem.bind( this )}
+										formElements={formElements}
+										item={this.state.selected}/>
 	}
 
 	onSelected(item) {
@@ -41,10 +54,6 @@ class List extends React.Component {
 			selected: item
 		});
 		this.props.onSelected(item);
-	}
-
-	onSubmit( item ) {
-		this.props.onSubmit( item );
 	}
 
 /*
@@ -65,10 +74,8 @@ class List extends React.Component {
 			formElements,
 			header,
 			id,
-			isCurrent,
 			list,
 			onChange,
-			selected,
 			viewer
 		} = this.props;
 		let { adding } = this.state;
@@ -80,7 +87,7 @@ class List extends React.Component {
 			{list.map( ( i, index ) => <Editor id={"list_editor_ " + id}
 																					key={index}
 																					onChange={onChange}
-																					onSubmit={this.onSubmit.bind( this )}
+																					onSubmit={this.updateItem.bind( this )}
 																					formElements={formElements}
 																					item={i}/> )}
 			</div>

@@ -13,15 +13,15 @@ class EditableListComponent extends React.Component {
 		}
 	}
 
-	addListItem( ) {
+	addListItem( item) {
 		let id = this.state.list.length + 1;
 		this.setState({
-			selected: {},
+			current: null,
 			list: [
 				...this.state.list, {
 					id,
-					name: this.state.selected.name,
-					age: this.state.selected.age
+					name: item.name,
+					age: item.age
 				}
 			]
 		});
@@ -44,14 +44,6 @@ class EditableListComponent extends React.Component {
 		return item.name;
 	}
 
-	isCurrent( item ) {
-		return this.state.current && this.state.current.id && (this.state.current.id === item.id);
-	}
-
-	isNew( item ) {
-		return !this.state.current.id;
-	}
-
 	onChange(event,item) {
 		let changedItem = Object.assign( {}, item)
 		if(event.target.id === 'name') {
@@ -62,26 +54,8 @@ class EditableListComponent extends React.Component {
 		return changedItem;
 	}
 
-	onSelected( item ) {
-		this.setState({ current: item })
-	}
-
 	newItem( ) {
-		return { id:'new_item', name: '', age: 0 };
-	}
-
-	onSubmit( item) {
-		let originalList = this.state.list;
-		if( item.id) {
-			let original = this.state.list.findIndex( l => l.id === item.id );
-			originalList[original] =  item ;
-		} else {
-			item.id = originalList.length +1;
-		}
-		this.setState({
-			selected: null,
-			list: [...originalList, item]
-		})
+		return { name: '', age: 0 };
 	}
 
 	removeListItem( item ) {
@@ -91,30 +65,23 @@ class EditableListComponent extends React.Component {
 	}
 
 	render( ) {
-		return <List body={this.body}
-									current={this.state.current}
+		return <List addItem={this.addListItem.bind(this)}
+									body={this.body}
 									editFormElements={this.formElements.bind( this )}
 									formElements={this.formElements.bind( this )}
 									header={this.header}
 									id="data_item_list"
-									isCurrent={this.isCurrent.bind( this )}
-									isNew={this.isNew.bind( this )}
 									list={this.state.list}
 									newItem={this.newItem.bind( this )}
 									onChange={this.onChange.bind(this)}
-									onSelected={this.onSelected.bind(this)}
-									onSubmit={this.onSubmit.bind( this )}/>
+									updateItem={this.updateListItem.bind(this)}/>
 	}
 
 	updateListItem( item ) {
-		// if ( item.id ) {
-		// 	let original = this.state.list.findIndex( l => l.id === item.id );
-		// 	let originalList = this.state.list;
-		// 	originalList[original] = Object.assign( {}, originalList[original], item );
-		// 	this.setState({ list: originalList })
-		// } else {
-			this.setState({current: Object.assign( {}, this.state.current, item )})
-		// }
+			let original = this.state.list.findIndex( l => l.id === item.id );
+			let originalList = this.state.list;
+			originalList[original] = Object.assign( {}, originalList[original], item );
+			this.setState({ list: originalList })
 	}
 }
 
