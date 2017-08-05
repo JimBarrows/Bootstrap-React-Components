@@ -1,14 +1,20 @@
 import React from "react";
-
-import PageHeader from "../PageHeader";
+import Editor from "./Editor";
+import Viewer from "./Viewer";
 
 class Item extends React.Component {
+
+	componentWillReceiveProps(nextProps) {
+		let { isCurrent, item } = nextProps;
+		this.setState({
+			editing: isCurrent(item)
+		})
+	}
 
 	constructor(props) {
 		super(props);
 		this.state = {
-			editing: false,
-			allowEditing: false
+			editing: false
 		}
 	}
 
@@ -16,10 +22,12 @@ class Item extends React.Component {
 		this.setState({
 			editing: true
 		});
+		this.props.onSelected(this.props.item);
 	}
 
-	editor(item) {
-		return "";
+	editor() {
+		let {id, formElements, onChange, onSubmit, item} =this.props;
+		return <Editor id={"list_editor_ " + id} onChange={onChange} onSubmit={onSubmit} formElements={formElements} item={item}/>
 	}
 
 	remove() {
@@ -28,7 +36,7 @@ class Item extends React.Component {
 
 	render() {
 		let {editing} = this.state;
-		let element                       = (editing && this.props.allowEditing) ? this.editor(this.props.item) : this.viewer(this.props.item);
+		let element                       = (editing ) ? this.editor(this.props.item) : this.viewer();
 		return element;
 	}
 
@@ -39,8 +47,9 @@ class Item extends React.Component {
 		this.props.save(item);
 	}
 
-	viewer(item) {
-		return "";
+	viewer() {
+		let {body, header, id, item } =this.props;
+		return <Viewer body={body( item )} header={header( item )} id={id} onEditButtonClick={this.editing.bind(this)} onRemoveButtonClick={this.remove.bind(this)}/>
 	}
 }
 
