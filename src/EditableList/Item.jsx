@@ -4,13 +4,6 @@ import Viewer from "./Viewer";
 
 class Item extends React.Component {
 
-	componentWillReceiveProps(nextProps) {
-		let { isCurrent, item } = nextProps;
-		this.setState({
-			editing: isCurrent(item)
-		})
-	}
-
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -22,12 +15,15 @@ class Item extends React.Component {
 		this.setState({
 			editing: true
 		});
-		this.props.onSelected(this.props.item);
 	}
 
 	editor() {
-		let {id, formElements, onChange, onSubmit, item} =this.props;
-		return <Editor id={"list_editor_ " + id} onChange={onChange} onSubmit={onSubmit} formElements={formElements} item={item}/>
+		let {id, formElements, onChange, item} =this.props;
+		return <Editor id={"list_editor_ " + id}
+										onChange={onChange}
+										onSubmit={this.save.bind(this)}
+										formElements={formElements}
+										item={item}/>
 	}
 
 	remove() {
@@ -44,7 +40,7 @@ class Item extends React.Component {
 		this.setState({
 			editing: false
 		});
-		this.props.save(item);
+		this.props.onSubmit(item);
 	}
 
 	viewer() {

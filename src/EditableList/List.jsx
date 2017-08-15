@@ -57,16 +57,7 @@ class List extends React.Component {
 	}
 
 /*
-<Item key={index}
-																	body={body}
-																	header={header}
-																	id={id}
-																	isCurrent={isCurrent}
-																	item={isCurrent() ? selected : i}
-																	formElements={formElements}
-																	onChange={onChange}
-																	onSelected={this.onSelected.bind(this)}
-																	onSubmit={this.onSubmit.bind( this )}/>
+
 																	*/
 	render( ) {
 		let {
@@ -84,12 +75,15 @@ class List extends React.Component {
 				? this.form( )
 				: this.addButton( )}
 			<div id={"list_group_" + id} class="list-group">
-			{list.map( ( i, index ) => <Editor id={"list_editor_ " + id}
-																					key={index}
-																					onChange={onChange}
-																					onSubmit={this.updateItem.bind( this )}
-																					formElements={formElements}
-																					item={i}/> )}
+			{list.map( ( i, index ) => <Item key={index}
+																				body={body}
+																				header={header}
+																				id={id}
+																				item={ i}
+																				formElements={formElements}
+																				onChange={onChange}
+																				onSelected={this.onSelected.bind(this)}
+																				onSubmit={this.updateItem.bind( this )}/>)}
 			</div>
 		</div>
 

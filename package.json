@@ -8,6 +8,8 @@
     "build:docker": "cd features/support;docker build --tag bootstrap-react-components-test --rm .",
     "dev:src": "watch 'babel src --presets babel-preset-es2015 --out-dir features/support/html/js' ./src",
     "dev:harness": "webpack --progress --colors --watch -d --config features/support/webpack.config.js",
+    "dev:host:start": "docker run --rm -p 80:80 --name bootstrap-react-components-test-host -d -v $PWD/features/support/html:/usr/share/nginx/html bootstrap-react-components-test",
+    "dev:host:stop": "docker stop bootstrap-react-components-test-host",
     "prepublish": "npm run build",
     "test:host:start": "docker run --rm -p 80:80 --name bootstrap-react-components-test-host -d -v $PWD/features/support/html:/usr/share/nginx/html bootstrap-react-components-test",
     "test:host:stop": "docker stop bootstrap-react-components-test-host",
