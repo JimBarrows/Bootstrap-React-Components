@@ -60,7 +60,7 @@ class EditableListComponent extends React.Component {
 
 	removeListItem( item ) {
 		this.setState({
-			list: this.state.list.filter( i => i.id === item.id )
+			list: this.state.list.filter( i => i.id !== item.id )
 		})
 	}
 
@@ -74,6 +74,7 @@ class EditableListComponent extends React.Component {
 									list={this.state.list}
 									newItem={this.newItem.bind( this )}
 									onChange={this.onChange.bind(this)}
+									removeItem={this.removeListItem.bind(this)}
 									updateItem={this.updateListItem.bind(this)}/>
 	}
 

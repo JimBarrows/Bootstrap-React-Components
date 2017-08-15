@@ -83,7 +83,8 @@ class List extends React.Component {
 																				formElements={formElements}
 																				onChange={onChange}
 																				onSelected={this.onSelected.bind(this)}
-																				onSubmit={this.updateItem.bind( this )}/>)}
+																				onSubmit={this.updateItem.bind( this )}
+																				remove={this.removeItem.bind(this)}/>)}
 			</div>
 		</div>
 

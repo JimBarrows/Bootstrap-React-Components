@@ -27,7 +27,7 @@ class Item extends React.Component {
 	}
 
 	remove() {
-		this.props.remove(this.state.item);
+		this.props.remove(this.props.item);
 	}
 
 	render() {
