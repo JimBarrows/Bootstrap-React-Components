@@ -19,6 +19,7 @@ import ListPanel from "./ListPanel";
 import ListTablePanel from "./ListTablePanel";
 import NumberFormGroup from "./NumberFormGroup";
 import PageHeader from "./PageHeader";
+import Pagination from "./Pagination";
 import Panel from "./Panel";
 import PanelBody from "./PanelBody";
 import PanelHeader from "./PanelHeader";
@@ -52,6 +53,7 @@ module.exports = {
 	ListTablePanel,
 	NumberFormGroup,
 	PageHeader,
+	Pagination,
 	Panel,
 	PanelBody,
 	PanelHeader,
