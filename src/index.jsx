@@ -6,6 +6,7 @@
 import AddButton from "./AddButton";
 import Alert from "./Alert";
 import ButtonGroup from "./ButtonGroup";
+import CancelButton from "./CancelButton";
 import CheckboxFormGroup from "./CheckboxFormGroup";
 import ColorFormGroup from "./ColorFormGroup";
 import DatePickerFormGroup from "./DatePickerFormGroup";
@@ -40,6 +41,7 @@ module.exports = {
 	AddButton,
 	Alert,
 	ButtonGroup,
+	CancelButton,
 	CheckboxFormGroup,
 	ColorFormGroup,
 	DatePickerFormGroup,

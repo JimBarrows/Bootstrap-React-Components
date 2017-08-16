@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Alert, PageHeader, TextAreaFormGroup } from "../../src";
+import { Alert, PageHeader, RowControlButtons, TextAreaFormGroup } from "../../src";
 import EditableListComponent from "./EditableListComponent";
 import PaginationComponent from "./PaginationComponent";
 
@@ -45,4 +45,8 @@ ReactDOM.render(
 	<Alert id="plain_success" onDismiss={( ) => {}} type="success" message="This is a basic success alert message"/>
 	<Alert id="plain_warning" onDismiss={( ) => {}} type="warning" message="This is a basic warning alert message"/>
 	<Alert id="plain_danger" onDismiss={( ) => {}} type="danger" message="This is a basic danger alert message"/>
+	<h1>Row Control Buttons</h1>
+	<RowControlButtons cancel={() => {}} editing={false} edit={() => {}} id="not_editing" save={() => {}} remove={() => {}}/>
+	<br/>
+	<RowControlButtons cancel={() => {}} editing={true} edit={() => {}} id="editing" save={() => {}} remove={() => {}}/>
 </div>, mountNode);
