@@ -11,10 +11,10 @@ class RowControlButtons extends React.Component {
 		let {editing, edit, id, save, remove} = this.props;
 
 		let buttonGroup = editing ? (
-				<ButtonGroup id={id}>
+				<ButtonGroup id={"button_group_" + id}>
 					<SaveButton id={id} onClick={save}/>
 				</ButtonGroup>
-		) : (<ButtonGroup id={id}>
+		) : (<ButtonGroup id={"button_group_" + id}>
 					<EditButton id={id} onClick={edit}/>
 					<RemoveButton id={id} onClick={remove}/>
 				</ButtonGroup>

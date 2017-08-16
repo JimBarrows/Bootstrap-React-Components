@@ -6,7 +6,7 @@ export default class SaveButton extends React.Component {
 	render() {
 		let {id, onClick} = this.props;
 		return (
-				<button id={id + "SaveButton"} type="button" class="btn btn-default btn-xs" onClick={onClick}>
+				<button id={"save_button_" + id  } type="button" class="btn btn-default btn-xs" onClick={onClick}>
 					<span class="glyphicon glyphicon-ok"/>
 				</button>
 		);
