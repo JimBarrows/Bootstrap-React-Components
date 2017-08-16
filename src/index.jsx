@@ -4,10 +4,10 @@
 'use strict';
 
 import AddButton from "./AddButton";
+import Alert from "./Alert";
 import ButtonGroup from "./ButtonGroup";
 import CheckboxFormGroup from "./CheckboxFormGroup";
 import ColorFormGroup from "./ColorFormGroup";
-import DangerAlert from "./DangerAlert";
 import DatePickerFormGroup from "./DatePickerFormGroup";
 import DateRangeFormGroup from "./DateRangeFormGroup";
 import EditButton from "./EditButton";
@@ -38,10 +38,10 @@ import TextFormGroup from "./TextFormGroup";
 
 module.exports = {
 	AddButton,
+	Alert,
 	ButtonGroup,
 	CheckboxFormGroup,
 	ColorFormGroup,
-	DangerAlert,
 	DatePickerFormGroup,
 	DateRangeFormGroup,
 	EditButton,

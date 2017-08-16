@@ -12,16 +12,16 @@ export default class DateRangeFormGroup extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			fromName: "dateRange_" + this.props.id + "_From";
-			thruName: "dateRange_" + this.props.id + "_Thru";
+			fromName: "dateRange_" + this.props.id + "_From",
+			thruName: "dateRange_" + this.props.id + "_Thru"
 		}
 
 	}
 
 	componentWillReceiveProps(nextProps) {
 		this.setState({
-			fromName: "dateRange_" + nextProps.id + "_From";
-			thruName: "dateRange_" + nextProps.id + "_Thru";
+			fromName: "dateRange_" + nextProps.id + "_From",
+			thruName: "dateRange_" + nextProps.id + "_Thru"
 		})
 	}
 

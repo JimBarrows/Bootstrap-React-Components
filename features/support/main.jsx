@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { PageHeader, TextAreaFormGroup } from "../../src";
+import { Alert, PageHeader, TextAreaFormGroup } from "../../src";
 import EditableListComponent from "./EditableListComponent";
 import PaginationComponent from "./PaginationComponent";
 
@@ -22,5 +22,27 @@ ReactDOM.render(
 	<EditableListComponent/>
 	<h1>Pagination</h1>
 	<PaginationComponent/>
-
+	<h1>Alerts</h1>
+	<h2>Plain</h2>
+	<Alert id="plain" message="This is a basic alert message"/>
+	<Alert id="children">
+		<ul>
+			<li>Message 1</li>
+			<li>Message 2</li>
+		</ul>
+	</Alert>
+	<Alert id="plain_success" type="success" message="This is a basic success alert message"/>
+	<Alert id="plain_warning" type="warning" message="This is a basic warning alert message"/>
+	<Alert id="plain_danger" type="danger" message="This is a basic danger alert message"/>
+	<h2>Dismissable</h2>
+	<Alert id="dismissable" onDismiss={( ) => {}} message="This is a dismissable alert message"/>
+	<Alert id="children" onDismiss={( ) => {}}>
+		<ul>
+			<li>Message 1</li>
+			<li>Message 2</li>
+		</ul>
+	</Alert>
+	<Alert id="plain_success" onDismiss={( ) => {}} type="success" message="This is a basic success alert message"/>
+	<Alert id="plain_warning" onDismiss={( ) => {}} type="warning" message="This is a basic warning alert message"/>
+	<Alert id="plain_danger" onDismiss={( ) => {}} type="danger" message="This is a basic danger alert message"/>
 </div>, mountNode);

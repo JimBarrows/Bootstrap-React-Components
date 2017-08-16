@@ -1,6 +1,6 @@
 'use strict';
 import React from "react";
-import DangerAlert from "./DangerAlert";
+import Alert from "./Alert";
 
 
 export default class CheckboxFormGroup extends React.Component {
@@ -9,8 +9,10 @@ export default class CheckboxFormGroup extends React.Component {
 		let {disabled, error, id, label, onChange, placeholder, required, value} = this.props;
 		let validationStatus                                                     = "";
 		let requiredText                                                         = "";
+		let alert = "";
 		if (error) {
 			validationStatus = "has-error";
+			alert = <Alert id={id } type="error" message={error}/>;
 		}
 		if (required) {
 			requiredText = (<small class="text-deanger">Required</small>)
@@ -29,7 +31,7 @@ export default class CheckboxFormGroup extends React.Component {
 						/>
 						{label} {requiredText}
 					</label>
-					<DangerAlert id={id + "DangerAlert"} error={error}/>
+					{alert}
 				</div>
 		);
 	}
