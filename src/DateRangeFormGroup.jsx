@@ -11,14 +11,24 @@ export default class DateRangeFormGroup extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.fromName = this.props.id + "From";
-		this.thruName = this.props.id + "Thru";
+		this.state = {
+			fromName: "dateRange_" + this.props.id + "_From",
+			thruName: "dateRange_" + this.props.id + "_Thru"
+		}
+
+	}
+
+	componentWillReceiveProps(nextProps) {
+		this.setState({
+			fromName: "dateRange_" + nextProps.id + "_From",
+			thruName: "dateRange_" + nextProps.id + "_Thru"
+		})
 	}
 
 	fromChange(selectedDate) {
 		this.props.onChange({
 			target: {
-				id: this.fromName,
+				id: this.state.fromName,
 				value: selectedDate
 			}
 		})
@@ -27,7 +37,7 @@ export default class DateRangeFormGroup extends React.Component {
 	thruChange(selectedDate) {
 		this.props.onChange({
 			target: {
-				id: this.thruName,
+				id: this.state.thruName,
 				value: selectedDate
 			}
 		})
@@ -37,20 +47,20 @@ export default class DateRangeFormGroup extends React.Component {
 		let {dateFormat, disabled, error, fromValue, id, label, onChange, placeholder, required, thruValue, value} = this.props;
 		let requiredText                                                                                           = "";
 		if (required) {
-			requiredText = (<small class="text-deanger">Required</small>)
+			requiredText = (<small class="text-danger">Required</small>)
 		}
 		return (
 
 				<FormGroup error={error} id={id} label={label} required={required}>
 					<div class="row">
 						<div class="col-md-6">
-							<label class="control-label" for={this.fromName}>From {requiredText}</label>
-							<DatePicker id={this.fromName} name={this.fromName} value={fromValue}
+							<label class="control-label" for={this.state.fromName}>From {requiredText}</label>
+							<DatePicker id={this.name.statefromName} name={this.name.fromName} value={fromValue}
 							            onChange={this.fromChange.bind(this)} dateFormat={dateFormat} timeFormat={false}/>
 						</div>
 						<div class="col-md-6">
-							<label class="control-label" for={this.thruName}>Thru {requiredText}</label>
-							<DatePicker id={this.thruName} name={this.thruName} value={thruValue}
+							<label class="control-label" for={this.name.thruName}>Thru {requiredText}</label>
+							<DatePicker id={this.name.thruName} name={this.name.thruName} value={thruValue}
 							            onChange={this.thruChange.bind(this)} dateFormat={dateFormat} timeFormat={false}/>
 						</div>
 					</div>

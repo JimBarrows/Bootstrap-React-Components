@@ -4,10 +4,11 @@
 'use strict';
 
 import AddButton from "./AddButton";
+import Alert from "./Alert";
 import ButtonGroup from "./ButtonGroup";
+import CancelButton from "./CancelButton";
 import CheckboxFormGroup from "./CheckboxFormGroup";
 import ColorFormGroup from "./ColorFormGroup";
-import DangerAlert from "./DangerAlert";
 import DatePickerFormGroup from "./DatePickerFormGroup";
 import DateRangeFormGroup from "./DateRangeFormGroup";
 import EditButton from "./EditButton";
@@ -19,6 +20,7 @@ import ListPanel from "./ListPanel";
 import ListTablePanel from "./ListTablePanel";
 import NumberFormGroup from "./NumberFormGroup";
 import PageHeader from "./PageHeader";
+import Pagination from "./Pagination";
 import Panel from "./Panel";
 import PanelBody from "./PanelBody";
 import PanelHeader from "./PanelHeader";
@@ -37,10 +39,11 @@ import TextFormGroup from "./TextFormGroup";
 
 module.exports = {
 	AddButton,
+	Alert,
 	ButtonGroup,
+	CancelButton,
 	CheckboxFormGroup,
 	ColorFormGroup,
-	DangerAlert,
 	DatePickerFormGroup,
 	DateRangeFormGroup,
 	EditButton,
@@ -52,6 +55,7 @@ module.exports = {
 	ListTablePanel,
 	NumberFormGroup,
 	PageHeader,
+	Pagination,
 	Panel,
 	PanelBody,
 	PanelHeader,
