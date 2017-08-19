@@ -13,6 +13,7 @@ import DatePickerFormGroup from "./DatePickerFormGroup";
 import DateRangeFormGroup from "./DateRangeFormGroup";
 import EditButton from "./EditButton";
 import EditableCell from "./EditableCell";
+import EditableList from "./EditableList";
 import EmailFormGroup from "./EmailFormGroup";
 import FileFormGroup from "./FileFormGroup";
 import FormGroup from "./FormGroup";
@@ -48,6 +49,7 @@ module.exports = {
 	DateRangeFormGroup,
 	EditButton,
 	EditableCell,
+	EditableList,
 	EmailFormGroup,
 	FileFormGroup,
 	FormGroup,
