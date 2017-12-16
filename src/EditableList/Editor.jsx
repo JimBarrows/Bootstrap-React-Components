@@ -8,7 +8,7 @@ class Editor extends React.Component {
       current: props.item
     }
     this.onCancel = this.onCancel.bind(this)
-    this.onSubmit = this.onSubmit.bind(this)
+    this.onSave = this.onSave.bind(this)
   }
 
   componentWillReceiveProps (nextProps) {
@@ -40,9 +40,9 @@ class Editor extends React.Component {
     )
   }
 
-  onSubmit (e) {
+  onSave (e) {
     e.preventDefault()
-    this.props.onSubmit(this.state.current)
+    this.props.onSave(this.state.current)
   }
 
   render () {
@@ -55,12 +55,12 @@ class Editor extends React.Component {
     )
 
     return (
-      <form id='defaultForm' onSubmit={this.onSubmit} >
+      <div id='defaultForm' >
         {childrenWithProps}
-        <button id={'submit_form_' + id} type='submit' className='btn btn-success' >Save</button >
+        <button id={'submit_form_' + id} onClick={this.onSave} className='btn btn-success' type='button' >Save</button >
         <button id={'cancel_form_' + id} onClick={this.onCancel} className='btn btn-default' type='button' >Cancel
         </button >
-      </form >
+      </div >
     )
   }
 }
@@ -71,7 +71,7 @@ Editor.propTypes = {
   item: PropTypes.object.isRequired,
   onCancel: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
-  onSubmit: PropTypes.func.isRequired
+  onSave: PropTypes.func.isRequired
 }
 
 export default Editor

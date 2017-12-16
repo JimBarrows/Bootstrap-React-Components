@@ -27,7 +27,7 @@ class Item extends React.Component {
     return <Editor id={'list_editor_ ' + id}
       onCancel={onCancel}
       onChange={onChange}
-      onSubmit={this.save}
+      onSave={this.save}
       formElements={formElements}
       item={item} />
   }

@@ -53,7 +53,7 @@ class List extends React.Component {
     return <Editor id={'new_item'}
       onCancel={this.addItemCancel}
       onChange={onChange}
-      onSubmit={this.addItem}
+      onSave={this.addItem}
       formElements={formElements}
       item={this.state.selected} />
   }
