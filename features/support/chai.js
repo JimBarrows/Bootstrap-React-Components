@@ -1,6 +1,6 @@
 // support/chai.js
 
-"use strict";
+'use strict'
 
 let chai = require('chai');
 

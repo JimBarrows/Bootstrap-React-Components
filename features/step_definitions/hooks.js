@@ -1,21 +1,11 @@
-// features/step_definitions/hooks.js
-
-import {
-    Account
-} from "../../models";
-import Promise from "bluebird";
-
 var {
-    defineSupportCode
-} = require('cucumber');
+  defineSupportCode
+} = require('cucumber')
 
-defineSupportCode(function({
-  Before,
-  After
-}) {
+defineSupportCode(function ({Before, After}) {
+  Before(function (result, callback) {
+  })
 
-    Before(function(result, callback) {
-    });
-
-    After(function() {});
-});
+  After(function () {
+  })
+})
