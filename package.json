@@ -1,8 +1,5 @@
 {
   "name": "bootstrap-react-components",
-  @FindBy(css=
-  ""
-  )
   "version": "0.18.1",
   "description": "Bootstrap components for react.",
   "main": "./distribution/index.js",
