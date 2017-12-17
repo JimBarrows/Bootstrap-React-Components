@@ -1,37 +1,49 @@
-'use strict';
-import React from "react";
+import PropTypes from 'prop-types'
+import React from 'react'
 
 export default class Pagination extends React.Component {
-	
-	onNext(e) {
-		e.preventDefault();
-		this.props.onNext();
-	}
+  constructor (props) {
+    super(props)
+    this.onNext = this.onNext.bind(this)
+    this.onPrevious = this.onPrevious.bind(this)
+  }
 
-	onPrevious(e) {
-		e.preventDefault();
-		this.props.onPrevious();
-	}
+  onNext (e) {
+    e.preventDefault()
+    this.props.onNext()
+  }
 
-	render() {
-		let {id, onPrevious, onNext} = this.props;
-		return (
+  onPrevious (e) {
+    e.preventDefault()
+    this.props.onPrevious()
+  }
 
-				<nav id={id + "pagination"} aria-label={id + " Page navigation"}>
-  				<ul class="pagination">
-    				<li>
-      				<a onClick={this.onPrevious.bind(this)} aria-label="Previous">
-        				<span aria-hidden="true">&laquo;</span>
-      				</a>
-    				</li>
-						{this.props.children}
-    				<li>
-      				<a onClick={this.onNext.bind(this)} aria-label="Next">
-        				<span aria-hidden="true">&raquo;</span>
-      				</a>
-    				</li>
-  				</ul>
-				</nav>
-		);
-	}
+  render () {
+    let {id} = this.props
+    return (
+
+      <nav id={id + 'pagination'} aria-label={id + ' Page navigation'} >
+        <ul className='pagination' >
+          <li >
+            <a onClick={this.onPrevious} aria-label='Previous' >
+              <span aria-hidden='true' >&laquo;</span >
+            </a >
+          </li >
+          {this.props.children}
+          <li >
+            <a onClick={this.onNext} aria-label='Next' >
+              <span aria-hidden='true' >&raquo;</span >
+            </a >
+          </li >
+        </ul >
+      </nav >
+    )
+  }
+}
+
+Pagination.propTypes = {
+  children: PropTypes.node.isRequired,
+  id: PropTypes.string.isRequired,
+  onNext: PropTypes.func.isRequired,
+  onPrevious: PropTypes.func.isRequired
 }

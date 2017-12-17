@@ -1,52 +1,72 @@
-import React from "react";
-import Editor from "./Editor";
-import Viewer from "./Viewer";
+import PropTypes from 'prop-types'
+import React from 'react'
+import Editor from './Editor'
+import Viewer from './Viewer'
 
 class Item extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      editing: false
+    }
+    this.editing = this.editing.bind(this)
+    this.remove = this.remove.bind(this)
+    this.save = this.save.bind(this)
+  }
 
-	constructor(props) {
-		super(props);
-		this.state = {
-			editing: false
-		}
-	}
+  editing () {
+    this.setState(
+      {
+        editing: true
+      }
+    )
+  }
 
-	editing(e) {
-		this.setState({
-			editing: true
-		});
-	}
+  editor () {
+    let {id, formElements, onCancel, onChange, item} = this.props
+    return <Editor id={'list_editor_ ' + id}
+      onCancel={onCancel}
+      onChange={onChange}
+      onSave={this.save}
+      formElements={formElements}
+      item={item} />
+  }
 
-	editor() {
-		let {id, formElements, onChange, item} =this.props;
-		return <Editor id={"list_editor_ " + id}
-										onChange={onChange}
-										onSubmit={this.save.bind(this)}
-										formElements={formElements}
-										item={item}/>
-	}
+  remove () {
+    this.props.remove(this.props.item)
+  }
 
-	remove() {
-		this.props.remove(this.props.item);
-	}
+  render () {
+    let {editing} = this.state
+    return (editing) ? this.editor(this.props.item) : this.viewer()
+  }
 
-	render() {
-		let {editing} = this.state;
-		let element                       = (editing ) ? this.editor(this.props.item) : this.viewer();
-		return element;
-	}
+  save (item) {
+    this.setState(
+      {
+        editing: false
+      }
+    )
+    this.props.onSubmit(item)
+  }
 
-	save(item) {
-		this.setState({
-			editing: false
-		});
-		this.props.onSubmit(item);
-	}
-
-	viewer() {
-		let {body, header, id, item } =this.props;
-		return <Viewer body={body( item )} header={header( item )} id={id} onEditButtonClick={this.editing.bind(this)} onRemoveButtonClick={this.remove.bind(this)}/>
-	}
+  viewer () {
+    let {body, header, id, item} = this.props
+    return <Viewer body={body(item)} header={header(item)} id={id} onEditButtonClick={this.editing}
+      onRemoveButtonClick={this.remove} />
+  }
 }
 
-export default Item;
+Item.propTypes = {
+  body: PropTypes.func.isRequired,
+  formElements: PropTypes.node.isRequired,
+  header: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  item: PropTypes.object.isRequired,
+  onCancel: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  remove: PropTypes.func.isRequired
+}
+
+export default Item

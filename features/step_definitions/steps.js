@@ -1,11 +1,6 @@
-var {
+const {
   defineSupportCode
-} = require('cucumber');
+} = require('cucumber')
 
-defineSupportCode(function({
-  Given,
-  When,
-  Then
-}) {
-
-});
+defineSupportCode(function ({Given, When, Then}) {
+})
