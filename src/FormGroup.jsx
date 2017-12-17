@@ -1,31 +1,39 @@
-import React from "react";
-import Alert from "./Alert";
+import PropTypes from 'prop-types'
+import React from 'react'
+import Alert from './Alert'
 
 export default class FormGroup extends React.Component {
+  render () {
+    let {error, id, label, required} = this.props
+    let validationStatus = ''
+    let requiredText = ''
+    let alert = ''
+    if (error) {
+      validationStatus = 'has-error'
+      alert = <Alert id={id} type='danger' message={error} />
+    }
+    if (required) {
+      requiredText = (<small className='text-danger' >Required</small >)
+    }
 
-	constructor() {
-		super();
-	}
+    return (
+      <div id={id + 'FormGroup'} className={'form-group ' + validationStatus} >
+        <label id={id + 'Label'} className='control-label' htmlFor={id} >{label}{requiredText}</label >
+        {this.props.children}
+        {alert}
+      </div >
+    )
+  }
+}
 
-	render() {
-		let {error, id, label, required} = this.props;
-		let validationStatus             = "";
-		let requiredText                 = "";
-		let alert = "";
-		if (error) {
-			validationStatus = "has-error";
-			alert = <Alert id={id } type="danger" message={error}/>;
-		}
-		if (required) {
-			requiredText = (<small class="text-deanger">Required</small>)
-		}
+FormGroup.defaultProps = {
+  required: false
+}
 
-		return (
-				<div id={id + "FormGroup"} class={"form-group " + validationStatus}>
-					<label id={id + "Label"} class="control-label" for={id}>{label} {requiredText}</label>
-					{this.props.children}
-					{alert}
-				</div>
-		);
-	}
+FormGroup.propTypes = {
+  children: PropTypes.node.isRequired,
+  error: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  required: PropTypes.bool
 }

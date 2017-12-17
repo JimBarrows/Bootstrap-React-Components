@@ -15,7 +15,7 @@ ReactDOM.render(
     </PageHeader >
     <h1 >Form Groups</h1 >
     <h2 >Text Area</h2 >
-    <TextAreaFormGroup cssClass='question' id='question' label='Question' value='Question' />
+    <TextAreaFormGroup cssclassName='question' id='question' label='Question' value='Question' />
     <h1 >Editable List</h1 >
     <h2 >All Internal Changes</h2 >
     <EditableListComponent />

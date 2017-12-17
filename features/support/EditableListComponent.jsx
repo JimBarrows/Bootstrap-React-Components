@@ -1,7 +1,7 @@
-import React from "react";
-import data from "./EditableListTest/Data";
-import { List } from "../../src/EditableList";
-import { TextFormGroup, NumberFormGroup } from "../../src/";
+import React from 'react'
+import {NumberFormGroup, TextFormGroup} from '../../src/'
+import {List} from '../../src/EditableList'
+import data from './EditableListTest/Data'
 
 class EditableListComponent extends React.Component {
 
@@ -32,11 +32,11 @@ class EditableListComponent extends React.Component {
 	}
 
 	formElements( item ) {
-		let nameError = "";
-		let ageError = "";
-		return <div class="formElements">
-			<TextFormGroup error={nameError} id="name" label="Name" value={item.name}/>
-			<NumberFormGroup error={ageError} id="age" label="Age" value={item.age}/>
+    let nameError = ''
+    let ageError = ''
+    return <div className='formElements' >
+      <TextFormGroup error={nameError} id='name' label='Name' value={item.name} />
+      <NumberFormGroup error={ageError} id='age' label='Age' value={item.age} />
 		</div>
 	}
 
@@ -70,7 +70,7 @@ class EditableListComponent extends React.Component {
 									editFormElements={this.formElements.bind( this )}
 									formElements={this.formElements.bind( this )}
 									header={this.header}
-									id="data_item_list"
+      id='data_item_list'
 									list={this.state.list}
 									newItem={this.newItem.bind( this )}
 									onChange={this.onChange.bind(this)}
