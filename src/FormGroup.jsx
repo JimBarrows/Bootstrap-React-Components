@@ -34,6 +34,6 @@ FormGroup.propTypes = {
   children: PropTypes.node.isRequired,
   error: PropTypes.string,
   id: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   required: PropTypes.bool
 }
