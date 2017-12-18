@@ -112,9 +112,9 @@ class List extends React.Component {
 
 List.propTypes = {
   addItem: PropTypes.func.isRequired,
-  body: PropTypes.node.isRequired,
-  formElements: PropTypes.node.isRequired,
-  header: PropTypes.node.isRequired,
+  body: PropTypes.func.isRequired,
+  formElements: PropTypes.func.isRequired,
+  header: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
   list: PropTypes.array.isRequired,
   newItem: PropTypes.func.isRequired,
