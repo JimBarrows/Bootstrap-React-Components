@@ -29,7 +29,7 @@ FileFormGroup.propTypes = {
   disabled: PropTypes.bool,
   error: PropTypes.string,
   id: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
   required: PropTypes.bool,

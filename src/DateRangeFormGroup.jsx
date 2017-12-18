@@ -84,7 +84,7 @@ DateRangeFormGroup.propTypes = {
   error: PropTypes.string,
   fromValue: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   required: PropTypes.bool,
   thruValue: PropTypes.string.isRequired

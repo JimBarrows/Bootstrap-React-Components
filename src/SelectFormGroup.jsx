@@ -27,7 +27,7 @@ SelectFormGroup.propTypes = {
   disabled: PropTypes.bool,
   error: PropTypes.string,
   id: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   options: PropTypes.array.isRequired,
   required: PropTypes.bool,
