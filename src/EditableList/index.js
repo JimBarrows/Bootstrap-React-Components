@@ -15,7 +15,7 @@ class List extends React.Component {
     this.addItemCancel = this.addItemCancel.bind(this)
     this.onSelected = this.onSelected.bind(this)
     this.removeItem = this.removeItem.bind(this)
-    this.updateItem = this.updateItem(this)
+    this.updateItem = this.updateItem.bind(this)
   }
 
   add () {
