@@ -8,6 +8,7 @@ class Editor extends React.Component {
       current: props.item
     }
     this.onCancel = this.onCancel.bind(this)
+    this.onChange = this.onChange.bind(this)
     this.onSave = this.onSave.bind(this)
   }
 
@@ -66,7 +67,7 @@ class Editor extends React.Component {
 }
 
 Editor.propTypes = {
-  formElements: PropTypes.node.isRequired,
+  formElements: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
   item: PropTypes.object.isRequired,
   onCancel: PropTypes.func.isRequired,

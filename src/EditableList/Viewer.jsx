@@ -26,7 +26,7 @@ class Viewer extends React.Component {
 }
 
 Viewer.propTypes = {
-  body: PropTypes.func.isRequired,
+  body: PropTypes.node.isRequired,
   header: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   onEditButtonClick: PropTypes.func.isRequired,
