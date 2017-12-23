@@ -38,7 +38,7 @@ class Item extends React.Component {
 
   render () {
     let {editing} = this.state
-    return (editing) ? this.editor(this.props.item) : this.viewer()
+    return (editing) ? this.editor() : this.viewer()
   }
 
   save (item) {
