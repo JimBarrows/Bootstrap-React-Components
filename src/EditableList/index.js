@@ -95,7 +95,7 @@ class List extends React.Component {
           onCancel={onCancel}
           onChange={onChange}
           onSelected={this.onSelected}
-          onSubmit={this.updateItem}
+          onSave={this.updateItem}
           remove={this.removeItem} />)}
       </div >
     </div >

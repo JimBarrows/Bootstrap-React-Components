@@ -47,7 +47,7 @@ class Item extends React.Component {
         editing: false
       }
     )
-    this.props.onSubmit(item)
+    this.props.onSave(item)
   }
 
   viewer () {
@@ -59,13 +59,13 @@ class Item extends React.Component {
 
 Item.propTypes = {
   body: PropTypes.func.isRequired,
-  formElements: PropTypes.node.isRequired,
+  formElements: PropTypes.func.isRequired,
   header: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
   item: PropTypes.object.isRequired,
   onCancel: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
-  onSubmit: PropTypes.func.isRequired,
+  onSave: PropTypes.func.isRequired,
   remove: PropTypes.func.isRequired
 }
 
