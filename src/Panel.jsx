@@ -18,6 +18,6 @@ Panel.defaultProps = {
 
 Panel.propTypes = {
   children: PropTypes.node.isRequired,
-  context: PropTypes.oneOf('primary', 'success', 'info', 'warn', 'danger'),
+  context: PropTypes.oneOf(['primary', 'success', 'info', 'warn', 'danger']),
   id: PropTypes.string.isRequired
 }

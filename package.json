@@ -31,11 +31,13 @@
     "url": "https://github.com/JimBarrows/Bootstrap-React-Components/issues"
   },
   "homepage": "https://github.com/JimBarrows/Bootstrap-React-Components#readme",
-  "peerDependencies": {},
+  "peerDependencies": {
+    "react": "0.14.x || 15.x.x || 16.x.x",
+    "react-dom": "0.14.x || 15.x.x || 16.x.x"
+  },
   "dependencies": {
     "bootstrap": "^3.3.7",
     "css-loader": "^0.25.0",
-    "draft-js": "^0.9.1",
     "eslint": "^4.13.1",
     "file-loader": "^0.9.0",
     "font-awesome": "^4.7.0",
@@ -44,7 +46,7 @@
     "react": "^15.3.2",
     "react-datetime": "^2.6.0",
     "react-dom": "^15.3.2",
-    "react-rte": "^0.11.0",
+    "react-rte": "^0.16.0",
     "url-loader": "^0.5.7"
   },
   "devDependencies": {

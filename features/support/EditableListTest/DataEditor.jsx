@@ -3,6 +3,13 @@ import {NumberFormGroup, TextFormGroup} from '../../../src/'
 import {Editor} from '../../../src/EditableList'
 
 class DataEditor extends Editor {
+  constructor (props) {
+    super(props)
+    this.ageChange = this.ageChange.bind(this)
+    this.nameChange = this.nameChange.bind(this)
+    this.onSubmit = this.onSubmit.bind(this)
+  }
+
   ageChange (e) {
     this.props.ageChange(this.props.item, e.target.value)
   }
@@ -28,9 +35,9 @@ class DataEditor extends Editor {
     let {name, age} = this.props.item
     return (
       <div id='DataEditor' >
-        <form id='dataEditorForm' onSubmit={this.onSubmit.bind(this)} >
-          <TextFormGroup error={nameError} id='name' label='Name' onChange={this.nameChange.bind(this)} value={name} />
-          <NumberFormGroup error={ageError} id='age' label='Age' onChange={this.ageChange.bind(this)} value={age} />
+        <form id='dataEditorForm' onSubmit={this.onSubmit} >
+          <TextFormGroup error={nameError} id='name' label='Name' onChange={this.nameChange} value={name} />
+          <NumberFormGroup error={ageError} id='age' label='Age' onChange={this.ageChange} value={age} />
           <button id='submitDataEditorForm' type='submit' className='btn btn-success' >Save</button >
         </form >
       </div >
