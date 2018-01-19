@@ -37,22 +37,20 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "css-loader": "^0.25.0",
+    "css-loader": "^0.28.9",
     "eslint": "^4.13.1",
-    "file-loader": "^0.9.0",
+    "file-loader": "^1.1.6",
     "font-awesome": "^4.7.0",
     "moment": "^2.14.1",
     "prop-types": "^15.6.0",
-    "react": "^15.3.2",
     "react-datetime": "^2.6.0",
-    "react-dom": "^15.3.2",
     "react-rte": "^0.16.0",
-    "url-loader": "^0.5.7"
+    "url-loader": "^0.6.2"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
     "babel-core": "^6.10.4",
-    "babel-loader": "^6.2.4",
+    "babel-loader": "^7.1.2",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-react-html-attrs": "^2.0.0",
     "babel-plugin-transform-class-properties": "^6.11.5",
@@ -65,7 +63,7 @@
     "chai": "^4.0.2",
     "chai-as-promised": "^7.0.0",
     "chai-things": "^0.2.0",
-    "cucumber": "^2.3.1",
+    "cucumber": "^3.2.1",
     "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-config-standard-react": "^5.0.0",
     "eslint-plugin-import": "^2.8.0",
@@ -73,8 +71,10 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-react": "^7.5.1",
     "eslint-plugin-standard": "^3.0.1",
-    "style-loader": "^0.13.2",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.0"
   }
 }
