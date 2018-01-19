@@ -15,7 +15,8 @@ ReactDOM.render(
     </PageHeader >
     <h1 >Form Groups</h1 >
     <h2 >Text Area</h2 >
-    <TextAreaFormGroup cssclassName='question' id='question' label='Question' value='Question' />
+    <TextAreaFormGroup cssclassName='question' id='question' label='Question'
+      onChange={e => console.log('text area changed: ', e)} value='Question' />
     <h1 >Editable List</h1 >
     <h2 >All Internal Changes</h2 >
     <EditableListComponent />

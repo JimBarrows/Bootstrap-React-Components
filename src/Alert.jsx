@@ -47,5 +47,5 @@ Alert.propTypes = {
   onDismiss: PropTypes.func,
   id: PropTypes.string.isRequired,
   type: PropTypes.oneOf(['info', 'success', 'warning', 'danger']),
-  message: PropTypes.string.isRequired
+  message: PropTypes.string
 }
