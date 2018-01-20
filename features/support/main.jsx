@@ -4,6 +4,7 @@ import '../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import {Alert, PageHeader, RowControlButtons, TextAreaFormGroup} from '../../src'
 import EditableListComponent from './EditableListComponent'
+import EditableListInlineComponent from './EditableListInlineComponent'
 import ListGroupComponent from './ListGroupComponent'
 import ListInlineComponent from './ListInlineComponent'
 import PaginationComponent from './PaginationComponent'
@@ -11,7 +12,7 @@ import PaginationComponent from './PaginationComponent'
 const mountNode = document.getElementById('app')
 
 ReactDOM.render(
-  <div >
+  <div className='container' >
     <PageHeader id='ReactTest' >
       <h1 >Bootstrap React Components Tests</h1 >
     </PageHeader >
@@ -25,7 +26,10 @@ ReactDOM.render(
     <h2 >List Group</h2 >
     <ListGroupComponent />
     <h1 >List Inline</h1 >
+    <h2 >Read only</h2 >
     <ListInlineComponent />
+    <h2 >Editable</h2 >
+    <EditableListInlineComponent />
     <h1 >Pagination</h1 >
     <PaginationComponent />
     <h1 >Alerts</h1 >
