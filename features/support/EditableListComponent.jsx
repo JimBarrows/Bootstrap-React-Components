@@ -1,6 +1,6 @@
 import React from 'react'
 import {NumberFormGroup, TextFormGroup} from '../../src/'
-import List from '../../src/EditableList'
+import List from '../../src/EditableListGroup'
 import data from './EditableListTest/Data'
 
 class EditableListComponent extends React.Component {
@@ -43,6 +43,7 @@ class EditableListComponent extends React.Component {
   formElements (item) {
     let nameError = ''
     let ageError = ''
+    // Both TextFormGroup and NumberFormGroup require onChange functions, however, they can be ignored because the list group provides a custom onChange
     return <div className='formElements' >
       <TextFormGroup error={nameError} id='name' label='Name' value={item.name} />
       <NumberFormGroup error={ageError} id='age' label='Age' value={item.age} />

@@ -7,7 +7,7 @@ import ColorFormGroup from './ColorFormGroup'
 import DatePickerFormGroup from './DatePickerFormGroup'
 import DateRangeFormGroup from './DateRangeFormGroup'
 import EditableCell from './EditableCell'
-import EditableList from './EditableList'
+import EditableListGroup from './EditableListGroup'
 import EditButton from './EditButton'
 import EmailFormGroup from './EmailFormGroup'
 import FileFormGroup from './FileFormGroup'
@@ -45,7 +45,7 @@ module.exports = {
   DateRangeFormGroup,
   EditButton,
   EditableCell,
-  EditableList,
+  EditableListGroup,
   EmailFormGroup,
   FileFormGroup,
   FormGroup,
