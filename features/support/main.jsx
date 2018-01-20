@@ -4,6 +4,7 @@ import '../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import {Alert, PageHeader, RowControlButtons, TextAreaFormGroup} from '../../src'
 import EditableListComponent from './EditableListComponent'
+import ListGroupComponent from './ListGroupComponent'
 import PaginationComponent from './PaginationComponent'
 
 const mountNode = document.getElementById('app')
@@ -17,9 +18,11 @@ ReactDOM.render(
     <h2 >Text Area</h2 >
     <TextAreaFormGroup cssclassName='question' id='question' label='Question'
       onChange={e => console.log('text area changed: ', e)} value='Question' />
-    <h1 >Editable List</h1 >
-    <h2 >All Internal Changes</h2 >
+    <h1 >List Groups</h1 >
+    <h2 >Editable List Group</h2 >
     <EditableListComponent />
+    <h2 >List Group</h2 >
+    <ListGroupComponent />
     <h1 >Pagination</h1 >
     <PaginationComponent />
     <h1 >Alerts</h1 >

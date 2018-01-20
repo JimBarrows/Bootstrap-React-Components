@@ -1,7 +1,8 @@
 import React from 'react'
 import {NumberFormGroup, TextFormGroup} from '../../src/'
 import List from '../../src/EditableListGroup'
-import data from './EditableListTest/Data'
+
+const data = [{name: 'Jane', age: 10}, {name: 'John', age: 20}]
 
 class EditableListComponent extends React.Component {
   constructor (props) {

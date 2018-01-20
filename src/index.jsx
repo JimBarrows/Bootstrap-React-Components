@@ -12,6 +12,7 @@ import EditButton from './EditButton'
 import EmailFormGroup from './EmailFormGroup'
 import FileFormGroup from './FileFormGroup'
 import FormGroup from './FormGroup'
+import ListGroup from './ListGroup'
 import ListPanel from './ListPanel'
 import ListTablePanel from './ListTablePanel'
 import NumberFormGroup from './NumberFormGroup'
@@ -49,6 +50,7 @@ module.exports = {
   EmailFormGroup,
   FileFormGroup,
   FormGroup,
+  ListGroup,
   ListPanel,
   ListTablePanel,
   NumberFormGroup,
