@@ -13,6 +13,7 @@ import EmailFormGroup from './EmailFormGroup'
 import FileFormGroup from './FileFormGroup'
 import FormGroup from './FormGroup'
 import ListGroup from './ListGroup'
+import ListInline from './ListInline'
 import ListPanel from './ListPanel'
 import ListTablePanel from './ListTablePanel'
 import NumberFormGroup from './NumberFormGroup'
@@ -51,6 +52,7 @@ module.exports = {
   FileFormGroup,
   FormGroup,
   ListGroup,
+  ListInline,
   ListPanel,
   ListTablePanel,
   NumberFormGroup,

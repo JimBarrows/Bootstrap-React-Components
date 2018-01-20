@@ -5,6 +5,7 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import {Alert, PageHeader, RowControlButtons, TextAreaFormGroup} from '../../src'
 import EditableListComponent from './EditableListComponent'
 import ListGroupComponent from './ListGroupComponent'
+import ListInlineComponent from './ListInlineComponent'
 import PaginationComponent from './PaginationComponent'
 
 const mountNode = document.getElementById('app')
@@ -23,6 +24,8 @@ ReactDOM.render(
     <EditableListComponent />
     <h2 >List Group</h2 >
     <ListGroupComponent />
+    <h1 >List Inline</h1 >
+    <ListInlineComponent />
     <h1 >Pagination</h1 >
     <PaginationComponent />
     <h1 >Alerts</h1 >
