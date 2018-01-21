@@ -14,13 +14,14 @@ import FileFormGroup from './FileFormGroup'
 import FormGroup from './FormGroup'
 import ListGroup from './ListGroup'
 import ListInline from './ListInline'
-import ListPanel from './ListPanel'
+import ListPanel from './PanelWithAddButton'
 import ListTablePanel from './ListTablePanel'
 import NumberFormGroup from './NumberFormGroup'
 import PageHeader from './PageHeader'
 import Pagination from './Pagination'
 import Panel from './Panel'
 import PanelBody from './PanelBody'
+import PanelFooter from './PanelFooter'
 import PanelHeader from './PanelHeader'
 import PasswordFormGroup from './PasswordFormGroup'
 import RangeFormGroup from './RangeFormGroup'
@@ -53,14 +54,15 @@ module.exports = {
   FormGroup,
   ListGroup,
   ListInline,
-  ListPanel,
   ListTablePanel,
   NumberFormGroup,
   PageHeader,
   Pagination,
   Panel,
   PanelBody,
+  PanelFooter,
   PanelHeader,
+  ListPanel,
   PasswordFormGroup,
   RangeFormGroup,
   ReloadButton,

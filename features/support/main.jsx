@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom'
 import '../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import {Alert, PageHeader, RowControlButtons, TextAreaFormGroup} from '../../src'
+import Panel from '../../src/Panel'
+import PanelBody from '../../src/PanelBody'
+import PanelFooter from '../../src/PanelFooter'
+import PanelHeader from '../../src/PanelHeader'
+import PanelWithAddButton from '../../src/PanelWithAddButton'
+import StripedTable from '../../src/StripedTable'
 import EditableListComponent from './EditableListComponent'
 import EditableListInlineComponent from './EditableListInlineComponent'
 import ListGroupComponent from './ListGroupComponent'
@@ -73,10 +79,158 @@ ReactDOM.render(
     <EditableListComponent />
     <h3 >List Group</h3 >
     <ListGroupComponent />
+    <h2 >Panels</h2 >
+    <h3 >Basic Example</h3 >
+    <Panel id={'basic example'} >
+      <PanelBody id={'basic example'} >
+        Basic panel example
+      </PanelBody >
+    </Panel >
+    <h3 >Panel with Heading</h3 >
+    <Panel id={'withoutTitle'} >
+      <PanelHeader id={'withoutTitle'} >
+        Panel heading without title
+      </PanelHeader >
+      <PanelBody id={'withoutTitle'} >
+        withoutTitle
+      </PanelBody >
+    </Panel >
+    <Panel id={'withTitle'} >
+      <PanelHeader id={'withTitle'} >
+        <h3 className='panel-title' >Panel heading with title</h3 >
+      </PanelHeader >
+      <PanelBody id={'withoutTitle'} >
+        withoutTitle
+      </PanelBody >
+    </Panel >
+    <h3 >Panel with Footer</h3 >
+    <Panel id={'withFooter'} >
+      <PanelBody id={'withFooter'} >
+        Panel Content
+      </PanelBody >
+      <PanelFooter id={'withFooter'} >
+        Panel Footer
+      </PanelFooter >
+    </Panel >
+    <h3 >Contextual Alternatives</h3 >
+    <Panel id={'primary'} context='primary' >
+      <PanelHeader id={'primary'} >
+        <h3 className='panel-title' >Panel heading primary</h3 >
+      </PanelHeader >
+      <PanelBody id={'primary'} >
+        primary
+      </PanelBody >
+    </Panel >
+    <Panel id={'success'} context='success' >
+      <PanelHeader id={'success'} >
+        <h3 className='panel-title' >Panel heading success</h3 >
+      </PanelHeader >
+      <PanelBody id={'success'} >
+        success
+      </PanelBody >
+    </Panel >
+    <Panel id={'info'} context='info' >
+      <PanelHeader id={'info'} >
+        <h3 className='panel-title' >Panel heading info</h3 >
+      </PanelHeader >
+      <PanelBody id={'info'} >
+        info
+      </PanelBody >
+    </Panel >
+    <Panel id={'warning'} context='warn' >
+      <PanelHeader id={'warning'} >
+        <h3 className='panel-title' >Panel heading warning</h3 >
+      </PanelHeader >
+      <PanelBody id={'warning'} >
+        warning
+      </PanelBody >
+    </Panel >
+    <Panel id={'danger'} context='danger' >
+      <PanelHeader id={'danger'} >
+        <h3 className='panel-title' >Panel heading danger</h3 >
+      </PanelHeader >
+      <PanelBody id={'danger'} >
+        danger
+      </PanelBody >
+    </Panel >
+    <h3 >With tables</h3 >
+    <Panel id={'withTablesAndText'} >
+      <PanelHeader id={'withTablesAndText'} >
+        <h3 className='panel-title' >Panel heading for table with panel body</h3 >
+      </PanelHeader >
+      <PanelBody id={'withTablesAndText'} >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies sit amet diam eu placerat. Maecenas nisi
+        augue, semper quis vehicula efficitur, hendrerit nec risus. Morbi eu justo tortor. Cras rhoncus ultricies dolor
+        vitae bibendum. Vivamus risus lorem, varius sit amet pretium nec, feugiat vel erat. Sed at pretium odio, sit
+        amet feugiat diam. Suspendisse risus purus, fermentum in ex vel, ullamcorper maximus magna. Nullam bibendum
+        lacus at erat varius ornare. Pellentesque pharetra dapibus nibh eget viverra. Donec porttitor lacinia ante ac
+        rutrum.
+      </PanelBody >
+      <table className='table' >
+        <thead >
+          <tr >
+            <th >First Name</th >
+            <th >Last Name</th >
+          </tr >
+        </thead >
+        <tbody >
+          <tr >
+            <td >Bob</td >
+            <td >Jones</td >
+          </tr >
+        </tbody >
+      </table >
+    </Panel >
+    <Panel id={'withTables'} >
+      <PanelHeader id={'withTables'} >
+        <h3 className='panel-title' >Panel heading for table</h3 >
+      </PanelHeader >
+      <table className='table' >
+        <thead >
+          <tr >
+            <th >First Name</th >
+            <th >Last Name</th >
+          </tr >
+        </thead >
+        <tbody >
+          <tr >
+            <td >Bob</td >
+            <td >Jones</td >
+          </tr >
+        </tbody >
+      </table >
+    </Panel >
+    <PanelWithAddButton id={'panelWithAddButton'} onAddClick={item => console.log('onAddClick: ', item)}
+      title={'Panel with add button'} >
+      <StripedTable id={'panelWithAddButtonTable'} >
+        <thead >
+          <tr >
+            <th >First Name</th >
+            <th >Last Name</th >
+          </tr >
+        </thead >
+        <tbody >
+          <tr >
+            <td >Bob</td >
+            <td >Jones</td >
+          </tr >
+          <tr >
+            <td >John</td >
+            <td >Smith</td >
+          </tr >
+          <tr >
+            <td >John</td >
+            <td >Smith</td >
+          </tr >
+        </tbody >
+      </StripedTable >
+    </PanelWithAddButton >
+
+    <h3 >With List groups</h3 >
     <h1 >Javascript</h1 >
 
-
-    <h1 >Row Control Buttons</h1 >
+    <h1 >Custom</h1 >
+    <h2 >Row Control Buttons</h2 >
     <RowControlButtons cancel={() => {
     }} editing={false} edit={() => {
     }} id='not_editing' save={() => {

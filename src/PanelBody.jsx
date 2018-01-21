@@ -2,11 +2,9 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 export default class PanelBody extends React.Component {
-
   render () {
-    let {id} = this.props
     return (
-      <div id={id + 'PanelBody'} className='panel-body' >
+      <div id={'PanelBody_' + this.props.id} className='panel-body' >
         {this.props.children}
       </div >
     )
