@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import '../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import {Alert, PageHeader, RowControlButtons, TextAreaFormGroup} from '../../src'
+import {Alert, ListGroup, PageHeader, RowControlButtons, TextAreaFormGroup} from '../../src'
 import Panel from '../../src/Panel'
 import PanelBody from '../../src/PanelBody'
 import PanelFooter from '../../src/PanelFooter'
@@ -225,8 +225,22 @@ ReactDOM.render(
         </tbody >
       </StripedTable >
     </PanelWithAddButton >
-
     <h3 >With List groups</h3 >
+    <Panel id={'panelWithListGorups'} >
+      <PanelHeader id={'panelWithListGroups'} >
+        This is the panel header
+      </PanelHeader >
+      <PanelBody id={'panelWithListGroups'} >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies sit amet diam eu placerat. Maecenas nisi
+        augue, semper quis vehicula efficitur, hendrerit nec risus. Morbi eu justo tortor. Cras rhoncus ultricies dolor
+        vitae bibendum. Vivamus risus lorem, varius sit amet pretium nec, feugiat vel erat. Sed at pretium odio, sit
+        amet feugiat diam. Suspendisse risus purus, fermentum in ex vel, ullamcorper maximus magna. Nullam bibendum
+        lacus at erat varius ornare. Pellentesque pharetra dapibus nibh eget viverra. Donec porttitor lacinia ante ac
+        rutrum.
+      </PanelBody >
+      <ListGroup id={'panelWithListGroups'} itemHeading={item => item.name}
+        items={[{name: 'foo', body: 'This is foo'}, {name: 'bar', body: 'This is bar'}]} itemText={item => item.body} />
+    </Panel >
     <h1 >Javascript</h1 >
 
     <h1 >Custom</h1 >
@@ -242,4 +256,6 @@ ReactDOM.render(
     }} id='editing' save={() => {
     }} remove={() => {
     }} />
-  </div >, mountNode)
+  </div >,
+  mountNode
+)
