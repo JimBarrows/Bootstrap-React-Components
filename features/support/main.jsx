@@ -98,9 +98,13 @@ ReactDOM.render(
     <h3 >Contextual Alternatives</h3 >
     <ProgressBar context='success' id='progressBarExample4' max={100} min={0} now={50} width={60} />
     <ProgressBar context='info' id='progressBarExample4' max={100} min={0} now={50} width={60} />
-    <ProgressBar context='warning' id='progressBarExample4' max={100} min={0} now={50} width={60} />
+    <ProgressBar context='warn' id='progressBarExample4' max={100} min={0} now={50} width={60} />
     <ProgressBar context='danger' id='progressBarExample4' max={100} min={0} now={50} width={60} />
     <h3 >Striped</h3 >
+    <ProgressBar context='success' id='progressBarExample4' max={100} min={0} now={50} striped={true} width={60} />
+    <ProgressBar context='info' id='progressBarExample4' max={100} min={0} now={50} striped={true} width={60} />
+    <ProgressBar context='warn' id='progressBarExample4' max={100} min={0} now={50} striped={true} width={60} />
+    <ProgressBar context='danger' id='progressBarExample4' max={100} min={0} now={50} striped={true} width={60} />
     <h3 >Animated</h3 >
     <h3 >Slacked</h3 >
     <h2 > Media Object</h2 >
