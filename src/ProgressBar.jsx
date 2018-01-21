@@ -7,7 +7,10 @@ export default class ProgressBar extends React.Component {
       width: this.props.now + '%',
       minWidth: this.props.minWidth + 'em'
     }
-    let className = 'progress-bar progress-bar-' + this.props.context + (this.props.striped ? ' progress-bar-striped' : '')
+    let className = 'progress-bar progress-bar-' +
+      this.props.context +
+      (this.props.striped ? ' progress-bar-striped' : '') +
+      (this.props.animated ? ' active' : '')
     return (
       <div id={'ProgressBarComponent_' + this.props.id} className='progress' >
         <div
@@ -25,6 +28,7 @@ export default class ProgressBar extends React.Component {
 }
 
 ProgressBar.propTypes = {
+  animated: PropTypes.boolean,
   context: PropTypes.oneOf(['primary', 'success', 'info', 'warn', 'danger', 'default']),
   id: PropTypes.string.isRequired,
   label: PropTypes.string,
@@ -36,6 +40,7 @@ ProgressBar.propTypes = {
 }
 
 ProgressBar.defaultProps = {
+  animated: false,
   context: 'default',
   minWidth: 2,
   striped: false
