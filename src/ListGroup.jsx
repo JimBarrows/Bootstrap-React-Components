@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-export default class List extends React.Component {
+export default class ListGroup extends React.Component {
 
   render () {
     return (
@@ -24,7 +24,7 @@ export default class List extends React.Component {
   }
 }
 
-List.propTypes = {
+ListGroup.propTypes = {
   id: PropTypes.string.isRequired,
   items: PropTypes.array.isRequired,
   itemHeading: PropTypes.func.isRequired,
