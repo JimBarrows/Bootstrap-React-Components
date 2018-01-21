@@ -29,6 +29,7 @@ import PanelFooter from './PanelFooter'
 import PanelHeader from './PanelHeader'
 import PanelWithAddButton from './PanelWithAddButton'
 import PasswordFormGroup from './PasswordFormGroup'
+import ProgressBar from './ProgressBar'
 import RangeFormGroup from './RangeFormGroup'
 import ReloadButton from './ReloadButton'
 import RemoveButton from './RemoveButton'
@@ -74,6 +75,7 @@ module.exports = {
   PanelHeader,
   PanelWithAddButton,
   PasswordFormGroup,
+  ProgressBar,
   RangeFormGroup,
   ReloadButton,
   RemoveButton,

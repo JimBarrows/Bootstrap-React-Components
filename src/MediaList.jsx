@@ -14,7 +14,7 @@ export default class MediaList extends React.Component {
 
 MediaList.propTypes = {
   children: PropTypes.node.isRequired,
-  id: PropTypes.string.required
+  id: PropTypes.string.isRequired
 }
 
 MediaList.defaultProps = {}

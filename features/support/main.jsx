@@ -16,6 +16,7 @@ import {
   PanelFooter,
   PanelHeader,
   PanelWithAddButton,
+  ProgressBar,
   RowControlButtons,
   StripedTable,
   TextAreaFormGroup
@@ -88,6 +89,16 @@ ReactDOM.render(
     }} type='warning' message='This is a basic warning alert message' />
     <Alert id='plain_danger' onDismiss={() => {
     }} type='danger' message='This is a basic danger alert message' />
+    <h2 >Progress Bars</h2 >
+    <h3 >Basic Example</h3 >
+    <ProgressBar id='progressBarExample1' max={100} min={0} now={50} width={60} />
+    <h3 >With Label</h3 >
+    <ProgressBar id='progressBarExample2' label='0% done' max={100} min={0} now={0} width={60} />
+    <ProgressBar id='progressBarExample3' label='2% done' max={100} min={0} now={2} width={60} />
+    <h3 >Contextual Alternatives</h3 >
+    <h3 >Striped</h3 >
+    <h3 >Animated</h3 >
+    <h3 >Slacked</h3 >
     <h2 > Media Object</h2 >
     <h3 >Default Media</h3 >
     <Media id={'MediaGroup'} >
