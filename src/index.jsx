@@ -14,8 +14,12 @@ import FileFormGroup from './FileFormGroup'
 import FormGroup from './FormGroup'
 import ListGroup from './ListGroup'
 import ListInline from './ListInline'
-import ListPanel from './PanelWithAddButton'
 import ListTablePanel from './ListTablePanel'
+import Media from './Media'
+import MediaBody from './MediaBody'
+import MediaLeft from './MediaLeft'
+import MediaObjectImage from './MediaObjectImage'
+import MediaRight from './MediaRight'
 import NumberFormGroup from './NumberFormGroup'
 import PageHeader from './PageHeader'
 import Pagination from './Pagination'
@@ -23,6 +27,7 @@ import Panel from './Panel'
 import PanelBody from './PanelBody'
 import PanelFooter from './PanelFooter'
 import PanelHeader from './PanelHeader'
+import PanelWithAddButton from './PanelWithAddButton'
 import PasswordFormGroup from './PasswordFormGroup'
 import RangeFormGroup from './RangeFormGroup'
 import ReloadButton from './ReloadButton'
@@ -55,6 +60,11 @@ module.exports = {
   ListGroup,
   ListInline,
   ListTablePanel,
+  Media,
+  MediaBody,
+  MediaLeft,
+  MediaObjectImage,
+  MediaRight,
   NumberFormGroup,
   PageHeader,
   Pagination,
@@ -62,7 +72,7 @@ module.exports = {
   PanelBody,
   PanelFooter,
   PanelHeader,
-  ListPanel,
+  PanelWithAddButton,
   PasswordFormGroup,
   RangeFormGroup,
   ReloadButton,
