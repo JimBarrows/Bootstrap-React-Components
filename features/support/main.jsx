@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom'
 import '../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import {Alert, ListGroup, PageHeader, RowControlButtons, TextAreaFormGroup} from '../../src'
+import Media from '../../src/Media'
+import MediaBody from '../../src/MediaBody'
+import MediaLeft from '../../src/MediaLeft'
+import MediaObjectImage from '../../src/MediaObjectImage'
+import MediaRight from '../../src/MediaRight'
 import Panel from '../../src/Panel'
 import PanelBody from '../../src/PanelBody'
 import PanelFooter from '../../src/PanelFooter'
@@ -74,6 +79,64 @@ ReactDOM.render(
     }} type='warning' message='This is a basic warning alert message' />
     <Alert id='plain_danger' onDismiss={() => {
     }} type='danger' message='This is a basic danger alert message' />
+    <h2 > Media Object</h2 >
+    <h3 >Default Media</h3 >
+    <Media id={'MediaGroup'} >
+      <MediaLeft id={'MediaLeft'} >
+        <MediaObjectImage id={'MediaObjectImage'}
+          src={'https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg'} alt={'Pick of a beach'} />
+      </MediaLeft >
+      <MediaBody id={'mediaBody'} >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies sit amet diam eu placerat. Maecenas nisi
+        augue, semper quis vehicula efficitur, hendrerit nec risus. Morbi eu justo tortor. Cras rhoncus ultricies dolor
+        vitae bibendum. Vivamus risus lorem, varius sit amet pretium nec, feugiat vel erat. Sed at pretium odio, sit
+        amet feugiat diam. Suspendisse risus purus, fermentum in ex vel, ullamcorper maximus magna. Nullam bibendum
+        lacus at erat varius ornare. Pellentesque pharetra dapibus nibh eget viverra. Donec porttitor lacinia ante ac
+        rutrum.
+      </MediaBody >
+    </Media >
+    <Media id={'MediaGroup'} >
+      <MediaLeft id={'MediaLeft'} >
+        <MediaObjectImage id={'MediaObjectImage'}
+          src={'https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg'} alt={'Pick of a beach'} />
+      </MediaLeft >
+      <MediaBody id={'mediaBody'} >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies sit amet diam eu placerat. Maecenas nisi
+        augue, semper quis vehicula efficitur, hendrerit nec risus. Morbi eu justo tortor. Cras rhoncus ultricies dolor
+        vitae bibendum. Vivamus risus lorem, varius sit amet pretium nec, feugiat vel erat. Sed at pretium odio, sit
+        amet feugiat diam. Suspendisse risus purus, fermentum in ex vel, ullamcorper maximus magna. Nullam bibendum
+        lacus at erat varius ornare. Pellentesque pharetra dapibus nibh eget viverra. Donec porttitor lacinia ante ac
+        rutrum.
+        <Media id={'MediaGroup'} >
+          <MediaLeft id={'MediaLeft'} >
+            <MediaObjectImage id={'MediaObjectImage'}
+              src={'https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg'} alt={'Pick of a beach'} />
+          </MediaLeft >
+          <MediaBody id={'mediaBody'} >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies sit amet diam eu placerat. Maecenas nisi
+            augue, semper quis vehicula efficitur, hendrerit nec risus. Morbi eu justo tortor. Cras rhoncus ultricies dolor
+            vitae bibendum. Vivamus risus lorem, varius sit amet pretium nec, feugiat vel erat. Sed at pretium odio, sit
+            amet feugiat diam. Suspendisse risus purus, fermentum in ex vel, ullamcorper maximus magna. Nullam bibendum
+            lacus at erat varius ornare. Pellentesque pharetra dapibus nibh eget viverra. Donec porttitor lacinia ante ac
+            rutrum.
+          </MediaBody >
+        </Media >
+      </MediaBody >
+    </Media >
+    <Media id={'MediaGroup'} >
+      <MediaBody id={'mediaBody'} >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies sit amet diam eu placerat. Maecenas nisi
+        augue, semper quis vehicula efficitur, hendrerit nec risus. Morbi eu justo tortor. Cras rhoncus ultricies dolor
+        vitae bibendum. Vivamus risus lorem, varius sit amet pretium nec, feugiat vel erat. Sed at pretium odio, sit
+        amet feugiat diam. Suspendisse risus purus, fermentum in ex vel, ullamcorper maximus magna. Nullam bibendum
+        lacus at erat varius ornare. Pellentesque pharetra dapibus nibh eget viverra. Donec porttitor lacinia ante ac
+        rutrum.
+      </MediaBody >
+      <MediaRight id={'MediaLeft'} >
+        <MediaObjectImage id={'MediaObjectImage'}
+          src={'https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg'} alt={'Pick of a beach'} />
+      </MediaRight >
+    </Media >
     <h2 >List Group</h2 >
     <h3 >Editable List Group</h3 >
     <EditableListComponent />

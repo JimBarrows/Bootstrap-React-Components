@@ -14,6 +14,10 @@ import FileFormGroup from './FileFormGroup'
 import FormGroup from './FormGroup'
 import ListGroup from './ListGroup'
 import ListInline from './ListInline'
+import Media from './Media'
+import MediaLeft from './MediaLeft'
+import MediaObjectImage from './MediaObjectImage'
+import MediaRight from './MediaRight'
 import ListPanel from './PanelWithAddButton'
 import ListTablePanel from './ListTablePanel'
 import NumberFormGroup from './NumberFormGroup'
@@ -55,6 +59,10 @@ module.exports = {
   ListGroup,
   ListInline,
   ListTablePanel,
+  Media,
+  MediaLeft,
+  MediaObjectImage,
+  MediaRight,
   NumberFormGroup,
   PageHeader,
   Pagination,
