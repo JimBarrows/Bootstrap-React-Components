@@ -2,18 +2,24 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import '../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import {Alert, ListGroup, PageHeader, RowControlButtons, TextAreaFormGroup} from '../../src'
-import Media from '../../src/Media'
-import MediaBody from '../../src/MediaBody'
-import MediaLeft from '../../src/MediaLeft'
-import MediaObjectImage from '../../src/MediaObjectImage'
-import MediaRight from '../../src/MediaRight'
-import Panel from '../../src/Panel'
-import PanelBody from '../../src/PanelBody'
-import PanelFooter from '../../src/PanelFooter'
-import PanelHeader from '../../src/PanelHeader'
-import PanelWithAddButton from '../../src/PanelWithAddButton'
-import StripedTable from '../../src/StripedTable'
+import {
+  Alert,
+  ListGroup,
+  Media,
+  MediaBody,
+  MediaLeft,
+  MediaObjectImage,
+  MediaRight,
+  PageHeader,
+  Panel,
+  PanelBody,
+  PanelFooter,
+  PanelHeader,
+  PanelWithAddButton,
+  RowControlButtons,
+  StripedTable,
+  TextAreaFormGroup
+} from '../../src'
 import EditableListComponent from './EditableListComponent'
 import EditableListInlineComponent from './EditableListInlineComponent'
 import ListGroupComponent from './ListGroupComponent'
