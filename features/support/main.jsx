@@ -158,6 +158,85 @@ ReactDOM.render(
           src={'https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg'} alt={'Pick of a beach'} />
       </MediaRight >
     </Media >
+    <h3 >Media Alignment</h3 >
+    <Media id={'MediaGroup'} >
+      <MediaLeft id={'MediaLeft'} vertical_alignment='top' >
+        <MediaObjectImage id={'MediaObjectImage'}
+          src={'https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg'} alt={'Pick of a beach'} />
+      </MediaLeft >
+      <MediaBody id={'mediaBody'} >
+        <p >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitor, sapien id accumsan tristique,
+          augue
+          nisl porta risus, eu viverra lorem nisl pulvinar dui. Sed porta aliquam nunc vel mollis. In in libero ut urna
+          pretium euismod eu sed neque. Sed eu sapien tempus, commodo ipsum at, lacinia odio. Donec commodo velit at
+          diam
+          lacinia convallis. Praesent dapibus magna felis, ac blandit enim vehicula sed. Donec lobortis convallis magna,
+          a
+          laoreet urna auctor a. Integer vitae nisi egestas, aliquet dolor condimentum, maximus velit. Fusce sodales
+          feugiat purus ac luctus. Ut eget nisl aliquet, dapibus dui dictum, faucibus erat. Nulla eget sem eu nunc
+          rutrum
+          viverra.
+        </p >
+        <p >
+          Pellentesque rhoncus dolor vitae vulputate gravida. In vel aliquet orci. Proin at elit ante. Nullam leo lacus,
+          rhoncus sit amet tincidunt sed, ultrices pharetra tortor. Pellentesque in lobortis nunc. Etiam id fringilla
+          augue. Aliquam vulputate mollis felis, vitae pharetra enim venenatis sit amet.
+        </p >
+      </MediaBody >
+    </Media >
+    <Media id={'MediaGroup'} >
+      <MediaLeft id={'MediaLeft'} vertical_alignment='middle' >
+        <MediaObjectImage id={'MediaObjectImage'}
+          src={'https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg'} alt={'Pick of a beach'} />
+      </MediaLeft >
+      <MediaBody id={'mediaBody'} >
+        <p >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitor, sapien id accumsan tristique,
+          augue
+          nisl porta risus, eu viverra lorem nisl pulvinar dui. Sed porta aliquam nunc vel mollis. In in libero ut urna
+          pretium euismod eu sed neque. Sed eu sapien tempus, commodo ipsum at, lacinia odio. Donec commodo velit at
+          diam
+          lacinia convallis. Praesent dapibus magna felis, ac blandit enim vehicula sed. Donec lobortis convallis magna,
+          a
+          laoreet urna auctor a. Integer vitae nisi egestas, aliquet dolor condimentum, maximus velit. Fusce sodales
+          feugiat purus ac luctus. Ut eget nisl aliquet, dapibus dui dictum, faucibus erat. Nulla eget sem eu nunc
+          rutrum
+          viverra.
+        </p >
+        <p >
+          Pellentesque rhoncus dolor vitae vulputate gravida. In vel aliquet orci. Proin at elit ante. Nullam leo lacus,
+          rhoncus sit amet tincidunt sed, ultrices pharetra tortor. Pellentesque in lobortis nunc. Etiam id fringilla
+          augue. Aliquam vulputate mollis felis, vitae pharetra enim venenatis sit amet.
+        </p >
+      </MediaBody >
+    </Media >
+    <Media id={'MediaGroup'} >
+      <MediaLeft id={'MediaLeft'} vertical_alignment='bottom' >
+        <MediaObjectImage id={'MediaObjectImage'}
+          src={'https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg'} alt={'Pick of a beach'} />
+      </MediaLeft >
+      <MediaBody id={'mediaBody'} >
+        <p >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitor, sapien id accumsan tristique,
+          augue
+          nisl porta risus, eu viverra lorem nisl pulvinar dui. Sed porta aliquam nunc vel mollis. In in libero ut urna
+          pretium euismod eu sed neque. Sed eu sapien tempus, commodo ipsum at, lacinia odio. Donec commodo velit at
+          diam
+          lacinia convallis. Praesent dapibus magna felis, ac blandit enim vehicula sed. Donec lobortis convallis magna,
+          a
+          laoreet urna auctor a. Integer vitae nisi egestas, aliquet dolor condimentum, maximus velit. Fusce sodales
+          feugiat purus ac luctus. Ut eget nisl aliquet, dapibus dui dictum, faucibus erat. Nulla eget sem eu nunc
+          rutrum
+          viverra.
+        </p >
+        <p >
+          Pellentesque rhoncus dolor vitae vulputate gravida. In vel aliquet orci. Proin at elit ante. Nullam leo lacus,
+          rhoncus sit amet tincidunt sed, ultrices pharetra tortor. Pellentesque in lobortis nunc. Etiam id fringilla
+          augue. Aliquam vulputate mollis felis, vitae pharetra enim venenatis sit amet.
+        </p >
+      </MediaBody >
+    </Media >
     <h2 >List Group</h2 >
     <h3 >Editable List Group</h3 >
     <EditableListComponent />

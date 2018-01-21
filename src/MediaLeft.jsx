@@ -1,11 +1,11 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
 export default class MediaLeft extends React.Component {
 
   render () {
     return (
-      <div id={'MediaLeftComponent_' + this.props.id} className={'media-left'} >
+      <div id={'MediaLeftComponent_' + this.props.id} className={'media-right media-' + this.props.vertical_alignment} >
         {this.props.children}
       </div >
     )
@@ -14,7 +14,10 @@ export default class MediaLeft extends React.Component {
 
 MediaLeft.propTypes = {
   children: PropTypes.node.isRequired,
-  id: PropTypes.string.isRequired
+  id: PropTypes.string.isRequired,
+  vertical_alignment: PropTypes.oneOf(['top', 'middle', 'bottom'])
 }
 
-MediaLeft.defaultProps = {}
+MediaLeft.defaultProps = {
+  vertical_alignment: 'top'
+}
