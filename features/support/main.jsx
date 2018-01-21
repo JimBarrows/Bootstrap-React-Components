@@ -113,17 +113,38 @@ ReactDOM.render(
               src={'https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg'} alt={'Pick of a beach'} />
           </MediaLeft >
           <MediaBody id={'mediaBody'} >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies sit amet diam eu placerat. Maecenas nisi
-            augue, semper quis vehicula efficitur, hendrerit nec risus. Morbi eu justo tortor. Cras rhoncus ultricies dolor
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies sit amet diam eu placerat. Maecenas
+            nisi
+            augue, semper quis vehicula efficitur, hendrerit nec risus. Morbi eu justo tortor. Cras rhoncus ultricies
+            dolor
             vitae bibendum. Vivamus risus lorem, varius sit amet pretium nec, feugiat vel erat. Sed at pretium odio, sit
             amet feugiat diam. Suspendisse risus purus, fermentum in ex vel, ullamcorper maximus magna. Nullam bibendum
-            lacus at erat varius ornare. Pellentesque pharetra dapibus nibh eget viverra. Donec porttitor lacinia ante ac
+            lacus at erat varius ornare. Pellentesque pharetra dapibus nibh eget viverra. Donec porttitor lacinia ante
+            ac
             rutrum.
           </MediaBody >
         </Media >
       </MediaBody >
     </Media >
     <Media id={'MediaGroup'} >
+      <MediaBody id={'mediaBody'} >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies sit amet diam eu placerat. Maecenas nisi
+        augue, semper quis vehicula efficitur, hendrerit nec risus. Morbi eu justo tortor. Cras rhoncus ultricies dolor
+        vitae bibendum. Vivamus risus lorem, varius sit amet pretium nec, feugiat vel erat. Sed at pretium odio, sit
+        amet feugiat diam. Suspendisse risus purus, fermentum in ex vel, ullamcorper maximus magna. Nullam bibendum
+        lacus at erat varius ornare. Pellentesque pharetra dapibus nibh eget viverra. Donec porttitor lacinia ante ac
+        rutrum.
+      </MediaBody >
+      <MediaRight id={'MediaLeft'} >
+        <MediaObjectImage id={'MediaObjectImage'}
+          src={'https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg'} alt={'Pick of a beach'} />
+      </MediaRight >
+    </Media >
+    <Media id={'MediaGroup'} >
+      <MediaLeft id={'MediaLeft'} >
+        <MediaObjectImage id={'MediaObjectImage'}
+          src={'https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg'} alt={'Pick of a beach'} />
+      </MediaLeft >
       <MediaBody id={'mediaBody'} >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies sit amet diam eu placerat. Maecenas nisi
         augue, semper quis vehicula efficitur, hendrerit nec risus. Morbi eu justo tortor. Cras rhoncus ultricies dolor
