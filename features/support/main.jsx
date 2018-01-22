@@ -64,7 +64,7 @@ ReactDOM.render(
     <h2 >Pagination</h2 >
     <PaginationComponent />
     <h2 >Alerts</h2 >
-    <h3 >Plain</h3 >
+    <h3 >Examples</h3 >
     <Alert id='plain' message='This is a basic alert message' />
     <Alert id='children' >
       <ul >
@@ -91,6 +91,11 @@ ReactDOM.render(
     }} type='warning' message='This is a basic warning alert message' />
     <Alert id='plain_danger' onDismiss={() => {
     }} type='danger' message='This is a basic danger alert message' />
+    <h3 >Links</h3 >
+    <Alert id='plain_success' onDismiss={() => {
+    }} type='success' >
+      Words and stuff <a href='#' className='alert-link' >The link</a > surrounding the link.
+    </Alert >
     <h2 >Progress Bars</h2 >
     <h3 >Basic Example</h3 >
     <ProgressBarSingle id='progressBarExample1' max={100} min={0} now={50} />
