@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-export default class ProgressBar extends React.Component {
+export default class ProgressBarSingle extends React.Component {
   render () {
     let currentStyle = {
       width: this.props.now + '%',
@@ -12,19 +12,22 @@ export default class ProgressBar extends React.Component {
       (this.props.striped ? ' progress-bar-striped' : '') +
       (this.props.animated ? ' active' : '')
     return (
-      <div id={'ProgressBarComponent_' + this.props.id} className={className}
-        role={'progressbar'}
-        area-valuemax={this.props.max}
-        area-valuemin={this.props.min}
-        aria-valuenow={this.props.now}
-        style={currentStyle} >
-        {this.props.label}
+      <div id={'ProgressBarComponent_' + this.props.id} className='progress' >
+        <div
+          className={className}
+          role={'progressbar'}
+          area-valuemax={this.props.max}
+          area-valuemin={this.props.min}
+          aria-valuenow={this.props.now}
+          style={currentStyle} >
+          {this.props.label}
+        </div >
       </div >
     )
   }
 }
 
-ProgressBar.propTypes = {
+ProgressBarSingle.propTypes = {
   animated: PropTypes.bool,
   context: PropTypes.oneOf(['primary', 'success', 'info', 'warn', 'danger', 'default']),
   id: PropTypes.string.isRequired,
@@ -36,7 +39,7 @@ ProgressBar.propTypes = {
   striped: PropTypes.bool
 }
 
-ProgressBar.defaultProps = {
+ProgressBarSingle.defaultProps = {
   animated: false,
   context: 'default',
   minWidth: 2,
