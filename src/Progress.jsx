@@ -1,20 +1,20 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-export default class MediaList extends React.Component {
+export default class Progress extends React.Component {
 
   render () {
     return (
-      <ul id={'MediaListComponent_' + this.props.id} className={'media-list'} >
+      <div id={'ProgressComponent_' + this.props.id} className='progress' >
         {this.props.children}
-      </ul >
+      </div >
     )
   }
 }
 
-MediaList.propTypes = {
+Progress.propTypes = {
   children: PropTypes.node.isRequired,
   id: PropTypes.string.isRequired
 }
 
-MediaList.defaultProps = {}
+Progress.defaultProps = {}

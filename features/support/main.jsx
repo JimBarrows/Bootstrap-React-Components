@@ -16,6 +16,9 @@ import {
   PanelFooter,
   PanelHeader,
   PanelWithAddButton,
+  Progress,
+  ProgressBar,
+  ProgressBarSingle,
   RowControlButtons,
   StripedTable,
   TextAreaFormGroup
@@ -88,6 +91,33 @@ ReactDOM.render(
     }} type='warning' message='This is a basic warning alert message' />
     <Alert id='plain_danger' onDismiss={() => {
     }} type='danger' message='This is a basic danger alert message' />
+    <h2 >Progress Bars</h2 >
+    <h3 >Basic Example</h3 >
+    <ProgressBarSingle id='progressBarExample1' max={100} min={0} now={50} />
+    <h3 >With Label</h3 >
+    <ProgressBarSingle id='progressBarExample2' label='0% done' max={100} min={0} now={0} />
+    <ProgressBarSingle id='progressBarExample3' label='2% done' max={100} min={0} now={2} />
+    <h3 >Contextual Alternatives</h3 >
+    <ProgressBarSingle context='success' id='progressBarExample4' max={100} min={0} now={50} />
+    <ProgressBarSingle context='info' id='progressBarExample5' max={100} min={0} now={50} />
+    <ProgressBarSingle context='warn' id='progressBarExample6' max={100} min={0} now={50} />
+    <ProgressBarSingle context='danger' id='progressBarExample7' max={100} min={0} now={50} />
+    <h3 >Striped</h3 >
+    <ProgressBarSingle context='success' id='progressBarExample8' max={100} min={0} now={50} striped />
+    <ProgressBarSingle context='info' id='progressBarExample9' max={100} min={0} now={50} striped />
+    <ProgressBarSingle context='warn' id='progressBarExample10' max={100} min={0} now={50} striped />
+    <ProgressBarSingle context='danger' id='progressBarExample11' max={100} min={0} now={50} striped />
+    <h3 >Animated</h3 >
+    <ProgressBarSingle context='success' id='progressBarExample12' animated max={100} min={0} now={50} striped />
+    <ProgressBarSingle context='info' id='progressBarExample13' animated max={100} min={0} now={50} striped />
+    <ProgressBarSingle context='warn' id='progressBarExample14' animated max={100} min={0} now={50} striped />
+    <ProgressBarSingle context='danger' id='progressBarExample15' animated max={100} min={0} now={50} striped />
+    <h3 >Stacked</h3 >
+    <Progress id={'stackedProgressBarExample'} >
+      <ProgressBar context='success' id='progressBarExample16' animated max={100} min={0} now={35} striped />
+      <ProgressBar context='info' id='progressBarExample17' animated max={100} min={0} now={20} striped />
+      <ProgressBar context='warn' id='progressBarExample18' animated max={100} min={0} now={10} striped />
+    </Progress >
     <h2 > Media Object</h2 >
     <h3 >Default Media</h3 >
     <Media id={'MediaGroup'} >
