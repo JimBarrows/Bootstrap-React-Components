@@ -7,3 +7,6 @@
 3. npm run test:harness
 4. npm run test:host:start
 5. npm run test:behavior
+6. npm version major/minor/patch
+6. npm build
+7. npm publish
