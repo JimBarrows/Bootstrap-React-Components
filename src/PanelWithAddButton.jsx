@@ -5,7 +5,7 @@ import Panel from './Panel'
 import PanelBody from './PanelBody'
 import PanelHeader from './PanelHeader'
 
-export default class ListPanel extends React.Component {
+export default class PanelWithAddButton extends React.Component {
   render () {
     let {id, onAddClick, title} = this.props
     return (
@@ -16,17 +16,15 @@ export default class ListPanel extends React.Component {
             <AddButton id={id + 'AddButton'} onClick={onAddClick} />
           </div >
         </PanelHeader >
-        <PanelBody id={id} >
-          {this.props.children}
-        </PanelBody >
+        {this.props.children}
       </Panel >
     )
   }
 }
 
-ListPanel.defaultProps = {}
+PanelWithAddButton.defaultProps = {}
 
-ListPanel.propTypes = {
+PanelWithAddButton.propTypes = {
   children: PropTypes.node.isRequired,
   onAddClick: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,

@@ -1,17 +1,20 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-export default class PanelBody extends React.Component {
+export default class MediaList extends React.Component {
+
   render () {
     return (
-      <div id={'PanelBody_' + this.props.id} className='panel-body' >
+      <ul id={'MediaListComponent_' + this.props.id} className={'media-list'} >
         {this.props.children}
-      </div >
+      </ul >
     )
   }
 }
 
-PanelBody.propTypes = {
+MediaList.propTypes = {
   children: PropTypes.node.isRequired,
   id: PropTypes.string.isRequired
 }
+
+MediaList.defaultProps = {}

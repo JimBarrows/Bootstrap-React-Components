@@ -1,7 +1,7 @@
 'use strict'
 import PropTypes from 'prop-types'
 import React from 'react'
-import ListPanel from './ListPanel'
+import ListPanel from './PanelWithAddButton'
 import StripedTable from './StripedTable'
 
 export default class ListTablePanel extends React.Component {

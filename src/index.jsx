@@ -7,20 +7,31 @@ import ColorFormGroup from './ColorFormGroup'
 import DatePickerFormGroup from './DatePickerFormGroup'
 import DateRangeFormGroup from './DateRangeFormGroup'
 import EditableCell from './EditableCell'
-import EditableList from './EditableList'
+import EditableListGroup from './EditableListGroup'
 import EditButton from './EditButton'
 import EmailFormGroup from './EmailFormGroup'
 import FileFormGroup from './FileFormGroup'
 import FormGroup from './FormGroup'
-import ListPanel from './ListPanel'
+import ListGroup from './ListGroup'
+import ListInline from './ListInline'
 import ListTablePanel from './ListTablePanel'
+import Media from './Media'
+import MediaBody from './MediaBody'
+import MediaLeft from './MediaLeft'
+import MediaObjectImage from './MediaObjectImage'
+import MediaRight from './MediaRight'
 import NumberFormGroup from './NumberFormGroup'
 import PageHeader from './PageHeader'
 import Pagination from './Pagination'
 import Panel from './Panel'
 import PanelBody from './PanelBody'
+import PanelFooter from './PanelFooter'
 import PanelHeader from './PanelHeader'
+import PanelWithAddButton from './PanelWithAddButton'
 import PasswordFormGroup from './PasswordFormGroup'
+import Progress from './Progress'
+import ProgressBar from './ProgressBar'
+import ProgressBarSingle from './ProgressBarSingle'
 import RangeFormGroup from './RangeFormGroup'
 import ReloadButton from './ReloadButton'
 import RemoveButton from './RemoveButton'
@@ -45,19 +56,30 @@ module.exports = {
   DateRangeFormGroup,
   EditButton,
   EditableCell,
-  EditableList,
+  EditableListGroup,
   EmailFormGroup,
   FileFormGroup,
   FormGroup,
-  ListPanel,
+  ListGroup,
+  ListInline,
   ListTablePanel,
+  Media,
+  MediaBody,
+  MediaLeft,
+  MediaObjectImage,
+  MediaRight,
   NumberFormGroup,
   PageHeader,
   Pagination,
   Panel,
   PanelBody,
+  PanelFooter,
   PanelHeader,
+  PanelWithAddButton,
   PasswordFormGroup,
+  Progress,
+  ProgressBar,
+  ProgressBarSingle,
   RangeFormGroup,
   ReloadButton,
   RemoveButton,
