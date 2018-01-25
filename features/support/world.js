@@ -1,15 +1,16 @@
 // features/support/world.js
 
 var {
-    defineSupportCode
-} = require('cucumber');
+  defineSupportCode
+} = require('cucumber')
 
-function CustomWorld() {
-
+function CustomWorld () {
+  console.log('CustomWorld configuration')
 }
 
-defineSupportCode(function({
-  setWorldConstructor
-}) {
+defineSupportCode(function ({
+                              setWorldConstructor
+                            }) {
+  console.log('defineSupportCode')
   setWorldConstructor(CustomWorld)
-});
+})
