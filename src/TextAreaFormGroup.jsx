@@ -1,71 +1,60 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import RichTextEditor, {createEmptyValue, createValueFromString} from 'react-rte'
+import RichTextEditor, {createValueFromString} from 'react-rte'
 import FormGroup from './FormGroup'
 
 export default class TextAreaFormGroup extends React.Component {
   constructor (props) {
     super(props)
-    this.setValue(props.value)
     this.state = {
-      value: createEmptyValue()
+      value: createValueFromString(props.value, 'markdown')
     }
-    this.changeThis = this.changeThis.bind(this)
+    this.onChange = this.onChange.bind(this)
   }
 
-  componentWillReceiveProps (props) {
-    this.setValue(props.value)
-  }
-
-  changeThis (value) {
+  onChange (value) {
     this.setState({value})
     if (this.props.onChange) {
       this.props.onChange(
         {
-          target: {
-            id: this.props.id,
-            value: value.toString('markdown')
-          }
+          target:
+            {
+              value: value.toString('markdown')
+            }
         }
       )
     }
-  };
-
-  render () {
-    let {error, id, label, required} = this.props
-    return (
-      <FormGroup label={label} id={id} error={error} required={required} >
-        <RichTextEditor webDriverTestID={id} onChange={this.changeThis} value={this.state.value} />
-      </FormGroup >
-    )
   }
 
-  setValue (valueString) {
-    let value = null
-    if (valueString) {
-      value = createValueFromString(valueString, 'markdown')
-    } else {
-      value = createEmptyValue()
-    }
-    this.setState(
-      {
-        value
-      }
+  render () {
+    let {disabled, error, id, label, placeholder, required} = this.props
+    return (
+      <FormGroup label={label} id={id} error={error} required={required} >
+        <RichTextEditor
+          disabled={disabled}
+          onChange={this.onChange}
+          placeholder={placeholder}
+          value={this.state.value}
+          webDriverTestID={id}
+        />
+      </FormGroup >
     )
   }
 }
 
 TextAreaFormGroup.defaultProps = {
   disabled: false,
+  placeholder: '',
   required: false
 }
 
 TextAreaFormGroup.propTypes = {
-
+  disabled: PropTypes.bool,
   error: PropTypes.string,
   id: PropTypes.string.isRequired,
   label: PropTypes.string,
   onChange: PropTypes.func.isRequired,
+  placeholder: PropTypes.string,
   required: PropTypes.bool,
   value: PropTypes.string
 }
