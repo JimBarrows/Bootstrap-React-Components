@@ -26,6 +26,7 @@ import {
 import MediaHeading from '../../src/MediaHeading'
 import MediaList from '../../src/MediaList'
 import MediaListItem from '../../src/MediaListItem'
+import PasswordFormGroup from '../../src/PasswordFormGroup'
 import EditableListComponent from './EditableListComponent'
 import EditableListInlineComponent from './EditableListInlineComponent'
 import ListGroupComponent from './ListGroupComponent'
@@ -34,6 +35,8 @@ import PaginationComponent from './PaginationComponent'
 
 const mountNode = document.getElementById('app')
 
+let passwordValue = ''
+
 ReactDOM.render(
   <div className='container' >
     <PageHeader id='ReactTest' >
@@ -41,7 +44,7 @@ ReactDOM.render(
     </PageHeader >
     <h1 >CSS</h1 >
     <h2 > Grid System</h2 >
-    <h2 >Typeography</h2 >
+    <h2 >Typography</h2 >
     <h3 >Lists</h3 >
     <h4 >Inline</h4 >
     <h5 >Read only</h5 >
@@ -52,9 +55,12 @@ ReactDOM.render(
     <h2 >Tables</h2 >
     <h2 >Forms</h2 >
     <h3 >Supported Controls</h3 >
+    <h4 >Password</h4 >
+    <PasswordFormGroup id={'passwordTest'} onChange={e => passwordValue = e.target.value} value={passwordValue} />
+    <span id={'passwordValue'} >{passwordValue}</span >
     <h4 >Text Area</h4 >
     <TextAreaFormGroup cssclassName='question' id='question' label='Question'
-      onChange={e => console.log('text area changed: ', e)} value='Question' />
+      onChange={e => console.log('text area changed: ', e.target.value)} value='Question' />
     <h2 >Buttons</h2 >
     <h2 >Images</h2 >
     <h2 >HelperClasses</h2 >
