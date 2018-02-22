@@ -47,5 +47,5 @@ EditableCell.propTypes = {
   placeholder: PropTypes.string,
   required: PropTypes.bool,
   type: PropTypes.oneOf(['text', 'password', 'radio', 'checkbox', 'color', 'date', 'datetime-local', 'email', 'month', 'number', 'range', 'search', 'tel', 'time', 'url', 'week']),
-  value: PropTypes.bool.isRequired
+  value: PropTypes.string.isRequired
 }

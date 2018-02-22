@@ -23,10 +23,12 @@ import {
   StripedTable,
   TextAreaFormGroup
 } from '../../src'
+import ColorFormGroup from '../../src/ColorFormGroup'
 import MediaHeading from '../../src/MediaHeading'
 import MediaList from '../../src/MediaList'
 import MediaListItem from '../../src/MediaListItem'
 import PasswordFormGroup from '../../src/PasswordFormGroup'
+import RangeFormGroup from '../../src/RangeFormGroup'
 import EditableListComponent from './EditableListComponent'
 import EditableListInlineComponent from './EditableListInlineComponent'
 import ListGroupComponent from './ListGroupComponent'
@@ -36,7 +38,8 @@ import PaginationComponent from './PaginationComponent'
 const mountNode = document.getElementById('app')
 
 let passwordValue = ''
-
+let colorFormGroupValue = ''
+let rangeFormGroupvalue = ''
 ReactDOM.render(
   <div className='container' >
     <PageHeader id='ReactTest' >
@@ -55,9 +58,14 @@ ReactDOM.render(
     <h2 >Tables</h2 >
     <h2 >Forms</h2 >
     <h3 >Supported Controls</h3 >
+    <ColorFormGroup id={'colorFormGroupTest'} onChange={e => colorFormGroupValue = e.target.value}
+      value={colorFormGroupValue} />
+    <h4 > Range Form Group</h4 >
+    <RangeFormGroup id={'rangeFormGroupTest'} onChange={e => rangeFormGroupvalue = e.target.value}
+      value={rangeFormGroupvalue} />
     <h4 >Password</h4 >
     <PasswordFormGroup id={'passwordTest'} onChange={e => passwordValue = e.target.value} value={passwordValue} />
-    <span id={'passwordValue'} >{passwordValue}</span >
+    <p >Password value: <span id={'passwordValue'} >{passwordValue}</span ></p >
     <h4 >Text Area</h4 >
     <TextAreaFormGroup cssclassName='question' id='question' label='Question'
       onChange={e => console.log('text area changed: ', e.target.value)} value='Question' />
