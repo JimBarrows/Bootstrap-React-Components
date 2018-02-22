@@ -4,7 +4,7 @@ import FormGroup from './FormGroup'
 
 export default class ColorFormGroup extends React.Component {
   render () {
-    let {disabled, error, id, label, onChange, placeholder, required, value} = this.props
+    let {disabled, error, id, label, onChange, required, value} = this.props
     return (
       <FormGroup label={label} id={id} error={error} required={required} >
         <input checked={value}
@@ -12,10 +12,9 @@ export default class ColorFormGroup extends React.Component {
           disabled={disabled}
           id={id}
           onChange={onChange}
-          placeholder={placeholder}
           required={required}
           type='color'
-          value={id}
+          value={value}
         />
       </FormGroup >
     )
@@ -33,7 +32,6 @@ ColorFormGroup.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string,
   onChange: PropTypes.func.isRequired,
-  placeholder: PropTypes.string,
   required: PropTypes.bool,
   value: PropTypes.string.isRequired
 }

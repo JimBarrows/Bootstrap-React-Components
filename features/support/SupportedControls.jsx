@@ -7,7 +7,7 @@ export default class SupportedControls extends React.Component {
     super(props)
     this.state = {
       passwordFormGroupValue: '',
-      colorFormGroupValue: '',
+      colorFormGroupValue: '#ff0000',
       rangeFormGroupValue: '',
       textAreaFormGroupValue: '',
       textFormGroupValue: ''
@@ -30,7 +30,6 @@ export default class SupportedControls extends React.Component {
             onChange={e => this.setState({passwordFormGroupValue: e.target.value})}
             value={this.state.passwordFormGroupValue} />
           <p >Password value: <span id={'passwordValue'} >{this.state.passwordFormGroupValue}</span ></p >
-          
           <TextFormGroup id={'textFormGroupTest'} label={'Text form Group'}
             onChange={e => this.setState({textFormGroupValue: e.target.value})}
             required
