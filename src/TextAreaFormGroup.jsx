@@ -47,9 +47,11 @@ export default class TextAreaFormGroup extends React.Component {
     } else {
       value = createEmptyValue()
     }
-    this.state = {
-      value
-    }
+    this.setState(
+      {
+        value
+      }
+    )
   }
 }
 

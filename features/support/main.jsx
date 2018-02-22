@@ -20,7 +20,7 @@ import {
   ProgressBar,
   ProgressBarSingle,
   RowControlButtons,
-  StripedTable,
+  StripedTable
 } from '../../src'
 import MediaHeading from '../../src/MediaHeading'
 import MediaList from '../../src/MediaList'
@@ -512,7 +512,7 @@ ReactDOM.render(
     }} />
     <br />
     <RowControlButtons cancel={() => {
-    }} editing={true} edit={() => {
+    }} editing edit={() => {
     }} id='editing' save={() => {
     }} remove={() => {
     }} />
