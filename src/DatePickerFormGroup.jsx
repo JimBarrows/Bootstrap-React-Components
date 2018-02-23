@@ -27,5 +27,5 @@ DatePickerFormGroup.propTypes = {
   label: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   required: PropTypes.bool,
-  value: PropTypes.bool.isRequired
+  value: PropTypes.string.isRequired
 }

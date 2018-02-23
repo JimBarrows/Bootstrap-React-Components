@@ -12,14 +12,17 @@ export default class FormGroup extends React.Component {
       validationStatus = 'has-error'
       alert = <Alert id={id} type='danger' message={error} />
     }
+    let childrenWithProps = this.props.children
     if (required) {
       requiredText = (<small className='text-danger' >Required</small >)
+      childrenWithProps = React.Children.map(this.props.children, (child) => React.cloneElement(child, {required: true})
+      )
     }
 
     return (
       <div id={id + 'FormGroup'} className={'form-group ' + validationStatus} >
-        <label id={id + 'Label'} className='control-label' htmlFor={id} >{label}{requiredText}</label >
-        {this.props.children}
+        <label id={id + 'Label'} className='control-label' htmlFor={id} >{label}&nbsp;{requiredText}</label >
+        {childrenWithProps}
         {alert}
       </div >
     )

@@ -31,5 +31,5 @@ SelectFormGroup.propTypes = {
   onChange: PropTypes.func.isRequired,
   options: PropTypes.array.isRequired,
   required: PropTypes.bool,
-  value: PropTypes.bool.isRequired
+  value: PropTypes.string.isRequired
 }

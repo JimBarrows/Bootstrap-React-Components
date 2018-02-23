@@ -34,5 +34,5 @@ EmailFormGroup.propTypes = {
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
   required: PropTypes.bool,
-  value: PropTypes.bool.isRequired
+  value: PropTypes.string.isRequired
 }
