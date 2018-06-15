@@ -4,3 +4,4 @@ import React from 'react'
 
 
 storiesOf('components/Media', module)
+  .add('todo', () => <p>To do</p>)

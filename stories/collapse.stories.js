@@ -4,3 +4,4 @@ import React from 'react'
 
 
 storiesOf('bootstrap/components/Collapse', module)
+  .add('todo', () => <p>To do</p>)
