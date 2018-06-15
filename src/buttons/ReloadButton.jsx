@@ -2,17 +2,20 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 export default class ReloadButton extends React.Component {
-  render () {
+
+  static propTypes = {
+    id     : PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired
+  }
+
+  render() {
     let {id, onClick} = this.props
     return (
-      <button id={id} type='button' className='btn btn-default btn-xs' onClick={onClick} >
-        <span className='glyphicon glyphicon-refresh' />
-      </button >
+      <button id={id} type='button' className='btn btn-light btn-small' onClick={onClick}>
+        <span className='fas fa-sync'/>
+      </button>
     )
   }
 }
 
-ReloadButton.propTypes = {
-  id: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired
-}
+

@@ -3,17 +3,19 @@ import React from 'react'
 
 export default class RemoveButton extends React.Component {
 
+  static propTypes = {
+    id     : PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired
+  }
+
   render () {
     let {id, onClick} = this.props
     return (
-      <button id={'remove_button_' + id} type='button' className='btn btn-danger btn-xs' onClick={onClick} >
-        <span className='glyphicon glyphicon-remove' />
+      <button id={'remove-button-' + id} type='button' className='btn btn-light btn-small' onClick={onClick}>
+        <span className='fas fa-trash'/>
       </button >
     )
   }
 }
 
-RemoveButton.propTypes = {
-  id: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired
-}
+
