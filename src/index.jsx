@@ -1,4 +1,5 @@
 import Alert from './bootstrap/components/Alert'
+import Badge from './bootstrap/components/Badge'
 import ButtonGroup from './bootstrap/components/ButtonGroup'
 import ListGroup from './bootstrap/components/ListGroup'
 import Pagination from './bootstrap/components/Pagination'
@@ -48,6 +49,7 @@ import PanelWithAddButton from './panels/PanelWithAddButton'
 module.exports = {
   AddButton,
   Alert,
+  Badge,
   ButtonGroup,
   CancelButton,
   CheckboxFormGroup,
