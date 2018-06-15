@@ -3,5 +3,5 @@ import {storiesOf} from '@storybook/react'
 import React from 'react'
 
 
-storiesOf('bootstrap/media', module)
+storiesOf('Form Groups', module)
   .add('todo', () => <p>To do</p>)
