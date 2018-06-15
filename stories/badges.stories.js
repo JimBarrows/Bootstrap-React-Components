@@ -2,6 +2,7 @@ import {storiesOf} from '@storybook/react'
 
 import React from 'react'
 import Badge from '../src/components/Badge'
+import BadgePill from '../src/components/BadgePill'
 
 storiesOf('components/Badge', module)
   .add('primary', () => <Badge id={'primary'} type={'primary'}>This is a badge</Badge>)
@@ -12,4 +13,14 @@ storiesOf('components/Badge', module)
   .add('info', () => <Badge id={'info'} type={'info'}>This is a badge</Badge>)
   .add('light', () => <Badge id={'light'} type={'light'}>This is a badge</Badge>)
   .add('dark', () => <Badge id={'dark'} type={'dark'}>This is a badge</Badge>)
+
+storiesOf('components/BadgePill', module)
+  .add('primary', () => <BadgePill id={'primary'} type={'primary'}>This is a badge</BadgePill>)
+  .add('secondary', () => <BadgePill id={'secondary'} type={'secondary'}>This is a badge</BadgePill>)
+  .add('success', () => <BadgePill id={'success'} type={'success'}>This is a badge</BadgePill>)
+  .add('danger', () => <BadgePill id={'danger'} type={'danger'}>This is a badge</BadgePill>)
+  .add('warning', () => <BadgePill id={'warning'} type={'warning'}>This is a badge</BadgePill>)
+  .add('info', () => <BadgePill id={'info'} type={'info'}>This is a badge</BadgePill>)
+  .add('light', () => <BadgePill id={'light'} type={'light'}>This is a badge</BadgePill>)
+  .add('dark', () => <BadgePill id={'dark'} type={'dark'}>This is a badge</BadgePill>)
 
