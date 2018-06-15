@@ -1,5 +1,5 @@
 import React from 'react'
-import ListGroup from '../../src/ListGroup'
+import ListGroup from '../../src/bootstrap/components/ListGroup'
 
 const data = [{name: 'Jane', age: 10}, {name: 'John', age: 20}]
 

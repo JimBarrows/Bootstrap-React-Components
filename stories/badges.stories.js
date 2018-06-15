@@ -1,8 +1,8 @@
 import {storiesOf} from '@storybook/react'
 
 import React from 'react'
-import Badge from '../src/components/Badge'
-import BadgePill from '../src/components/BadgePill'
+import Badge from '../src/bootstrap/components/Badge'
+import BadgePill from '../src/bootstrap/components/BadgePill'
 
 storiesOf('components/Badge', module)
   .add('primary', () => <Badge id={'primary'} type={'primary'}>This is a badge</Badge>)

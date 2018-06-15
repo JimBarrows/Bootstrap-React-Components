@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import AddButton from './AddButton'
+import AddButton from '../buttons/AddButton'
 import Panel from './Panel'
-import PanelBody from './PanelBody'
 import PanelHeader from './PanelHeader'
 
 export default class PanelWithAddButton extends React.Component {

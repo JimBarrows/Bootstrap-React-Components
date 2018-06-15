@@ -2,7 +2,7 @@ import {action} from '@storybook/addon-actions'
 import {storiesOf} from '@storybook/react'
 
 import React from 'react'
-import Alert from '../src/components/Alert'
+import Alert from '../src/bootstrap/components/Alert'
 
 storiesOf('components/Alert', module)
   .add('primary', () => <Alert id={'primary'} type={'primary'}>This is an alert</Alert>)

@@ -1,4 +1,7 @@
 import React from 'react'
+import MediaHeading from '../../src/bootstrap/media/MediaHeading'
+import MediaList from '../../src/bootstrap/media/MediaList'
+import MediaListItem from '../../src/bootstrap/media/MediaListItem'
 import {
   Alert,
   ListGroup,
@@ -19,9 +22,6 @@ import {
   RowControlButtons,
   StripedTable
 } from '../../src/index'
-import MediaHeading from '../../src/MediaHeading'
-import MediaList from '../../src/MediaList'
-import MediaListItem from '../../src/MediaListItem'
 import EditableListComponent from './EditableListComponent'
 import EditableListInlineComponent from './EditableListInlineComponent'
 import ListGroupComponent from './ListGroupComponent'

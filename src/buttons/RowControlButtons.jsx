@@ -1,7 +1,7 @@
 'use strict'
 import PropTypes from 'prop-types'
 import React from 'react'
-import ButtonGroup from './ButtonGroup'
+import ButtonGroup from '../bootstrap/components/ButtonGroup'
 import CancelButton from './CancelButton'
 import EditButton from './EditButton'
 import RemoveButton from './RemoveButton'

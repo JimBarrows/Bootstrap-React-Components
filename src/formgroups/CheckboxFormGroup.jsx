@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import Alert from './components/Alert'
+import Alert from '../bootstrap/components/Alert'
 
 export default class CheckboxFormGroup extends React.Component {
   render () {
