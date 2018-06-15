@@ -4,7 +4,7 @@ import React from 'react'
 import Badge from '../src/bootstrap/components/Badge'
 import BadgePill from '../src/bootstrap/components/BadgePill'
 
-storiesOf('components/Badge', module)
+storiesOf('bootstrap/components/Badge', module)
   .add('primary', () => <Badge id={'primary'} type={'primary'}>This is a badge</Badge>)
   .add('secondary', () => <Badge id={'secondary'} type={'secondary'}>This is a badge</Badge>)
   .add('success', () => <Badge id={'success'} type={'success'}>This is a badge</Badge>)
@@ -14,7 +14,7 @@ storiesOf('components/Badge', module)
   .add('light', () => <Badge id={'light'} type={'light'}>This is a badge</Badge>)
   .add('dark', () => <Badge id={'dark'} type={'dark'}>This is a badge</Badge>)
 
-storiesOf('components/BadgePill', module)
+storiesOf('bootstrap/components/BadgePill', module)
   .add('primary', () => <BadgePill id={'primary'} type={'primary'}>This is a badge</BadgePill>)
   .add('secondary', () => <BadgePill id={'secondary'} type={'secondary'}>This is a badge</BadgePill>)
   .add('success', () => <BadgePill id={'success'} type={'success'}>This is a badge</BadgePill>)
