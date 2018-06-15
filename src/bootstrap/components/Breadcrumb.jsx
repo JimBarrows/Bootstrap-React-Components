@@ -3,23 +3,24 @@ import React from 'react'
 
 export default class Breadcrumb extends React.Component {
   static defaultProps = {
-    type: 'info'
   }
 
   static propTypes = {
     children: PropTypes.node,
-    id      : PropTypes.string.isRequired,
-    type    : PropTypes.oneOf(['danger', 'dark', 'info', 'light', 'primary', 'secondary', 'success', 'warning'])
+    id      : PropTypes.string.isRequired
   }
 
   render() {
     const {
             children,
             id,
-            type
           } = this.props
 
 
-    return <div id={'badge_' + id} className={'badge badge-' + type}>{children}</div>
+    return <nav aria-label={'breadcrumb'}>
+      <ol className={'breadcrumb'}>
+        {children}
+      </ol>
+    </nav>
   }
 }
