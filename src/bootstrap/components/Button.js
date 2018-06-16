@@ -3,28 +3,30 @@ import React from 'react'
 
 export default class Button extends React.Component {
   static defaultProps = {
-    block   : false,
-    disabled: false,
-    outline : false,
-    size    : '',
-    type    : 'info'
+    block         : false,
+    disabled      : false,
+    outline       : false,
+    size          : '',
+    type          : 'info',
+    utilityClasses: ''
   }
 
   static propTypes = {
-    block   : PropTypes.bool,
-    children: PropTypes.node.isRequired,
-    disabled: PropTypes.bool,
-    id      : PropTypes.string.isRequired,
-    onClick : PropTypes.func.isRequired,
-    outline : PropTypes.bool,
-    size    : PropTypes.oneOf(['small', 'large']),
-    type    : PropTypes.oneOf(['danger', 'dark', 'info', 'light', 'link', 'primary', 'secondary', 'success', 'warning'])
+    block         : PropTypes.bool,
+    children      : PropTypes.node.isRequired,
+    disabled      : PropTypes.bool,
+    id            : PropTypes.string.isRequired,
+    onClick       : PropTypes.func.isRequired,
+    outline       : PropTypes.bool,
+    size          : PropTypes.oneOf(['small', 'large']),
+    type          : PropTypes.oneOf(['danger', 'dark', 'info', 'light', 'link', 'primary', 'secondary', 'success', 'warning']),
+    utilityClasses: PropTypes.string
   }
 
   render() {
-    let {block, disabled, outline, id, onClick, size, type} = this.props
-    let cssClasses                                          = 'btn'
-    let attributes                                          = {}
+    let {block, disabled, outline, id, onClick, size, type, utilityClasses} = this.props
+    let cssClasses                                                          = 'btn'
+    let attributes                                                          = {}
     cssClasses += (outline ? ' outline-' : ' btn-')
     cssClasses += type
     if (size) {
@@ -39,6 +41,9 @@ export default class Button extends React.Component {
       cssClasses += ' disabled'
       attributes['disabled']      = true
       attributes['aria-disabled'] = true
+    }
+    if (utilityClasses) {
+      cssClasses += ' ' + utilityClasses
     }
     return (
       <button id={'button-' + id} type='button' className={cssClasses} onClick={onClick} {...attributes}>
