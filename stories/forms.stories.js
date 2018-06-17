@@ -4,6 +4,7 @@ import {storiesOf} from '@storybook/react'
 import React from 'react'
 import FormControl from '../src/bootstrap/forms/FormControl'
 import FormGroup from '../src/bootstrap/forms/FormGroup'
+import TextArea from '../src/bootstrap/forms/TextArea'
 
 
 storiesOf('bootstrap/forms', module)
@@ -152,5 +153,12 @@ storiesOf('bootstrap/forms', module)
     <form>
       <FormGroup id={'formcontrol-week'} label={'week'}>
         <FormControl id={'week'} onChange={action('week changed')} type={'week'} value={'2018-W24'}/>
+      </FormGroup>
+    </form>)
+  .add('Form control - textarea', () =>
+    <form>
+      <FormGroup id={'formcontrol-week'} label={'week'}>
+        <TextArea id={'week'} onChange={action('week changed')} type={'week'}
+                  value={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu pretium sem, id fringilla tortor. Quisque et lectus lectus. Maecenas in magna quis odio efficitur pulvinar non sit amet justo. Mauris lorem orci, euismod et gravida id, dapibus quis justo. Vivamus quis congue leo. Integer vel risus blandit, lobortis nulla eu, feugiat orci. Vivamus ultrices nunc at eros pharetra volutpat. Morbi hendrerit nunc quis neque rhoncus ornare. Quisque congue malesuada turpis eget eleifend. Aliquam congue ex mauris, molestie malesuada velit ornare non. Aliquam feugiat, nunc quis pharetra volutpat, dui odio pharetra odio, at elementum leo quam non ipsum. Proin a enim nisl.'}/>
       </FormGroup>
     </form>)
