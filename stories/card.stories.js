@@ -4,7 +4,10 @@ import {storiesOf} from '@storybook/react'
 import React from 'react'
 import Card from '../src/bootstrap/components/Card'
 import CardBody from '../src/bootstrap/components/CardBody'
+import CardColumn from '../src/bootstrap/components/CardColumn'
+import CardDeck from '../src/bootstrap/components/CardDeck'
 import CardFooter from '../src/bootstrap/components/CardFooter'
+import CardGroup from '../src/bootstrap/components/CardGroup'
 import CardHeader from '../src/bootstrap/components/CardHeader'
 import CardImage from '../src/bootstrap/components/CardImage'
 import CardImageOverlay from '../src/bootstrap/components/CardImageOverlay'
@@ -170,5 +173,71 @@ storiesOf('bootstrap/components/Card', module)
         </CardBody>
       </Card>
     </div>
+  )
+  .add('Card group', () =>
+    <CardGroup id={'cardGroup'}>
+      <Card id={'cardGroupr'} type={'danger'}>
+        <CardHeader id={'cardGroupr'} text={'This is a header'}/>
+        <CardBody id={'cardGroupr'} title={'card header'}>
+          <CardText id={'cardGroupr'} text={'Header body text'}/>
+        </CardBody>
+      </Card>
+      <Card id={'cardGroupr'} type={'dark'}>
+        <CardHeader id={'cardGroupr'} text={'This is a header'}/>
+        <CardBody id={'cardGroupr'} title={'card header'}>
+          <CardText id={'cardGroupr'} text={'Header body text'}/>
+        </CardBody>
+      </Card>
+      <Card id={'cardGroupr'} type={'info'}>
+        <CardHeader id={'cardGroupr'} text={'This is a header'}/>
+        <CardBody id={'cardGroupr'} title={'card header'}>
+          <CardText id={'cardGroupr'} text={'Header body text'}/>
+        </CardBody>
+      </Card>
+    </CardGroup>
+  )
+  .add('Card deck', () =>
+    <CardDeck id={'cardDeck'}>
+      <Card id={'cardDeck'} type={'danger'}>
+        <CardHeader id={'cardDeck'} text={'This is a header'}/>
+        <CardBody id={'cardDeck'} title={'card header'}>
+          <CardText id={'cardDeck'} text={'Header body text'}/>
+        </CardBody>
+      </Card>
+      <Card id={'cardDeck'} type={'dark'}>
+        <CardHeader id={'cardDeck'} text={'This is a header'}/>
+        <CardBody id={'cardDeck'} title={'card header'}>
+          <CardText id={'cardDeck'} text={'Header body text'}/>
+        </CardBody>
+      </Card>
+      <Card id={'cardDeck'} type={'info'}>
+        <CardHeader id={'cardDeck'} text={'This is a header'}/>
+        <CardBody id={'cardDeck'} title={'card header'}>
+          <CardText id={'cardDeck'} text={'Header body text'}/>
+        </CardBody>
+      </Card>
+    </CardDeck>
+  )
+  .add('Card column', () =>
+    <CardColumn id={'cardColumn'}>
+      <Card id={'cardColumn'} type={'danger'}>
+        <CardHeader id={'cardColumn'} text={'This is a header'}/>
+        <CardBody id={'cardColumn'} title={'card header'}>
+          <CardText id={'cardColumn'} text={'Header body text'}/>
+        </CardBody>
+      </Card>
+      <Card id={'cardColumn'} type={'dark'}>
+        <CardHeader id={'cardColumn'} text={'This is a header'}/>
+        <CardBody id={'cardColumn'} title={'card header'}>
+          <CardText id={'cardColumn'} text={'Header body text'}/>
+        </CardBody>
+      </Card>
+      <Card id={'cardColumn'} type={'info'}>
+        <CardHeader id={'cardColumn'} text={'This is a header'}/>
+        <CardBody id={'cardColumn'} title={'card header'}>
+          <CardText id={'cardColumn'} text={'Header body text'}/>
+        </CardBody>
+      </Card>
+    </CardColumn>
   )
 
