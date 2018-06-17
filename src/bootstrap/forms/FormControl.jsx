@@ -38,7 +38,9 @@ export default class FormControl extends React.Component {
         className = 'form-control-file'
         break
       case 'checkbox':
+      case 'radio' :
         className = 'form-check-input'
+        break
     }
     if (cssClass) {
       className += ' ' + cssClass
