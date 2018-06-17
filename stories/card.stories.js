@@ -19,6 +19,10 @@ import NavItem from '../src/bootstrap/components/NavItem'
 
 
 storiesOf('bootstrap/components/Card', module)
+  .addDecorator((story) =>
+    <div className="container">
+      {story()}
+    </div>)
   .add('Basic Card', () =>
     <Card id={'basicCard'}>
       This is a basic card.

@@ -6,6 +6,10 @@ import BreadcrumbItem from '../src/bootstrap/components/BreadcrumbItem'
 
 
 storiesOf('bootstrap/components/Breadcrumb', module)
+  .addDecorator((story) =>
+    <div className="container">
+      {story()}
+    </div>)
   .add('One level', () => <Breadcrumb id={'one'}>
     <BreadcrumbItem id={'basic item'} active={true} page={true}>
       Home

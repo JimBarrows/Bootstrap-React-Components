@@ -13,6 +13,10 @@ import SaveButton from '../src/buttons/SaveButton'
 
 
 storiesOf('bootstrap/components/Button', module)
+  .addDecorator((story) =>
+    <div className="container">
+      {story()}
+    </div>)
   .add('Danger', () => <Button id={'danger'} onClick={action('Danger Button Pressed')} type={'danger'}>Press
                                                                                                        me</Button>)
   .add('Dark', () => <Button id={'dark'} onClick={action('Dark Button Pressed')} type={'dark'}>Press me</Button>)
@@ -51,6 +55,10 @@ storiesOf('bootstrap/components/Button', module)
 
 
 storiesOf('buttons', module)
+  .addDecorator((story) =>
+    <div className="container">
+      {story()}
+    </div>)
   .add('Add Button', () => <AddButton id={'add'} onClick={action('Add Button pressed')}/>)
   .add('Cancel Button', () => <CancelButton id={'cancel'} onClick={action('Cancel Button pressed')}/>)
   .add('Edit Button', () => <EditButton id={'edit'} onClick={action('Edit Button pressed')}/>)

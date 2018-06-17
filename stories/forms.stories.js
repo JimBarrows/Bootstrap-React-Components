@@ -2,12 +2,16 @@ import {action} from '@storybook/addon-actions'
 import {storiesOf} from '@storybook/react'
 
 import React from 'react'
+import FormCheck from '../src/bootstrap/forms/FormCheck'
 import FormControl from '../src/bootstrap/forms/FormControl'
 import FormGroup from '../src/bootstrap/forms/FormGroup'
 import TextArea from '../src/bootstrap/forms/TextArea'
 
-
 storiesOf('bootstrap/forms', module)
+  .addDecorator((story) =>
+    <div className="container">
+      {story()}
+    </div>)
   .add('Form Group', () =>
     <form>
       <FormGroup id={'formGroup'} label={'Form Group Test'}>
@@ -24,6 +28,27 @@ storiesOf('bootstrap/forms', module)
     <form>
       <FormGroup id={'formGroup'} label={'Required Form Group Test'} error={"This is not right"}>
         <input type={'text'} className="form-control"/>
+      </FormGroup>
+    </form>)
+  .add('Form control - commmon functionality', () =>
+    <form>
+      <FormGroup id={'formcontrol-required'} label={'Required'} required={true}>
+        <FormControl id={'text'} onChange={action('text changed')} required={true} type={'text'}
+                     value={'This is text'}/>
+      </FormGroup>
+      <FormGroup id={'formcontrol-disabled'} label={'Disabled'}>
+        <FormControl id={'text'} onChange={action('text changed')} disabled={true} type={'text'}
+                     value={'This is text'}/>
+      </FormGroup>
+      <FormGroup id={'formcontrol-small'} label={'Small'}>
+        <FormControl id={'text'} onChange={action('text changed')} size={'small'} type={'text'} value={'This is text'}/>
+      </FormGroup>
+      <FormGroup id={'formcontrol-large'} label={'Large'}>
+        <FormControl id={'text'} onChange={action('text changed')} size={'large'} type={'text'} value={'This is text'}/>
+      </FormGroup>
+      <FormGroup id={'formcontrol-readonly8'} label={'Read only'}>
+        <FormControl id={'text'} onChange={action('text changed')} readOnly={true} type={'text'}
+                     value={'This is text'}/>
       </FormGroup>
     </form>)
   .add('Form control - button', () =>
@@ -142,6 +167,7 @@ storiesOf('bootstrap/forms', module)
       <FormGroup id={'formcontrol-text'} label={'text'}>
         <FormControl id={'text'} onChange={action('text changed')} type={'text'} value={'This is text'}/>
       </FormGroup>
+
     </form>)
   .add('Form control - url', () =>
     <form>
@@ -162,3 +188,17 @@ storiesOf('bootstrap/forms', module)
                   value={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu pretium sem, id fringilla tortor. Quisque et lectus lectus. Maecenas in magna quis odio efficitur pulvinar non sit amet justo. Mauris lorem orci, euismod et gravida id, dapibus quis justo. Vivamus quis congue leo. Integer vel risus blandit, lobortis nulla eu, feugiat orci. Vivamus ultrices nunc at eros pharetra volutpat. Morbi hendrerit nunc quis neque rhoncus ornare. Quisque congue malesuada turpis eget eleifend. Aliquam congue ex mauris, molestie malesuada velit ornare non. Aliquam feugiat, nunc quis pharetra volutpat, dui odio pharetra odio, at elementum leo quam non ipsum. Proin a enim nisl.'}/>
       </FormGroup>
     </form>)
+  .add('Groups of check boxes', () =>
+    <FormGroup id={'group-of-checkboxes'} label={"Group of Checkboxes"}>
+      <FormCheck id={'group-of-checkboxes'}>
+        <FormControl id={'group-of-checkboxes1'} onChange={action('checkbox 1')} type={'chekbox'} value={'one'}/>
+        <label className='form-check-label' for={'group-of-checkboxes1'}>One</label>
+
+      </FormCheck>
+      <FormCheck id={'group-of-checkboxes'}>
+        <FormControl id={'group-of-checkboxes2'} onChange={action('checkbox 2')} type={'chekbox'} value={'two'}/>
+        <label className='form-check-label' htmlFor={'group-of-checkboxes2'}>Two</label>
+      </FormCheck>
+
+    </FormGroup>
+  )

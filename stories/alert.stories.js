@@ -5,6 +5,10 @@ import React from 'react'
 import Alert from '../src/bootstrap/components/Alert'
 
 storiesOf('bootstrap/components/Alert', module)
+  .addDecorator((story) =>
+    <div className="container">
+      {story()}
+    </div>)
   .add('primary', () => <Alert id={'primary'} type={'primary'}>This is an alert</Alert>)
   .add('secondary', () => <Alert id={'secondary'} type={'secondary'}>This is an alert</Alert>)
   .add('success', () => <Alert id={'success'} type={'success'}>This is an alert</Alert>)

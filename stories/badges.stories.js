@@ -5,6 +5,10 @@ import Badge from '../src/bootstrap/components/Badge'
 import BadgePill from '../src/bootstrap/components/BadgePill'
 
 storiesOf('bootstrap/components/Badge', module)
+  .addDecorator((story) =>
+    <div className="container">
+      {story()}
+    </div>)
   .add('primary', () => <Badge id={'primary'} type={'primary'}>This is a badge</Badge>)
   .add('secondary', () => <Badge id={'secondary'} type={'secondary'}>This is a badge</Badge>)
   .add('success', () => <Badge id={'success'} type={'success'}>This is a badge</Badge>)
@@ -15,6 +19,10 @@ storiesOf('bootstrap/components/Badge', module)
   .add('dark', () => <Badge id={'dark'} type={'dark'}>This is a badge</Badge>)
 
 storiesOf('bootstrap/components/BadgePill', module)
+  .addDecorator((story) =>
+    <div className="container">
+      {story()}
+    </div>)
   .add('primary', () => <BadgePill id={'primary'} type={'primary'}>This is a badge</BadgePill>)
   .add('secondary', () => <BadgePill id={'secondary'} type={'secondary'}>This is a badge</BadgePill>)
   .add('success', () => <BadgePill id={'success'} type={'success'}>This is a badge</BadgePill>)

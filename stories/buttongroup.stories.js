@@ -7,6 +7,10 @@ import ButtonToolbar from '../src/bootstrap/components/ButtonToolbar'
 
 
 storiesOf('bootstrap/components/Button Group', module)
+  .addDecorator((story) =>
+    <div className="container">
+      {story()}
+    </div>)
   .add('Group of 1', () => <ButtonGroup id={'buttonGroupTest'}>
     <Button id={'buttonGroupTest'} onClick={action('Button 1 Clicked')}>Button 1</Button>
   </ButtonGroup>)
@@ -16,6 +20,10 @@ storiesOf('bootstrap/components/Button Group', module)
   </ButtonGroup>)
 
 storiesOf('bootstrap/components/Button Toolbar', module)
+  .addDecorator((story) =>
+    <div className="container">
+      {story()}
+    </div>)
   .add('Toolbar with 1 button', () =>
     <ButtonToolbar id={'buttonToolbarTest1'}>
       <Button id={'buttonGroupTest'} onClick={action('Button 1 Clicked')}>Button 1</Button>
