@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import RichTextEditor, {createValueFromString} from 'react-rte'
-import FormGroup from './FormGroup'
+import FormGroup from '../bootstrap/forms/FormGroup'
 
 export default class TextAreaFormGroup extends React.Component {
   constructor (props) {

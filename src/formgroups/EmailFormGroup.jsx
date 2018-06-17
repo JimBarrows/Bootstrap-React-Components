@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import FormGroup from './FormGroup'
+import FormGroup from '../bootstrap/forms/FormGroup'
 
 export default class EmailFormGroup extends React.Component {
 

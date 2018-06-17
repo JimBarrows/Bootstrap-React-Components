@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import DatePicker from 'react-datetime'
-import FormGroup from './FormGroup'
+import FormGroup from '../bootstrap/forms/FormGroup'
 
 require('react-datetime/css/react-datetime.css')
 
