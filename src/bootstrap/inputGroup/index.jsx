@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import AppendAddon from './AppendAddon'
+import PrependAddon from './PrependAddon'
 
 export default class InputGroup extends React.Component {
 
@@ -20,14 +22,10 @@ export default class InputGroup extends React.Component {
     let prependComponent                              = ''
     let appendComponent                               = ''
     if (prependText) {
-      prependComponent = <div className='input-group-prepend'>
-        <span className='input-group-text' id={'InputGroup-Prepend-Addon-' + id}>{prependText}</span>
-      </div>
+      prependComponent = <PrependAddon id={id} text={prependText}/>
     }
     if (appendText) {
-      appendComponent = <div className='input-group-append'>
-        <span className='input-group-text' id={'InputGroup-Append-Addon-' + id}>{appendText}</span>
-      </div>
+      appendComponent = <AppendAddon id={id} text={appendText}/>
     }
 
     let className = 'input-group mb-3'

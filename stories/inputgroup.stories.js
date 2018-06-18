@@ -2,7 +2,9 @@ import {action} from '@storybook/addon-actions'
 import {storiesOf} from '@storybook/react'
 import React from 'react'
 import FormControl from '../src/bootstrap/forms/FormControl'
-import InputGroup from '../src/bootstrap/inputGroup/InputGroup'
+import AppendAddon from '../src/bootstrap/inputGroup/AppendAddon'
+import InputGroup from '../src/bootstrap/inputGroup/index'
+import PrependAddon from '../src/bootstrap/inputGroup/PrependAddon'
 
 
 storiesOf('bootstrap/components/InputGroup', module)
@@ -50,5 +52,14 @@ storiesOf('bootstrap/components/InputGroup', module)
     return <InputGroup id={'multipleInputs'} prependText={'First and Last Name'}>
       <FormControl id={'multipleInputs1'} onChange={action('multipleInputs1 changed')} type={'text'} value={'Bob'}/>
       <FormControl id={'multipleInputs2'} onChange={action('multipleInputs2 changed')} type={'text'} value={'Smith'}/>
+    </InputGroup>
+  })
+  .add('Multiple addons', () => {
+    return <InputGroup id={'multipleAddons'}>
+      <PrependAddon id={'multipleAddons1'} text={'$'}/>
+      <PrependAddon id={'multipleAddons2'} text={'0.00'}/>
+      <FormControl id={'multipleAddons'} onChange={action('multipleAddons Changed')} type={'text'} value={'100'}/>
+      <AppendAddon id={'multipleAddons1'} text={'$'}/>
+      <AppendAddon id={'multipleAddons2'} text={'0.00'}/>
     </InputGroup>
   })
