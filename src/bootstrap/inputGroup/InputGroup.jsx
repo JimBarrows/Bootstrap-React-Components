@@ -3,19 +3,22 @@ import React from 'react'
 
 export default class InputGroup extends React.Component {
 
-  static defaultProps = {}
+  static defaultProps = {
+    size: 'medium'
+  }
 
   static propTypes = {
     appendText : PropTypes.string,
     children   : PropTypes.node.isRequired,
     id         : PropTypes.string.isRequired,
-    prependText: PropTypes.string
+    prependText: PropTypes.string,
+    size       : PropTypes.oneOf(['small', 'medium', 'large'])
   }
 
   render() {
-    let {appendText, children, id, prependText} = this.props
-    let prependComponent                        = ''
-    let appendComponent                         = ''
+    let {appendText, children, id, prependText, size} = this.props
+    let prependComponent                              = ''
+    let appendComponent                               = ''
     if (prependText) {
       prependComponent = <div className='input-group-prepend'>
         <span className='input-group-text' id={'InputGroup-Prepend-Addon-' + id}>{prependText}</span>
@@ -26,8 +29,18 @@ export default class InputGroup extends React.Component {
         <span className='input-group-text' id={'InputGroup-Append-Addon-' + id}>{appendText}</span>
       </div>
     }
+
+    let className = 'input-group mb-3'
+    switch (size) {
+      case 'small':
+        className += ' input-group-sm'
+        break
+      case 'large':
+        className += ' input-group-lg'
+        break
+    }
     return (
-      <div id={'InputGroup-' + id} className='input-group mb-3'>
+      <div id={'InputGroup-' + id} className={className}>
         {prependComponent}
         {children}
         {appendComponent}
