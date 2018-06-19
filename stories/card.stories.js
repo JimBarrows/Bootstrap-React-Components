@@ -15,7 +15,7 @@ import CardTabs from '../src/bootstrap/components/CardTabs'
 import CardText from '../src/bootstrap/components/CardText'
 import CardTitle from '../src/bootstrap/components/CardTitle'
 import ListGroup from '../src/bootstrap/components/ListGroup/index'
-import NavItem from '../src/bootstrap/components/NavItem'
+import NavItem from '../src/bootstrap/components/Nav/NavItem'
 
 
 storiesOf('bootstrap/components/Card', module)

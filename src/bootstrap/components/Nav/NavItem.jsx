@@ -16,7 +16,7 @@ export default class NavItem extends React.Component {
 
   render() {
     let {id, label, onClick, state} = this.props
-    let cssClasses                  = 'nav-link'
+    let cssClasses                  = 'nav-item nav-link'
     if (state === 'active') {
       cssClasses += ' active'
     } else if (state === 'disabled') {
@@ -24,9 +24,7 @@ export default class NavItem extends React.Component {
     }
 
     return (
-      <li id={'NavItem-' + id} className={'nav-item'}>
-        <a className={cssClasses} onClick={onClick}>{label}</a>
-      </li>
+      <a className={cssClasses} onClick={onClick} href={'#'}>{label}</a>
     )
   }
 }
