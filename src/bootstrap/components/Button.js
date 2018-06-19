@@ -7,7 +7,7 @@ export default class Button extends React.Component {
     disabled      : false,
     outline       : false,
     size          : '',
-    type          : 'info',
+    context       : '',
     utilityClasses: ''
   }
 
@@ -19,16 +19,18 @@ export default class Button extends React.Component {
     onClick       : PropTypes.func.isRequired,
     outline       : PropTypes.bool,
     size          : PropTypes.oneOf(['small', 'large']),
-    type          : PropTypes.oneOf(['danger', 'dark', 'info', 'light', 'link', 'primary', 'secondary', 'success', 'warning']),
+    context       : PropTypes.oneOf(['danger', 'dark', 'info', 'light', 'link', 'primary', 'secondary', 'success', 'warning']),
     utilityClasses: PropTypes.string
   }
 
   render() {
-    let {block, disabled, outline, id, onClick, size, type, utilityClasses} = this.props
-    let cssClasses                                                          = 'btn'
-    let attributes                                                          = {}
+    let {block, context, disabled, outline, id, onClick, size, utilityClasses} = this.props
+    let cssClasses                                                             = 'btn'
+    let attributes                                                             = {}
     cssClasses += (outline ? ' outline-' : ' btn-')
-    cssClasses += type
+    if (context) {
+      cssClasses += ' btn-' + context
+    }
     if (size) {
       if (size === 'small') {
         cssClasses += ' btn-sm'
@@ -46,7 +48,7 @@ export default class Button extends React.Component {
       cssClasses += ' ' + utilityClasses
     }
     return (
-      <button id={'button-' + id} type='button' className={cssClasses} onClick={onClick} {...attributes}>
+      <button id={'button-' + id} context='button' className={cssClasses} onClick={onClick} {...attributes}>
         {this.props.children}
       </button>
     )

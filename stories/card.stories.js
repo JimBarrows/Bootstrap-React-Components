@@ -128,49 +128,49 @@ storiesOf('bootstrap/components/Card', module)
   )
   .add('Background and color', () =>
     <div>
-      <Card id={'backgroundAndColor'} type={'danger'}>
+      <Card id={'backgroundAndColor'} context={'danger'}>
         <CardHeader id={'backgroundAndColor'} text={'This is a header'}/>
         <CardBody id={'backgroundAndColor'} title={'card header'}>
           <CardText id={'backgroundAndColor'} text={'Header body text'}/>
         </CardBody>
       </Card>
-      <Card id={'backgroundAndColor'} type={'dark'}>
+      <Card id={'backgroundAndColor'} context={'dark'}>
         <CardHeader id={'backgroundAndColor'} text={'This is a header'}/>
         <CardBody id={'backgroundAndColor'} title={'card header'}>
           <CardText id={'backgroundAndColor'} text={'Header body text'}/>
         </CardBody>
       </Card>
-      <Card id={'backgroundAndColor'} type={'info'}>
+      <Card id={'backgroundAndColor'} context={'info'}>
         <CardHeader id={'backgroundAndColor'} text={'This is a header'}/>
         <CardBody id={'backgroundAndColor'} title={'card header'}>
           <CardText id={'backgroundAndColor'} text={'Header body text'}/>
         </CardBody>
       </Card>
-      <Card id={'backgroundAndColor'} type={'light'}>
+      <Card id={'backgroundAndColor'} context={'light'}>
         <CardHeader id={'backgroundAndColor'} text={'This is a header'}/>
         <CardBody id={'backgroundAndColor'} title={'card header'}>
           <CardText id={'backgroundAndColor'} text={'Header body text'}/>
         </CardBody>
       </Card>
-      <Card id={'backgroundAndColor'} type={'primary'}>
+      <Card id={'backgroundAndColor'} context={'primary'}>
         <CardHeader id={'backgroundAndColor'} text={'This is a header'}/>
         <CardBody id={'backgroundAndColor'} title={'card header'}>
           <CardText id={'backgroundAndColor'} text={'Header body text'}/>
         </CardBody>
       </Card>
-      <Card id={'backgroundAndColor'} type={'secondary'}>
+      <Card id={'backgroundAndColor'} context={'secondary'}>
         <CardHeader id={'backgroundAndColor'} text={'This is a header'}/>
         <CardBody id={'backgroundAndColor'} title={'card header'}>
           <CardText id={'backgroundAndColor'} text={'Header body text'}/>
         </CardBody>
       </Card>
-      <Card id={'backgroundAndColor'} type={'success'}>
+      <Card id={'backgroundAndColor'} context={'success'}>
         <CardHeader id={'backgroundAndColor'} text={'This is a header'}/>
         <CardBody id={'backgroundAndColor'} title={'card header'}>
           <CardText id={'backgroundAndColor'} text={'Header body text'}/>
         </CardBody>
       </Card>
-      <Card id={'backgroundAndColor'} type={'warning'}>
+      <Card id={'backgroundAndColor'} context={'warning'}>
         <CardHeader id={'backgroundAndColor'} text={'This is a header'}/>
         <CardBody id={'backgroundAndColor'} title={'card header'}>
           <CardText id={'backgroundAndColor'} text={'Header body text'}/>
@@ -180,19 +180,19 @@ storiesOf('bootstrap/components/Card', module)
   )
   .add('Card group', () =>
     <CardGroup id={'cardGroup'}>
-      <Card id={'cardGroupr'} type={'danger'}>
+      <Card id={'cardGroupr'} context={'danger'}>
         <CardHeader id={'cardGroupr'} text={'This is a header'}/>
         <CardBody id={'cardGroupr'} title={'card header'}>
           <CardText id={'cardGroupr'} text={'Header body text'}/>
         </CardBody>
       </Card>
-      <Card id={'cardGroupr'} type={'dark'}>
+      <Card id={'cardGroupr'} context={'dark'}>
         <CardHeader id={'cardGroupr'} text={'This is a header'}/>
         <CardBody id={'cardGroupr'} title={'card header'}>
           <CardText id={'cardGroupr'} text={'Header body text'}/>
         </CardBody>
       </Card>
-      <Card id={'cardGroupr'} type={'info'}>
+      <Card id={'cardGroupr'} context={'info'}>
         <CardHeader id={'cardGroupr'} text={'This is a header'}/>
         <CardBody id={'cardGroupr'} title={'card header'}>
           <CardText id={'cardGroupr'} text={'Header body text'}/>
@@ -202,19 +202,19 @@ storiesOf('bootstrap/components/Card', module)
   )
   .add('Card deck', () =>
     <CardDeck id={'cardDeck'}>
-      <Card id={'cardDeck'} type={'danger'}>
+      <Card id={'cardDeck'} context={'danger'}>
         <CardHeader id={'cardDeck'} text={'This is a header'}/>
         <CardBody id={'cardDeck'} title={'card header'}>
           <CardText id={'cardDeck'} text={'Header body text'}/>
         </CardBody>
       </Card>
-      <Card id={'cardDeck'} type={'dark'}>
+      <Card id={'cardDeck'} context={'dark'}>
         <CardHeader id={'cardDeck'} text={'This is a header'}/>
         <CardBody id={'cardDeck'} title={'card header'}>
           <CardText id={'cardDeck'} text={'Header body text'}/>
         </CardBody>
       </Card>
-      <Card id={'cardDeck'} type={'info'}>
+      <Card id={'cardDeck'} context={'info'}>
         <CardHeader id={'cardDeck'} text={'This is a header'}/>
         <CardBody id={'cardDeck'} title={'card header'}>
           <CardText id={'cardDeck'} text={'Header body text'}/>
@@ -224,19 +224,19 @@ storiesOf('bootstrap/components/Card', module)
   )
   .add('Card column', () =>
     <CardColumn id={'cardColumn'}>
-      <Card id={'cardColumn'} type={'danger'}>
+      <Card id={'cardColumn'} context={'danger'}>
         <CardHeader id={'cardColumn'} text={'This is a header'}/>
         <CardBody id={'cardColumn'} title={'card header'}>
           <CardText id={'cardColumn'} text={'Header body text'}/>
         </CardBody>
       </Card>
-      <Card id={'cardColumn'} type={'dark'}>
+      <Card id={'cardColumn'} context={'dark'}>
         <CardHeader id={'cardColumn'} text={'This is a header'}/>
         <CardBody id={'cardColumn'} title={'card header'}>
           <CardText id={'cardColumn'} text={'Header body text'}/>
         </CardBody>
       </Card>
-      <Card id={'cardColumn'} type={'info'}>
+      <Card id={'cardColumn'} context={'info'}>
         <CardHeader id={'cardColumn'} text={'This is a header'}/>
         <CardBody id={'cardColumn'} title={'card header'}>
           <CardText id={'cardColumn'} text={'Header body text'}/>

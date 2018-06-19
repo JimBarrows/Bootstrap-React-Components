@@ -17,41 +17,43 @@ storiesOf('bootstrap/components/Button', module)
     <div className="container">
       {story()}
     </div>)
-  .add('Danger', () => <Button id={'danger'} onClick={action('Danger Button Pressed')} type={'danger'}>Press
-                                                                                                       me</Button>)
-  .add('Dark', () => <Button id={'dark'} onClick={action('Dark Button Pressed')} type={'dark'}>Press me</Button>)
-  .add('Info', () => <Button id={'info'} onClick={action('Info Button Pressed')} type={'info'}>Press me</Button>)
-  .add('Link', () => <Button id={'link'} onClick={action('Link Button Pressed')} type={'link'}>Press me</Button>)
-  .add('Primary', () => <Button id={'primary'} onClick={action('Primary Button Pressed')} type={'primary'}>Press
+  .add('Danger', () => <Button id={'danger'} onClick={action('Danger Button Pressed')} context={'danger'}>Press
+                                                                                                          me</Button>)
+  .add('Dark', () => <Button id={'dark'} onClick={action('Dark Button Pressed')} context={'dark'}>Press me</Button>)
+  .add('Info', () => <Button id={'info'} onClick={action('Info Button Pressed')} context={'info'}>Press me</Button>)
+  .add('Link', () => <Button id={'link'} onClick={action('Link Button Pressed')} context={'link'}>Press me</Button>)
+  .add('Primary', () => <Button id={'primary'} onClick={action('Primary Button Pressed')} context={'primary'}>Press
                                                                                                            me</Button>)
-  .add('Secondary', () => <Button id={'secondary'} onClick={action('Secondary Button Pressed')} type={'secondary'}>Press
-                                                                                                                   me</Button>)
-  .add('Success', () => <Button id={'success'} onClick={action('Success Button Pressed')} type={'success'}>Press
-                                                                                                           me</Button>)
-  .add('Warning', () => <Button id={'warning'} onClick={action('Warning Button Pressed')} type={'warning'}>Press
-                                                                                                           me</Button>)
+  .add('Secondary', () => <Button id={'secondary'} onClick={action('Secondary Button Pressed')} context={'secondary'}>Press
+                                                                                                                      me</Button>)
+  .add('Success', () => <Button id={'success'} onClick={action('Success Button Pressed')} context={'success'}>Press
+                                                                                                              me</Button>)
+  .add('Warning', () => <Button id={'warning'} onClick={action('Warning Button Pressed')} context={'warning'}>Press
+                                                                                                              me</Button>)
   .add('Outline Danger', () => <Button id={'danger'} onClick={action('Danger Button Pressed')} outline={true}
-                                       type={'danger'}>Press me</Button>)
-  .add('Outline Dark', () => <Button id={'dark'} onClick={action('Dark Button Pressed')} outline={true} type={'dark'}>Press
+                                       context={'danger'}>Press me</Button>)
+  .add('Outline Dark', () => <Button id={'dark'} onClick={action('Dark Button Pressed')} outline={true}
+                                     context={'dark'}>Press
                                                                                                                       me</Button>)
-  .add('Outline Info', () => <Button id={'info'} onClick={action('Info Button Pressed')} outline={true} type={'info'}>Press
-                                                                                                                      me</Button>)
+  .add('Outline Info', () => <Button id={'info'} onClick={action('Info Button Pressed')} outline={true}
+                                     context={'info'}>Press
+                                                      me</Button>)
   .add('Outline Primary', () => <Button id={'primary'} onClick={action('Primary Button Pressed')} outline={true}
-                                        type={'primary'}>Press me</Button>)
+                                        context={'primary'}>Press me</Button>)
   .add('Outline Secondary', () => <Button id={'secondary'} onClick={action('Secondary Button Pressed')} outline={true}
-                                          type={'secondary'}>Press me</Button>)
+                                          context={'secondary'}>Press me</Button>)
   .add('Outline Success', () => <Button id={'success'} onClick={action('Success Button Pressed')} outline={true}
-                                        type={'success'}>Press me</Button>)
+                                        context={'success'}>Press me</Button>)
   .add('Outline Warning', () => <Button id={'warning'} onClick={action('Warning Button Pressed')} outline={true}
-                                        type={'warning'}>Press me</Button>)
-  .add('Large', () => <Button id={'large'} onClick={action('Large Button Pressed')} size={'large'} type={'info'}>Press
+                                        context={'warning'}>Press me</Button>)
+  .add('Large', () => <Button id={'large'} onClick={action('Large Button Pressed')} size={'large'} context={'info'}>Press
                                                                                                                  me</Button>)
-  .add('Small', () => <Button id={'small'} onClick={action('Small Button Pressed')} size={'small'} type={'info'}>Press
-                                                                                                                 me</Button>)
-  .add('Block', () => <Button block={true} id={'block'} onClick={action('Block Button Pressed')} type={'info'}>Press
-                                                                                                               me</Button>)
-  .add('Disabled', () => <Button disabled={true} id={'block'} onClick={action('Block Button Pressed')} type={'info'}>Press
-                                                                                                                     me</Button>)
+  .add('Small', () => <Button id={'small'} onClick={action('Small Button Pressed')} size={'small'} context={'info'}>Press
+                                                                                                                    me</Button>)
+  .add('Block', () => <Button block={true} id={'block'} onClick={action('Block Button Pressed')} context={'info'}>Press
+                                                                                                                  me</Button>)
+  .add('Disabled', () => <Button disabled={true} id={'block'} onClick={action('Block Button Pressed')} context={'info'}>Press
+                                                                                                                        me</Button>)
 
 
 storiesOf('buttons', module)

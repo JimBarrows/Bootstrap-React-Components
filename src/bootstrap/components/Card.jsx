@@ -12,14 +12,14 @@ export default class Card extends React.Component {
     center  : PropTypes.bool,
     children: PropTypes.node.isRequired,
     id      : PropTypes.string.isRequired,
-    type    : PropTypes.oneOf(['danger', 'dark', 'info', 'light', 'primary', 'secondary', 'success', 'warning']),
+    context : PropTypes.oneOf(['danger', 'dark', 'info', 'light', 'primary', 'secondary', 'success', 'warning']),
     width   : PropTypes.string
   }
 
   render() {
-    let {center, children, id, type, width} = this.props
-    let attributes                          = {}
-    let cssClass                            = 'card'
+    let {center, children, id, context, width} = this.props
+    let attributes                             = {}
+    let cssClass                               = 'card'
     if (width) {
       attributes['style']          = {}
       attributes['style']['width'] = width
@@ -27,21 +27,21 @@ export default class Card extends React.Component {
     if (center) {
       cssClass += ' text-center'
     }
-    if ('danger' === type) {
+    if ('danger' === context) {
       cssClass += ' text-white bg-danger'
-    } else if ('dark' === type) {
+    } else if ('dark' === context) {
       cssClass += ' text-white bg-dark'
-    } else if ('info' === type) {
+    } else if ('info' === context) {
       cssClass += ' text-white bg-info'
-    } else if ('light' === type) {
+    } else if ('light' === context) {
       cssClass += ' bg-light'
-    } else if ('primary' === type) {
+    } else if ('primary' === context) {
       cssClass += ' text-white bg-primary'
-    } else if ('secondary' === type) {
+    } else if ('secondary' === context) {
       cssClass += ' text-white bg-secondary'
-    } else if ('success' === type) {
+    } else if ('success' === context) {
       cssClass += ' text-white bg-success'
-    } else if ('warning' === type) {
+    } else if ('warning' === context) {
       cssClass += ' text-white bg-warning'
     }
     return (
