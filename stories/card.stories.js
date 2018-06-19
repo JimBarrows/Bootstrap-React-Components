@@ -14,7 +14,7 @@ import CardImageOverlay from '../src/bootstrap/components/CardImageOverlay'
 import CardTabs from '../src/bootstrap/components/CardTabs'
 import CardText from '../src/bootstrap/components/CardText'
 import CardTitle from '../src/bootstrap/components/CardTitle'
-import ListGroup from '../src/bootstrap/components/ListGroup'
+import ListGroup from '../src/bootstrap/components/ListGroup/index'
 import NavItem from '../src/bootstrap/components/NavItem'
 
 
