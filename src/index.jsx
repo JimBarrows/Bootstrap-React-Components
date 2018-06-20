@@ -2,7 +2,7 @@ import Alert from './bootstrap/components/Alert'
 import Badge from './bootstrap/components/Badge'
 import ButtonGroup from './bootstrap/components/ButtonGroup'
 import ListGroup from './bootstrap/components/ListGroup/index'
-import Pagination from './bootstrap/components/Pagination'
+import Index from './bootstrap/components/Pagination/index'
 import Progress from './bootstrap/components/Progress'
 import ProgressBar from './bootstrap/components/ProgressBar'
 import ProgressBarSingle from './bootstrap/components/ProgressBarSingle'
@@ -72,7 +72,7 @@ module.exports = {
   MediaRight,
   NumberFormGroup,
   PageHeader,
-  Pagination,
+  Pagination: Index,
   Panel,
   PanelBody,
   PanelFooter,
