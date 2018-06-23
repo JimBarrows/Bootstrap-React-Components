@@ -4,7 +4,7 @@ import React from 'react'
 import StripedTable from '../bootstrap/tables/StripedTable'
 import ListPanel from './PanelWithAddButton'
 
-export default class ListTablePanel extends React.Component {
+export default class PanelStripedTable extends React.Component {
   static defaultProps = {}
 
   static propTypes = {

@@ -39,7 +39,7 @@ import TextAreaFormGroup from './formgroups/TextAreaFormGroup'
 import TextFormGroup from './formgroups/TextFormGroup'
 import URLFormGroup from './formgroups/URLFormGroup'
 import PageHeader from './PageHeader'
-import ListTablePanel from './panels/ListTablePanel'
+import PanelStripedTable from './panels/PanelStripedTable'
 import Panel from './panels/Panel'
 import PanelBody from './panels/PanelBody'
 import PanelFooter from './panels/PanelFooter'
@@ -57,14 +57,14 @@ module.exports = {
   DatePickerFormGroup,
   DateRangeFormGroup,
   EditButton,
-  EditableCell: EditableTextCell,
+  EditableCell  : EditableTextCell,
   EditableListGroup,
   EmailFormGroup,
   FileFormGroup,
   FormGroup,
   ListGroup,
   ListInline,
-  ListTablePanel,
+  ListTablePanel: PanelStripedTable,
   Media,
   MediaBody,
   MediaLeft,
@@ -72,7 +72,7 @@ module.exports = {
   MediaRight,
   NumberFormGroup,
   PageHeader,
-  Pagination  : Index,
+  Pagination    : Index,
   Panel,
   PanelBody,
   PanelFooter,
