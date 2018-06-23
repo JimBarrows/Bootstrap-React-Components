@@ -1,7 +1,7 @@
+import {FormGroup} from 'bootstrap-react-components'
 import PropTypes from 'prop-types'
 import React from 'react'
 import RichTextEditor, {createValueFromString} from 'react-rte'
-import FormGroup from '../bootstrap/forms/FormGroup'
 
 export default class TextAreaFormGroup extends React.Component {
   constructor (props) {
@@ -19,6 +19,7 @@ export default class TextAreaFormGroup extends React.Component {
         {
           target:
             {
+              id: this.props.id,
               value: value.toString('markdown')
             }
         }
@@ -28,17 +29,15 @@ export default class TextAreaFormGroup extends React.Component {
 
   render () {
     let {disabled, error, id, label, placeholder, required} = this.props
-    return (
-      <FormGroup label={label} id={id} error={error} required={required} >
-        <RichTextEditor
-          disabled={disabled}
-          onChange={this.onChange}
-          placeholder={placeholder}
-          value={this.state.value}
-          webDriverTestID={id}
-        />
-      </FormGroup >
-    )
+    return <FormGroup label={label} id={id} error={error} required={required} >
+      <RichTextEditor
+        disabled={disabled}
+        onChange={this.onChange}
+        placeholder={placeholder}
+        value={this.state.value}
+        webDriverTestID={id}
+      />
+    </FormGroup >
   }
 }
 
