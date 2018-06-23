@@ -1,53 +1,55 @@
-import AddButton from './AddButton'
-import Alert from './Alert'
-import ButtonGroup from './ButtonGroup'
-import CancelButton from './CancelButton'
-import CheckboxFormGroup from './CheckboxFormGroup'
-import ColorFormGroup from './ColorFormGroup'
-import DatePickerFormGroup from './DatePickerFormGroup'
-import DateRangeFormGroup from './DateRangeFormGroup'
-import EditableCell from './EditableCell'
+import Alert from './bootstrap/components/Alert'
+import Badge from './bootstrap/components/Badge'
+import ButtonGroup from './bootstrap/components/ButtonGroup'
+import ListGroup from './bootstrap/components/ListGroup/index'
+import Index from './bootstrap/components/Pagination/index'
+import Progress from './bootstrap/components/Progress'
+import ProgressBar from './bootstrap/components/ProgressBar'
+import ProgressBarSingle from './bootstrap/components/ProgressBarSingle'
+import FormGroup from './bootstrap/forms/FormGroup'
+import Media from './bootstrap/media/Media'
+import MediaBody from './bootstrap/media/MediaBody'
+import MediaLeft from './bootstrap/media/MediaLeft'
+import MediaObjectImage from './bootstrap/media/MediaObjectImage'
+import MediaRight from './bootstrap/media/MediaRight'
+import StripedTable from './bootstrap/tables/StripedTable'
+import ListInline from './bootstrap/typography/ListInline'
+import AddButton from './buttons/AddButton'
+import CancelButton from './buttons/CancelButton'
+import EditButton from './buttons/EditButton'
+import ReloadButton from './buttons/ReloadButton'
+import RemoveButton from './buttons/RemoveButton'
+import RowControlButtons from './buttons/RowControlButtons'
+import SaveButton from './buttons/SaveButton'
+import EditableTextCell from './table/EditableTextCell'
 import EditableListGroup from './EditableListGroup'
-import EditButton from './EditButton'
-import EmailFormGroup from './EmailFormGroup'
-import FileFormGroup from './FileFormGroup'
-import FormGroup from './FormGroup'
-import ListGroup from './ListGroup'
-import ListInline from './ListInline'
-import ListTablePanel from './ListTablePanel'
-import Media from './Media'
-import MediaBody from './MediaBody'
-import MediaLeft from './MediaLeft'
-import MediaObjectImage from './MediaObjectImage'
-import MediaRight from './MediaRight'
-import NumberFormGroup from './NumberFormGroup'
+import CheckboxFormGroup from './formgroups/CheckboxFormGroup'
+import ColorFormGroup from './formgroups/ColorFormGroup'
+import DatePickerFormGroup from './formgroups/DatePickerFormGroup'
+import DateRangeFormGroup from './formgroups/DateRangeFormGroup'
+import EmailFormGroup from './formgroups/EmailFormGroup'
+import FileFormGroup from './formgroups/FileFormGroup'
+import NumberFormGroup from './formgroups/NumberFormGroup'
+import PasswordFormGroup from './formgroups/PasswordFormGroup'
+import RangeFormGroup from './formgroups/RangeFormGroup'
+import SearchFromGroup from './formgroups/SearchFormGroup'
+import SelectFormGroup from './formgroups/SelectFormGroup'
+import TelFormGroup from './formgroups/TelFormGroup'
+import TextAreaFormGroup from './formgroups/TextAreaFormGroup'
+import TextFormGroup from './formgroups/TextFormGroup'
+import URLFormGroup from './formgroups/URLFormGroup'
 import PageHeader from './PageHeader'
-import Pagination from './Pagination'
-import Panel from './Panel'
-import PanelBody from './PanelBody'
-import PanelFooter from './PanelFooter'
-import PanelHeader from './PanelHeader'
-import PanelWithAddButton from './PanelWithAddButton'
-import PasswordFormGroup from './PasswordFormGroup'
-import Progress from './Progress'
-import ProgressBar from './ProgressBar'
-import ProgressBarSingle from './ProgressBarSingle'
-import RangeFormGroup from './RangeFormGroup'
-import ReloadButton from './ReloadButton'
-import RemoveButton from './RemoveButton'
-import RowControlButtons from './RowControlButtons'
-import SaveButton from './SaveButton'
-import SearchFromGroup from './SearchFormGroup'
-import SelectFormGroup from './SelectFormGroup'
-import StripedTable from './StripedTable'
-import TelFormGroup from './TelFormGroup'
-import TextAreaFormGroup from './TextAreaFormGroup'
-import TextFormGroup from './TextFormGroup'
-import URLFormGroup from './URLFormGroup'
+import PanelStripedTable from './panels/PanelStripedTable'
+import Panel from './panels/Panel'
+import PanelBody from './panels/PanelBody'
+import PanelFooter from './panels/PanelFooter'
+import PanelHeader from './panels/PanelHeader'
+import PanelWithAddButton from './panels/PanelWithAddButton'
 
 module.exports = {
   AddButton,
   Alert,
+  Badge,
   ButtonGroup,
   CancelButton,
   CheckboxFormGroup,
@@ -55,14 +57,14 @@ module.exports = {
   DatePickerFormGroup,
   DateRangeFormGroup,
   EditButton,
-  EditableCell,
+  EditableCell  : EditableTextCell,
   EditableListGroup,
   EmailFormGroup,
   FileFormGroup,
   FormGroup,
   ListGroup,
   ListInline,
-  ListTablePanel,
+  ListTablePanel: PanelStripedTable,
   Media,
   MediaBody,
   MediaLeft,
@@ -70,7 +72,7 @@ module.exports = {
   MediaRight,
   NumberFormGroup,
   PageHeader,
-  Pagination,
+  Pagination    : Index,
   Panel,
   PanelBody,
   PanelFooter,

@@ -1,6 +1,6 @@
 import React from 'react'
 import {ColorFormGroup, PasswordFormGroup, RangeFormGroup, TextAreaFormGroup} from '../../src'
-import TextFormGroup from '../../src/TextFormGroup'
+import TextFormGroup from '../../src/formgroups/TextFormGroup'
 
 export default class SupportedControls extends React.Component {
   constructor (props) {
