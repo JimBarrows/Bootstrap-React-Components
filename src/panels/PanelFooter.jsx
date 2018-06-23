@@ -1,19 +1,21 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import CardFooter from '../bootstrap/components/CardFooter'
 
 export default class PanelFooter extends React.Component {
+
+  static propTypes = {
+    children: PropTypes.node.isRequired,
+    id: PropTypes.string.isRequired
+  }
+
+  static defaultProps = {}
+
   render () {
+    let {id} = this.props
     return (
-      <div id={'PanelFooterComponent_' + this.props.id} className={'panel-footer'} >
-        {this.props.children}
-      </div >
+      <CardFooter id={'PanelFooter-' + id} text={'Panel footer'}/>
     )
   }
 }
 
-PanelFooter.propTypes = {
-  children: PropTypes.node.isRequired,
-  id: PropTypes.string.isRequired
-}
-
-PanelFooter.defaultProps = {}

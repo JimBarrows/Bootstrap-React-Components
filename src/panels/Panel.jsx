@@ -1,23 +1,26 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import Card from '../bootstrap/components/Card'
 
 export default class Panel extends React.Component {
-  render () {
+  static defaultProps = {
+    context: ''
+  }
+
+  static propTypes = {
+    children: PropTypes.node.isRequired,
+    context : PropTypes.string,
+    id      : PropTypes.string.isRequired
+  }
+
+  render() {
     let {context, id} = this.props
     return (
-      <div id={'Panel_' + id} className={`panel panel-${context}`} >
+      <Card id={'Panel-' + id} context={context}>
         {this.props.children}
-      </div >
+      </Card>
     )
   }
 }
 
-Panel.defaultProps = {
-  context: 'default'
-}
 
-Panel.propTypes = {
-  children: PropTypes.node.isRequired,
-  context: PropTypes.oneOf(['primary', 'success', 'info', 'warn', 'danger', 'default']),
-  id: PropTypes.string.isRequired
-}

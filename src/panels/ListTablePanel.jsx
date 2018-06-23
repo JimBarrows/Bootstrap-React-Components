@@ -5,6 +5,15 @@ import StripedTable from '../bootstrap/tables/StripedTable'
 import ListPanel from './PanelWithAddButton'
 
 export default class ListTablePanel extends React.Component {
+  static defaultProps = {}
+
+  static propTypes = {
+    children: PropTypes.node.isRequired,
+    onAddClick: PropTypes.func.isRequired,
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired
+  }
+
   render () {
     let {title, id, onAddClick} = this.props
     return (
@@ -17,11 +26,4 @@ export default class ListTablePanel extends React.Component {
   }
 }
 
-ListTablePanel.defaultProps = {}
 
-ListTablePanel.propTypes = {
-  children: PropTypes.node.isRequired,
-  onAddClick: PropTypes.func.isRequired,
-  id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired
-}
