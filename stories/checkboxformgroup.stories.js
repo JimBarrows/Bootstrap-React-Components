@@ -3,11 +3,10 @@ import {action} from '@storybook/addon-actions'
 
 import React from 'react'
 import CheckboxFormGroup from '../src/formgroups/CheckboxFormGroup'
-import EditableTextCell from '../src/table/EditableTextCell'
 
 
-storiesOf('Form Groups/checkbox', module)
-  .addDecorator((story) => <div className="container">{story()}</div>)
+storiesOf('Form Groups/Checkbox', module)
+  .addDecorator((story) => <div className="container"><form>{story()}</form></div>)
   .add('Checked', () =>
     <CheckboxFormGroup checked={true} id={'checked'} label={'Checkbox'} onChange={action('Checkbox')} value={'checkbox'}/>)
   .add('Unchecked', () =>
@@ -20,3 +19,7 @@ storiesOf('Form Groups/checkbox', module)
     <CheckboxFormGroup valid={true} validationMessage={'This is right'} disabled={true} id={'checked'} label={'Checkbox'} onChange={action('Checkbox')} value={'checkbox'}/>)
   .add('Required', () =>
     <CheckboxFormGroup checked={true} id={'checked'} label={'Checkbox'} onChange={action('Checkbox')} required={true} value={'checkbox'}/>)
+  .add('Required with no label', () =>
+    <CheckboxFormGroup checked={true} id={'checked'} onChange={action('Checkbox')} required={true} value={'checkbox'}/>)
+  .add('No label', () =>
+    <CheckboxFormGroup checked={true} id={'checked'} onChange={action('Checkbox')} value={'checkbox'}/>)

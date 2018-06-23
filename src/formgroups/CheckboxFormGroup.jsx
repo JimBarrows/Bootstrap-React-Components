@@ -21,22 +21,30 @@ export default class CheckboxFormGroup extends React.Component {
   render() {
     let {checked, disabled, id, label, onChange, required, value, valid, validationMessage} = this.props
     let className                                                                 = 'form-check-input'
-    let alert                                                                     = ''
+    let validationMessageTag                                                                    = ''
     let attributes                                                                = {}
+    let labelTag = ''
     if (validationMessage) {
       className += valid ? ' is-valid' : ' is-invalid'
-      alert = <div className={valid ? 'valid-feedback' : 'invalid-feedback'}>{validationMessage}</div>
+      validationMessageTag = <div className={valid ? 'valid-feedback' : 'invalid-feedback'}>{validationMessage}</div>
     }
     if(required) {
       attributes['required']=true
+    }
+    if( label && required) {
+      labelTag = <label id={'FormGroupLabel-' + id} className={'form-check-label'} htmlFor={id}>{label}&nbsp;<small className='text-danger'>Required</small></label>
+    } else if( label && !required) {
+      labelTag = <label id={'FormGroupLabel-' + id} className={'form-check-label'} htmlFor={id}>{label}</label>
+    } else if ( !label && required) {
+      labelTag = <label id={'FormGroupLabel-' + id} className={'form-check-label'} htmlFor={id}><small className='text-danger'>Required</small></label>
     }
     return (
       <FormGroup id={'Checkbox-' + id}>
         <div className='form-check'>
           <input checked={checked} className={className} disabled={disabled} id={id} onChange={onChange} type='checkbox'
                  value={value} {...attributes}/>
-          <label className={'form-check-label'}>{label}</label>
-          {alert}
+          {labelTag}
+          {validationMessageTag}
         </div>
       </FormGroup>
     )
