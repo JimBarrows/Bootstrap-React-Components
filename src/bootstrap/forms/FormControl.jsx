@@ -21,16 +21,16 @@ export default class FormControl extends React.Component {
     readOnly   : PropTypes.bool,
     required   : PropTypes.bool,
     size       : PropTypes.oneOf(['small', 'medium', 'large']),
-    context    : PropTypes.oneOf(['button', 'checkbox', 'color', 'date', 'datetime-local', 'email', 'file', 'hidden',
+    type    : PropTypes.oneOf(['button', 'checkbox', 'color', 'date', 'datetime-local', 'email', 'file', 'hidden',
       'image', 'month', 'number', 'password', 'radio', 'range', 'reset', 'search', 'submit', 'tel', 'text', 'time',
       'url', 'week']).isRequired,
     value      : PropTypes.string.isRequired
   }
 
   render() {
-    let {cssClass, disabled, id, max, min, onChange, placeholder, readOnly, required, size, context, value} = this.props
+    let {cssClass, disabled, id, max, min, onChange, placeholder, readOnly, required, size, type, value} = this.props
     let className                                                                                           = 'form-control'
-    switch (context) {
+    switch (type) {
       case 'range':
         className = 'form-control-range'
         break
@@ -46,7 +46,7 @@ export default class FormControl extends React.Component {
       className += ' ' + cssClass
     }
     let attributes = {}
-    switch (context) {
+    switch (type) {
       case 'button':
       case 'reset':
       case 'search':
@@ -57,7 +57,7 @@ export default class FormControl extends React.Component {
         attributes['onChange'] = onChange
     }
 
-    switch (context) {
+    switch (type) {
       case 'checkbox':
         attributes['checked'] = value
         break
@@ -83,7 +83,7 @@ export default class FormControl extends React.Component {
              placeholder={placeholder}
              readOnly={readOnly}
              required={required}
-             context={context}
+             type={type}
              value={value}/>
     )
   }

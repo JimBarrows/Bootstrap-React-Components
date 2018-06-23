@@ -21,7 +21,7 @@ import ReloadButton from './buttons/ReloadButton'
 import RemoveButton from './buttons/RemoveButton'
 import RowControlButtons from './buttons/RowControlButtons'
 import SaveButton from './buttons/SaveButton'
-import EditableCell from './EditableCell'
+import EditableTextCell from './table/EditableTextCell'
 import EditableListGroup from './EditableListGroup'
 import CheckboxFormGroup from './formgroups/CheckboxFormGroup'
 import ColorFormGroup from './formgroups/ColorFormGroup'
@@ -57,7 +57,7 @@ module.exports = {
   DatePickerFormGroup,
   DateRangeFormGroup,
   EditButton,
-  EditableCell,
+  EditableCell: EditableTextCell,
   EditableListGroup,
   EmailFormGroup,
   FileFormGroup,
@@ -72,7 +72,7 @@ module.exports = {
   MediaRight,
   NumberFormGroup,
   PageHeader,
-  Pagination: Index,
+  Pagination  : Index,
   Panel,
   PanelBody,
   PanelFooter,
