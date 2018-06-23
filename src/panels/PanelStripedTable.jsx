@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import StripedTable from '../bootstrap/tables/StripedTable'
+import Table from '../bootstrap/tables/Table'
 import PanelWithAddButton from './PanelWithAddButton'
 
 export default class PanelStripedTable extends React.Component {
@@ -17,9 +17,9 @@ export default class PanelStripedTable extends React.Component {
     let {title, id, onAddClick} = this.props
     return (
       <PanelWithAddButton title={title} id={id} onAddClick={onAddClick} >
-        <StripedTable id={id} >
+        <Table id={id} striped={true}>
           {this.props.children}
-        </StripedTable >
+        </Table >
       </PanelWithAddButton >
     )
   }

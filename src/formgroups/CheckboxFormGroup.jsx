@@ -1,52 +1,45 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import Alert from '../bootstrap/components/Alert'
+import FormGroup from '../bootstrap/forms/FormGroup'
 
 export default class CheckboxFormGroup extends React.Component {
-  render () {
-    let {disabled, error, id, label, onChange, placeholder, required, value} = this.props
-    let validationStatus = ''
-    let requiredText = ''
-    let alert = ''
-    if (error) {
-      validationStatus = 'has-error'
-      alert = <Alert id={id} type='error' message={error} />
+  static defaultProps = {}
+
+  static propTypes = {
+    checked          : PropTypes.bool.isRequired,
+    disabled         : PropTypes.bool,
+    id               : PropTypes.string.isRequired,
+    label            : PropTypes.string,
+    onChange         : PropTypes.func.isRequired,
+    required         : PropTypes.bool,
+    value            : PropTypes.bool.isRequired,
+    valid            : PropTypes.bool,
+    validationMessage: PropTypes.string
+  }
+
+  render() {
+    let {checked, disabled, id, label, onChange, required, value, valid, validationMessage} = this.props
+    let className                                                                 = 'form-check-input'
+    let alert                                                                     = ''
+    let attributes                                                                = {}
+    if (validationMessage) {
+      className += valid ? ' is-valid' : ' is-invalid'
+      alert = <div className={valid ? 'valid-feedback' : 'invalid-feedback'}>{validationMessage}</div>
     }
-    if (required) {
-      requiredText = (<small className='text-deanger' >Required</small >)
+    if(required) {
+      attributes['required']=true
     }
     return (
-      <div id={id + 'FormGroup'} className={'form-group ' + validationStatus} >
-        <label id={id + 'Label'} >
-          <input checked={value}
-            disabled={disabled}
-            id={id}
-            onChange={onChange}
-            placeholder={placeholder}
-            required={required}
-            type='checkbox'
-            value={id}
-          />
-          {label} {requiredText}
-        </label >
-        {alert}
-      </div >
+      <FormGroup id={'Checkbox-' + id}>
+        <div className='form-check'>
+          <input checked={checked} className={className} disabled={disabled} id={id} onChange={onChange} type='checkbox'
+                 value={value} {...attributes}/>
+          <label className={'form-check-label'}>{label}</label>
+          {alert}
+        </div>
+      </FormGroup>
     )
   }
 }
 
-CheckboxFormGroup.defaultProps = {
-  disabled: false,
-  required: false
-}
-
-CheckboxFormGroup.propTypes = {
-  disabled: PropTypes.bool,
-  error: PropTypes.string,
-  id: PropTypes.string.isRequired,
-  label: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
-  placeholder: PropTypes.string,
-  required: PropTypes.bool,
-  value: PropTypes.bool.isRequired
-}

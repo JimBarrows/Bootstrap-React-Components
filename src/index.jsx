@@ -12,7 +12,6 @@ import MediaBody from './bootstrap/media/MediaBody'
 import MediaLeft from './bootstrap/media/MediaLeft'
 import MediaObjectImage from './bootstrap/media/MediaObjectImage'
 import MediaRight from './bootstrap/media/MediaRight'
-import StripedTable from './bootstrap/tables/StripedTable'
 import ListInline from './bootstrap/typography/ListInline'
 import AddButton from './buttons/AddButton'
 import CancelButton from './buttons/CancelButton'
@@ -89,7 +88,6 @@ module.exports = {
   SaveButton,
   SearchFromGroup,
   SelectFormGroup,
-  StripedTable,
   TelFormGroup,
   TextAreaFormGroup,
   TextFormGroup,
