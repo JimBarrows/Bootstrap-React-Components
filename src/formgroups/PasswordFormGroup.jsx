@@ -28,19 +28,3 @@ export default class PasswordFormGroup extends React.Component {
     )
   }
 }
-
-PasswordFormGroup.defaultProps = {
-  disabled: false,
-  required: false
-}
-
-PasswordFormGroup.propTypes = {
-  disabled: PropTypes.bool,
-  error: PropTypes.string,
-  id: PropTypes.string.isRequired,
-  label: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
-  placeholder: PropTypes.string,
-  required: PropTypes.bool,
-  value: PropTypes.string.isRequired
-}
