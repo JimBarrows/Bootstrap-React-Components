@@ -21,15 +21,19 @@ export default class FormControl extends React.Component {
     readOnly   : PropTypes.bool,
     required   : PropTypes.bool,
     size       : PropTypes.oneOf(['small', 'medium', 'large']),
-    type    : PropTypes.oneOf(['button', 'checkbox', 'color', 'date', 'datetime-local', 'email', 'file', 'hidden',
+    type       : PropTypes.oneOf(['button', 'checkbox', 'color', 'date', 'datetime-local', 'email', 'file', 'hidden',
       'image', 'month', 'number', 'password', 'radio', 'range', 'reset', 'search', 'submit', 'tel', 'text', 'time',
       'url', 'week']).isRequired,
-    value      : PropTypes.string.isRequired
+    value      : PropTypes.string.isRequired,
+    valid      : PropTypes.bool,
+    validated  : PropTypes.bool
   }
 
   render() {
-    let {cssClass, disabled, id, max, min, onChange, placeholder, readOnly, required, size, type, value} = this.props
-    let className                                                                                           = 'form-control'
+    let {cssClass, disabled, id, max, min, onChange, placeholder, readOnly, required, size, type, valid, validated, value} = this.props
+
+    let className = 'form-control'
+
     switch (type) {
       case 'range':
         className = 'form-control-range'
@@ -42,9 +46,15 @@ export default class FormControl extends React.Component {
         className = 'form-check-input'
         break
     }
+
     if (cssClass) {
       className += ' ' + cssClass
     }
+
+    if (validated) {
+      className += valid ? ' is-valid' : ' is-invalid'
+    }
+
     let attributes = {}
     switch (type) {
       case 'button':
