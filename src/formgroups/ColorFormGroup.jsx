@@ -19,10 +19,6 @@ export default class ColorFormGroup extends React.Component {
 
   render() {
     let {disabled, id, label, onChange, required, value, valid, validationMessage} = this.props
-    let className                                                                 = 'form-control'
-    if( validationMessage) {
-      className += valid ? ' is-valid' : ' is-invalid'
-    }
     return (
       <FormGroup id={'Color-' + id} label={label}  required={required} valid={valid} validationMessage={validationMessage}>
         <FormControl disabled={disabled} id={id} onChange={onChange} type={'color'} valid={valid}
