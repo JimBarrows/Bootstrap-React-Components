@@ -24,7 +24,7 @@ export default class DateTimeLocalFormGroup extends React.Component {
       className += valid ? ' is-valid' : ' is-invalid'
     }
     return (
-      <FormGroup id={'DatePicker-' + id} label={label} required={required} valid={valid}
+      <FormGroup id={'DateTimeLocal-' + id} label={label} required={required} valid={valid}
                  validationMessage={validationMessage}>
         <FormControl disabled={disabled} id={id} onChange={onChange} type={'datetime-local'} valid={valid}
                      validated={validationMessage} value={value}/>

@@ -27,7 +27,7 @@ export default class SelectFormGroup extends React.Component {
       className += valid ? ' is-valid' : ' is-invalid'
     }
     return (
-      <FormGroup id={'Color-' + id} label={label} required={required} valid={valid}
+      <FormGroup id={'Select-' + id} label={label} required={required} valid={valid}
                  validationMessage={validationMessage}>
         <select className={className} disabled={disabled} id={id} onChange={onChange}
                 required={required} value={value}>

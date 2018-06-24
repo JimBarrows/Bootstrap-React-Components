@@ -21,7 +21,7 @@ export default class FileFormGroup extends React.Component {
   render () {
     let {disabled, id, label, onChange, required, value, valid, validationMessage} = this.props
     return (
-      <FormGroup id={'Color-' + id} label={label}  required={required} valid={valid} validationMessage={validationMessage}>
+      <FormGroup id={'File-' + id} label={label}  required={required} valid={valid} validationMessage={validationMessage}>
         <FormControl disabled={disabled} id={id} onChange={onChange} type={'file'} valid={valid}
                      validated={validationMessage} value={value}/>
       </FormGroup>
