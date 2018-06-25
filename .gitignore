@@ -87,3 +87,5 @@ fabric.properties
 distribution/
 
 features/support/html/js/
+/storybook-static/
+storybook-static/

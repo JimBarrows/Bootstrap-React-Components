@@ -1,5 +1,5 @@
 import React from 'react'
-import ListInline from '../../src/ListInline'
+import ListInline from '../../src/bootstrap/typography/ListInline'
 
 export default class ListInlineComponent extends React.Component {
 
