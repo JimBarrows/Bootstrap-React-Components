@@ -12,7 +12,6 @@ import MediaBody from './bootstrap/media/MediaBody'
 import MediaLeft from './bootstrap/media/MediaLeft'
 import MediaObjectImage from './bootstrap/media/MediaObjectImage'
 import MediaRight from './bootstrap/media/MediaRight'
-import StripedTable from './bootstrap/tables/StripedTable'
 import ListInline from './bootstrap/typography/ListInline'
 import AddButton from './buttons/AddButton'
 import CancelButton from './buttons/CancelButton'
@@ -25,7 +24,7 @@ import EditableTextCell from './table/EditableTextCell'
 import EditableListGroup from './EditableListGroup'
 import CheckboxFormGroup from './formgroups/CheckboxFormGroup'
 import ColorFormGroup from './formgroups/ColorFormGroup'
-import DatePickerFormGroup from './formgroups/DatePickerFormGroup'
+import DateTimeLocalFormGroup from './formgroups/DateTimeLocalFormGroup'
 import DateRangeFormGroup from './formgroups/DateRangeFormGroup'
 import EmailFormGroup from './formgroups/EmailFormGroup'
 import FileFormGroup from './formgroups/FileFormGroup'
@@ -37,7 +36,7 @@ import SelectFormGroup from './formgroups/SelectFormGroup'
 import TelFormGroup from './formgroups/TelFormGroup'
 import TextAreaFormGroup from './formgroups/TextAreaFormGroup'
 import TextFormGroup from './formgroups/TextFormGroup'
-import URLFormGroup from './formgroups/URLFormGroup'
+import UrlFormGroup from './formgroups/UrlFormGroup'
 import PageHeader from './PageHeader'
 import PanelStripedTable from './panels/PanelStripedTable'
 import Panel from './panels/Panel'
@@ -54,17 +53,17 @@ module.exports = {
   CancelButton,
   CheckboxFormGroup,
   ColorFormGroup,
-  DatePickerFormGroup,
+  DatePickerFormGroup: DateTimeLocalFormGroup,
   DateRangeFormGroup,
   EditButton,
-  EditableCell  : EditableTextCell,
+  EditableCell       : EditableTextCell,
   EditableListGroup,
   EmailFormGroup,
   FileFormGroup,
   FormGroup,
   ListGroup,
   ListInline,
-  ListTablePanel: PanelStripedTable,
+  ListTablePanel     : PanelStripedTable,
   Media,
   MediaBody,
   MediaLeft,
@@ -72,7 +71,7 @@ module.exports = {
   MediaRight,
   NumberFormGroup,
   PageHeader,
-  Pagination    : Index,
+  Pagination         : Index,
   Panel,
   PanelBody,
   PanelFooter,
@@ -89,9 +88,8 @@ module.exports = {
   SaveButton,
   SearchFromGroup,
   SelectFormGroup,
-  StripedTable,
   TelFormGroup,
   TextAreaFormGroup,
   TextFormGroup,
-  URLFormGroup
+  URLFormGroup       : UrlFormGroup
 }

@@ -3,8 +3,7 @@ import React from 'react'
 import FormControl from '../bootstrap/forms/FormControl'
 import FormGroup from '../bootstrap/forms/FormGroup'
 
-export default class PasswordFormGroup extends React.Component {
-
+export default class DateTimeLocalFormGroup extends React.Component {
   static defaultProps = {}
 
   static propTypes = {
@@ -18,13 +17,20 @@ export default class PasswordFormGroup extends React.Component {
     validationMessage: PropTypes.string
   }
 
-  render () {
+  render() {
     let {disabled, id, label, onChange, required, value, valid, validationMessage} = this.props
+    let className                                                                  = 'form-control'
+    if (validationMessage) {
+      className += valid ? ' is-valid' : ' is-invalid'
+    }
     return (
-      <FormGroup id={'Password-' + id} label={label}  required={required} valid={valid} validationMessage={validationMessage}>
-        <FormControl disabled={disabled} id={id} onChange={onChange} type={'password'} valid={valid}
+      <FormGroup id={'DateTimeLocal-' + id} label={label} required={required} valid={valid}
+                 validationMessage={validationMessage}>
+        <FormControl disabled={disabled} id={id} onChange={onChange} type={'datetime-local'} valid={valid}
                      validated={validationMessage} value={value}/>
       </FormGroup>
     )
   }
 }
+
+

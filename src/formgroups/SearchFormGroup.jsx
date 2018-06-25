@@ -1,37 +1,29 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import FormControl from '../bootstrap/forms/FormControl'
 import FormGroup from '../bootstrap/forms/FormGroup'
 
 export default class SearchFormGroup extends React.Component {
-  render () {
-    let {disabled, error, id, label, onChange, placeholder, required, value} = this.props
+  static defaultProps = {}
+
+  static propTypes = {
+    disabled         : PropTypes.bool,
+    id               : PropTypes.string.isRequired,
+    label            : PropTypes.string,
+    onChange         : PropTypes.func.isRequired,
+    required         : PropTypes.bool,
+    value            : PropTypes.string.isRequired,
+    valid            : PropTypes.bool,
+    validationMessage: PropTypes.string
+  }
+
+  render() {
+    let {disabled, id, label, onChange, required, value, valid, validationMessage} = this.props
     return (
-      <FormGroup label={label} id={id} error={error} required={required} >
-        <input className='form-control'
-          disabled={disabled}
-          id={id}
-          onChange={onChange}
-          placeholder={placeholder}
-          required={required}
-          type='search'
-          value={value} />
-      </FormGroup >
+      <FormGroup id={'Search-' + id} label={label}  required={required} valid={valid} validationMessage={validationMessage}>
+        <FormControl disabled={disabled} id={id} onChange={onChange} type={'search'} valid={valid}
+                     validated={validationMessage} value={value}/>
+      </FormGroup>
     )
   }
-}
-
-SearchFormGroup.defaultProps = {
-  disabled: false,
-  required: false
-}
-
-SearchFormGroup.propTypes = {
-  disabled: PropTypes.bool,
-  error: PropTypes.string,
-  id: PropTypes.string.isRequired,
-  label: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
-  placeholder: PropTypes.string,
-  required: PropTypes.bool,
-  value: PropTypes.string.isRequired
 }
