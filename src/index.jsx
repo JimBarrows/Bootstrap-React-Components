@@ -36,7 +36,7 @@ import SelectFormGroup from './formgroups/SelectFormGroup'
 import TelFormGroup from './formgroups/TelFormGroup'
 import TextAreaFormGroup from './formgroups/TextAreaFormGroup'
 import TextFormGroup from './formgroups/TextFormGroup'
-import URLFormGroup from './formgroups/URLFormGroup'
+import UrlFormGroup from './formgroups/UrlFormGroup'
 import PageHeader from './PageHeader'
 import PanelStripedTable from './panels/PanelStripedTable'
 import Panel from './panels/Panel'
@@ -91,5 +91,5 @@ module.exports = {
   TelFormGroup,
   TextAreaFormGroup,
   TextFormGroup,
-  URLFormGroup
+  URLFormGroup       : UrlFormGroup
 }
