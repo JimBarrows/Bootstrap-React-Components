@@ -56,8 +56,6 @@ import ReloadButton from './buttons/ReloadButton'
 import RemoveButton from './buttons/RemoveButton'
 import RowControlButtons from './buttons/RowControlButtons'
 import SaveButton from './buttons/SaveButton'
-
-import EditableListGroup from './EditableListGroup'
 import CheckboxFormGroup from './formgroups/CheckboxFormGroup'
 import ColorFormGroup from './formgroups/ColorFormGroup'
 import DateRangeFormGroup from './formgroups/DateRangeFormGroup'
@@ -79,6 +77,7 @@ import PanelBody from './panels/PanelBody'
 import PanelFooter from './panels/PanelFooter'
 import PanelHeader from './panels/PanelHeader'
 import PanelStripedTable from './panels/PanelStripedTable'
+import PanelTitle from './panels/PanelTitle'
 import PanelWithAddButton from './panels/PanelWithAddButton'
 import EditableTextCell from './table/EditableTextCell'
 
@@ -156,17 +155,13 @@ module.exports = {
   TextAreaFormGroup,
   TextFormGroup,
   UrlFormGroup,
-
-  EditableCell       : EditableTextCell,
-  EditableListGroup,
-
-  ListTablePanel     : PanelStripedTable,
-
   PageHeader,
   Panel,
   PanelBody,
   PanelFooter,
   PanelHeader,
+  PanelStripedTable,
+  PanelTitle,
   PanelWithAddButton,
-
+  EditableTextCell
 }
