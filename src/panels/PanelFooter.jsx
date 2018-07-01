@@ -12,9 +12,11 @@ export default class PanelFooter extends React.Component {
   static defaultProps = {}
 
   render () {
-    let {id} = this.props
+    let {children, id} = this.props
     return (
-      <CardFooter id={'PanelFooter-' + id} text={'Panel footer'}/>
+      <CardFooter id={'PanelFooter-' + id}>
+        {children}
+      </CardFooter>
     )
   }
 }
