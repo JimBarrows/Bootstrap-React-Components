@@ -1,3 +1,10 @@
 src/
 spec/
 features/
+.babelrc
+.eslintrc
+.idea/
+.storybook
+stories
+storybook-static
+yarn.lock
