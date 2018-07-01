@@ -48,8 +48,6 @@ import MediaRight from './bootstrap/media/MediaRight'
 import Table from './bootstrap/tables/Table'
 import TableHead from './bootstrap/tables/TableHead'
 import TableRow from './bootstrap/tables/TableRow'
-
-
 import ListInline from './bootstrap/typography/ListInline'
 import AddButton from './buttons/AddButton'
 import CancelButton from './buttons/CancelButton'
@@ -58,6 +56,7 @@ import ReloadButton from './buttons/ReloadButton'
 import RemoveButton from './buttons/RemoveButton'
 import RowControlButtons from './buttons/RowControlButtons'
 import SaveButton from './buttons/SaveButton'
+
 import EditableListGroup from './EditableListGroup'
 import CheckboxFormGroup from './formgroups/CheckboxFormGroup'
 import ColorFormGroup from './formgroups/ColorFormGroup'
@@ -134,21 +133,23 @@ module.exports = {
   Table,
   TableHead,
   TableRow,
-
-
+  ListInline,
   AddButton,
   CancelButton,
+  EditButton,
+  ReloadButton,
+  RemoveButton,
+  RowControlButtons,
+  SaveButton,
+
   CheckboxFormGroup,
   ColorFormGroup,
   DatePickerFormGroup: DateTimeLocalFormGroup,
   DateRangeFormGroup,
-  EditButton,
   EditableCell       : EditableTextCell,
   EditableListGroup,
   EmailFormGroup,
   FileFormGroup,
-  FormGroup,
-  ListInline,
   ListTablePanel     : PanelStripedTable,
   NumberFormGroup,
   PageHeader,
@@ -159,10 +160,6 @@ module.exports = {
   PanelWithAddButton,
   PasswordFormGroup,
   RangeFormGroup,
-  ReloadButton,
-  RemoveButton,
-  RowControlButtons,
-  SaveButton,
   SearchFromGroup,
   SelectFormGroup,
   TelFormGroup,
