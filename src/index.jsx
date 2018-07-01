@@ -141,23 +141,13 @@ module.exports = {
   RemoveButton,
   RowControlButtons,
   SaveButton,
-
   CheckboxFormGroup,
   ColorFormGroup,
-  DatePickerFormGroup: DateTimeLocalFormGroup,
   DateRangeFormGroup,
-  EditableCell       : EditableTextCell,
-  EditableListGroup,
+  DateTimeLocalFormGroup,
   EmailFormGroup,
   FileFormGroup,
-  ListTablePanel     : PanelStripedTable,
   NumberFormGroup,
-  PageHeader,
-  Panel,
-  PanelBody,
-  PanelFooter,
-  PanelHeader,
-  PanelWithAddButton,
   PasswordFormGroup,
   RangeFormGroup,
   SearchFromGroup,
@@ -165,5 +155,18 @@ module.exports = {
   TelFormGroup,
   TextAreaFormGroup,
   TextFormGroup,
-  URLFormGroup       : UrlFormGroup
+  UrlFormGroup,
+
+  EditableCell       : EditableTextCell,
+  EditableListGroup,
+
+  ListTablePanel     : PanelStripedTable,
+
+  PageHeader,
+  Panel,
+  PanelBody,
+  PanelFooter,
+  PanelHeader,
+  PanelWithAddButton,
+
 }
