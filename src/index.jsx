@@ -45,6 +45,11 @@ import MediaList from './bootstrap/media/MediaList'
 import MediaListItem from './bootstrap/media/MediaListItem'
 import MediaObjectImage from './bootstrap/media/MediaObjectImage'
 import MediaRight from './bootstrap/media/MediaRight'
+import Table from './bootstrap/tables/Table'
+import TableHead from './bootstrap/tables/TableHead'
+import TableRow from './bootstrap/tables/TableRow'
+
+
 import ListInline from './bootstrap/typography/ListInline'
 import AddButton from './buttons/AddButton'
 import CancelButton from './buttons/CancelButton'
@@ -122,12 +127,13 @@ module.exports = {
   MediaBody,
   MediaHeading,
   MediaLeft,
-  MediaObjectImage,
-  MediaRight,
   MediaList,
   MediaListItem,
   MediaObjectImage,
   MediaRight,
+  Table,
+  TableHead,
+  TableRow,
 
 
   AddButton,
