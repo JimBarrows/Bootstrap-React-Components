@@ -21,8 +21,8 @@
     "build-storybook": "build-storybook"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JimBarrows/Bootstrap-React-Components.git"
+   "type" : "git",
+   "url" : "git+https://github.com/JimBarrows/Bootstrap-React-Components.git"
   },
   "author": {
     "name": "Jim Barrows",
