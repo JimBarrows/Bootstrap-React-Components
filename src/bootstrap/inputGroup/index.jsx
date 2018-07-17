@@ -22,10 +22,10 @@ export default class InputGroup extends React.Component {
     let prependComponent                              = ''
     let appendComponent                               = ''
     if (prependText) {
-      prependComponent = <PrependAddon id={id} text={prependText}/>
+      prependComponent = <PrependAddon id={id}>{prependText}</PrependAddon>
     }
     if (appendText) {
-      appendComponent = <AppendAddon id={id} text={appendText}/>
+      appendComponent = <AppendAddon id={id}>{appendText}</AppendAddon>
     }
 
     let className = 'input-group mb-3'
