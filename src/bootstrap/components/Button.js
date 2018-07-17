@@ -6,8 +6,8 @@ export default class Button extends React.Component {
     block         : false,
     disabled      : false,
     outline       : false,
-    size          : '',
-    context       : '',
+    size          : 'medium',
+    context       : 'light',
     utilityClasses: ''
   }
 
@@ -18,7 +18,7 @@ export default class Button extends React.Component {
     id            : PropTypes.string.isRequired,
     onClick       : PropTypes.func.isRequired,
     outline       : PropTypes.bool,
-    size          : PropTypes.oneOf(['small', 'large']),
+    size          : PropTypes.oneOf(['small', 'medium', 'large']),
     context       : PropTypes.oneOf(['danger', 'dark', 'info', 'light', 'link', 'primary', 'secondary', 'success', 'warning']),
     utilityClasses: PropTypes.string
   }
@@ -31,14 +31,17 @@ export default class Button extends React.Component {
     if (context) {
       cssClasses += ' btn-' + context
     }
-    if (size) {
-      if (size === 'small') {
+    switch (size) {
+      case 'small':
         cssClasses += ' btn-sm'
-      } else if (size === 'large') {
+        break
+      case 'large':
         cssClasses += ' btn-lg'
-      }
+        break
     }
+
     cssClasses += block ? ' btn-block' : ''
+
     if (disabled) {
       cssClasses += ' disabled'
       attributes['disabled']      = true
