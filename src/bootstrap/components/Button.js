@@ -16,7 +16,7 @@ export default class Button extends React.Component {
     children      : PropTypes.node.isRequired,
     disabled      : PropTypes.bool,
     id            : PropTypes.string.isRequired,
-    onClick       : PropTypes.func.isRequired,
+    onClick       : PropTypes.func,
     outline       : PropTypes.bool,
     size          : PropTypes.oneOf(['small', 'medium', 'large']),
     context       : PropTypes.oneOf(['danger', 'dark', 'info', 'light', 'link', 'primary', 'secondary', 'success', 'warning']),
@@ -49,6 +49,10 @@ export default class Button extends React.Component {
     }
     if (utilityClasses) {
       cssClasses += ' ' + utilityClasses
+    }
+
+    if (onClick) {
+      attributes = Object.assign({}, attributes, {onClick: onClick})
     }
     return (
       <button id={'button-' + id} context='button' className={cssClasses} onClick={onClick} {...attributes}>

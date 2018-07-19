@@ -12,7 +12,7 @@ export default class CheckboxFormGroup extends React.Component {
     label            : PropTypes.string,
     onChange         : PropTypes.func.isRequired,
     required         : PropTypes.bool,
-    value            : PropTypes.bool.isRequired,
+    value            : PropTypes.string.isRequired,
     valid            : PropTypes.bool,
     validationMessage: PropTypes.string
   }
