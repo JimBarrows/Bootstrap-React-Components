@@ -10,11 +10,16 @@ storiesOf('bootstrap/components/List Group', module)
     <span>This is item 1</span>
     <span>This is item 2</span>
   </ListGroup>)
-  .add('With active item', () => <ListGroup id={'basic'} active={1}>
+  .add('Single Item', () => <ListGroup id={'single-item'}>
+    <span>This is item 1</span>
+  </ListGroup>)
+  .add('No Item', () => <ListGroup id={'no-item'}>
+  </ListGroup>)
+  .add('With active item', () => <ListGroup id={'active-item'} active={1}>
     <span>This is item 1</span>
     <span>This is item 2</span>
   </ListGroup>)
-  .add('Flush', () => <ListGroup id={'basic'} active={1} flush={true}>
+  .add('Flush', () => <ListGroup id={'flush'} active={1} flush={true}>
     <span>This is item 1</span>
     <span>This is item 2</span>
   </ListGroup>)

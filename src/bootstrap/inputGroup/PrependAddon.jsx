@@ -6,15 +6,15 @@ export default class PrependAddon extends React.Component {
   static defaultProps = {}
 
   static propTypes = {
-    id  : PropTypes.string.isRequired,
-    text: PropTypes.node.isRequired
+    id      : PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired
   }
 
   render() {
-    let {id, text} = this.props
+    let {id, children} = this.props
     return (
       <div id={'PrependComponent-' + id} className='input-group-prepend'>
-        <span className='input-group-text'>{text}</span>
+        <span className='input-group-text'>{children}</span>
       </div>
     )
   }

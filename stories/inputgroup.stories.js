@@ -56,10 +56,10 @@ storiesOf('bootstrap/components/InputGroup', module)
   })
   .add('Multiple addons', () => {
     return <InputGroup id={'multipleAddons'}>
-      <PrependAddon id={'multipleAddons1'} text={'$'}/>
-      <PrependAddon id={'multipleAddons2'} text={'0.00'}/>
+      <PrependAddon id={'multipleAddons1'}>$</PrependAddon>
+      <PrependAddon id={'multipleAddons2'}>0.00</PrependAddon>
       <FormControl id={'multipleAddons'} onChange={action('multipleAddons Changed')} type={'text'} value={'100'}/>
-      <AppendAddon id={'multipleAddons1'} text={'$'}/>
-      <AppendAddon id={'multipleAddons2'} text={'0.00'}/>
+      <AppendAddon id={'multipleAddons1'}>$</AppendAddon>
+      <AppendAddon id={'multipleAddons2'}>0.00</AppendAddon>
     </InputGroup>
   })

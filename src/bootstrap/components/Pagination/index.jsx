@@ -10,7 +10,7 @@ export default class Pagination extends React.Component {
   }
 
   static propTypes = {
-    alignment : PropTypes.oneOf('left', 'center', 'right'),
+    alignment : PropTypes.oneOf(['left', 'center', 'right']),
     children  : PropTypes.node.isRequired,
     id        : PropTypes.string.isRequired,
     onNext    : PropTypes.func.isRequired,

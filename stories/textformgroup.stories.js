@@ -1,5 +1,5 @@
-import {storiesOf} from '@storybook/react'
 import {action} from '@storybook/addon-actions'
+import {storiesOf} from '@storybook/react'
 
 import React from 'react'
 import TextFormGroup from '../src/formgroups/TextFormGroup'
@@ -20,3 +20,5 @@ storiesOf('Form Groups/Text', module)
                                        required={true} value={''}/>)
   .add('Required -  no label', () => <TextFormGroup id={'Required'} onChange={action('Text')}
                                                    required={true} value={''}/>)
+  .add('Placeholder', () => <TextFormGroup id={'Default'} label='Text' onChange={action('default clicked')}
+                                           placeholder={'This is a placeholder'} value={''}/>)

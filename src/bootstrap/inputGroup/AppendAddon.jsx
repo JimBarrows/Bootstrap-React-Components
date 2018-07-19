@@ -6,15 +6,15 @@ export default class AppendAddon extends React.Component {
   static defaultProps = {}
 
   static propTypes = {
-    id  : PropTypes.string.isRequired,
-    text: PropTypes.node.isRequired
+    id      : PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired
   }
 
   render() {
-    let {id, text} = this.props
+    let {id, children} = this.props
     return (
       <div id={'AppendComponent-' + id} className='input-group-append'>
-        <span className='input-group-text'>{text}</span>
+        <span className='input-group-text'>{children}</span>
       </div>
     )
   }

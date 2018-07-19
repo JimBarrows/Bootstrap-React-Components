@@ -13,7 +13,7 @@ export default class index extends React.Component {
     children: PropTypes.node.isRequired,
     id      : PropTypes.string.isRequired,
     look    : PropTypes.oneOf(['plain', 'tabs', 'pills']),
-    position: PropTypes.oneOf('fill', 'justify', 'left', 'center', 'right', 'verticle'),
+    position: PropTypes.oneOf(['fill', 'justify', 'left', 'center', 'right', 'verticle']),
   }
 
   render() {

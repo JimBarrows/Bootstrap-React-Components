@@ -12,6 +12,7 @@ export default class TextFormGroup extends React.Component {
     id               : PropTypes.string.isRequired,
     label            : PropTypes.string,
     onChange         : PropTypes.func.isRequired,
+    placeholder      : PropTypes.string,
     required         : PropTypes.bool,
     value            : PropTypes.string.isRequired,
     valid            : PropTypes.bool,
@@ -19,11 +20,12 @@ export default class TextFormGroup extends React.Component {
   }
 
   render() {
-    let {disabled, id, label, onChange, required, value, valid, validationMessage} = this.props
+    let {disabled, id, label, onChange, placeholder, required, value, valid, validationMessage} = this.props
     return (
       <FormGroup id={'Color-' + id} label={label} required={required} valid={valid}
                  validationMessage={validationMessage}>
-        <FormControl disabled={disabled} id={id} onChange={onChange} type={'text'} valid={valid}
+        <FormControl disabled={disabled} id={id} onChange={onChange} placeholder={placeholder} type={'text'}
+                     valid={valid}
                      validated={validationMessage} value={value}/>
       </FormGroup>
     )

@@ -17,13 +17,15 @@ storiesOf('bootstrap/components/Button', module)
     <div className="container">
       {story()}
     </div>)
+  .add('Default', () => <Button id={'default'}>Press me</Button>)
   .add('Danger', () => <Button id={'danger'} onClick={action('Danger Button Pressed')} context={'danger'}>Press
                                                                                                           me</Button>)
+  .add('light', () => <Button id={'light'} onClick={action('Light Button Pressed')} context={'light'}>Press me</Button>)
   .add('Dark', () => <Button id={'dark'} onClick={action('Dark Button Pressed')} context={'dark'}>Press me</Button>)
   .add('Info', () => <Button id={'info'} onClick={action('Info Button Pressed')} context={'info'}>Press me</Button>)
   .add('Link', () => <Button id={'link'} onClick={action('Link Button Pressed')} context={'link'}>Press me</Button>)
   .add('Primary', () => <Button id={'primary'} onClick={action('Primary Button Pressed')} context={'primary'}>Press
-                                                                                                           me</Button>)
+                                                                                                              me</Button>)
   .add('Secondary', () => <Button id={'secondary'} onClick={action('Secondary Button Pressed')} context={'secondary'}>Press
                                                                                                                       me</Button>)
   .add('Success', () => <Button id={'success'} onClick={action('Success Button Pressed')} context={'success'}>Press
@@ -34,7 +36,7 @@ storiesOf('bootstrap/components/Button', module)
                                        context={'danger'}>Press me</Button>)
   .add('Outline Dark', () => <Button id={'dark'} onClick={action('Dark Button Pressed')} outline={true}
                                      context={'dark'}>Press
-                                                                                                                      me</Button>)
+                                                      me</Button>)
   .add('Outline Info', () => <Button id={'info'} onClick={action('Info Button Pressed')} outline={true}
                                      context={'info'}>Press
                                                       me</Button>)
@@ -47,7 +49,7 @@ storiesOf('bootstrap/components/Button', module)
   .add('Outline Warning', () => <Button id={'warning'} onClick={action('Warning Button Pressed')} outline={true}
                                         context={'warning'}>Press me</Button>)
   .add('Large', () => <Button id={'large'} onClick={action('Large Button Pressed')} size={'large'} context={'info'}>Press
-                                                                                                                 me</Button>)
+                                                                                                                    me</Button>)
   .add('Small', () => <Button id={'small'} onClick={action('Small Button Pressed')} size={'small'} context={'info'}>Press
                                                                                                                     me</Button>)
   .add('Block', () => <Button block={true} id={'block'} onClick={action('Block Button Pressed')} context={'info'}>Press
