@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-react-components",
- "version" : "1.0.2",
+  "version": "1.0.3",
   "description": "Bootstrap components for react.",
   "main": "./distribution/index.js",
   "scripts": {
@@ -21,8 +21,8 @@
     "build-storybook": "build-storybook"
   },
   "repository": {
-   "type" : "git",
-   "url" : "git+https://github.com/JimBarrows/Bootstrap-React-Components.git"
+    "type": "git",
+    "url": "git+https://github.com/JimBarrows/Bootstrap-React-Components.git"
   },
   "author": {
     "name": "Jim Barrows",
