@@ -15,7 +15,7 @@ export default class index extends React.Component {
     children    : PropTypes.node,
     id          : PropTypes.string.isRequired,
     onBrandClick: PropTypes.func,
-    position    : PropTypes.oneOf(['fixed-top, fixed-bottom, sticky-top']),
+    position    : PropTypes.oneOf(['fixed-top', 'fixed-bottom', 'sticky-top']),
     theme       : PropTypes.oneOf(['light', 'dark']),
   }
 
