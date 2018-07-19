@@ -27,8 +27,8 @@ export default class ListGroup extends React.Component {
 
     }
     return <ul className={className}>
-      {children.map((i, idx) => <ListGroupItem key={idx} active={active === idx}
-                                               id={`${id}-${idx}`}>{i}</ListGroupItem>)}
+      {React.Children.map(children, (i, idx) => <ListGroupItem key={idx} active={active === idx}
+                                                               id={`${id}-${idx}`}>{i}</ListGroupItem>)}
     </ul>
 
   }
