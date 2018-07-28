@@ -23,6 +23,7 @@ export default class CheckboxFormGroup extends React.Component {
     let validationMessageTag                                                                = ''
     let attributes                                                                          = {}
     let labelTag                                                                            = ''
+    let componentId                                                                         = `CheckboxFormGroup-${id}`
     if (validationMessage) {
       className += valid ? ' is-valid' : ' is-invalid'
       validationMessageTag = <div className={valid ? 'valid-feedback' : 'invalid-feedback'}>{validationMessage}</div>
@@ -31,20 +32,20 @@ export default class CheckboxFormGroup extends React.Component {
       attributes['required'] = true
     }
     if (label && required) {
-      labelTag = <label id={'FormGroupLabel-' + id} className={'form-check-label'} htmlFor={id}>{label}&nbsp;
+      labelTag = <label id={'FormGroupLabel-' + componentId} className={'form-check-label'} htmlFor={id}>{label}&nbsp;
         <small className='text-danger'>Required</small>
       </label>
     } else if (label && !required) {
-      labelTag = <label id={'FormGroupLabel-' + id} className={'form-check-label'} htmlFor={id}>{label}</label>
+      labelTag = <label id={'FormGroupLabel-' + componentId} className={'form-check-label'} htmlFor={id}>{label}</label>
     } else if (!label && required) {
-      labelTag = <label id={'FormGroupLabel-' + id} className={'form-check-label'} htmlFor={id}>
+      labelTag = <label id={'FormGroupLabel-' + componentId} className={'form-check-label'} htmlFor={id}>
         <small className='text-danger'>Required</small>
       </label>
     }
     return (
-      <FormGroup id={'Checkbox-' + id} valid={valid} validationMessage={validationMessage}>
+      <FormGroup id={componentId} valid={valid} validationMessage={validationMessage}>
         <div className='form-check'>
-          <input checked={checked} className={className} disabled={disabled} id={id} onChange={onChange} type='checkbox'
+          <input checked={checked} className={className} disabled={disabled} id={`Checkbox-${componentId}`} onChange={onChange} type='checkbox'
                  value={value} {...attributes}/>
           {labelTag}
           {validationMessageTag}
@@ -53,4 +54,3 @@ export default class CheckboxFormGroup extends React.Component {
     )
   }
 }
-

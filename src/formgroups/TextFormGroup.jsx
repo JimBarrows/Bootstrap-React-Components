@@ -21,10 +21,11 @@ export default class TextFormGroup extends React.Component {
 
   render() {
     let {disabled, id, label, onChange, placeholder, required, value, valid, validationMessage} = this.props
+    let componentId = `TextFormGroup-${id}`
     return (
-      <FormGroup id={'Color-' + id} label={label} required={required} valid={valid}
+      <FormGroup id={componentId} label={label} required={required} valid={valid}
                  validationMessage={validationMessage}>
-        <FormControl disabled={disabled} id={id} onChange={onChange} placeholder={placeholder} type={'text'}
+        <FormControl disabled={disabled} id={componentId} onChange={onChange} placeholder={placeholder} type={'text'}
                      valid={valid}
                      validated={validationMessage} value={value}/>
       </FormGroup>

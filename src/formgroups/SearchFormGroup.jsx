@@ -19,9 +19,10 @@ export default class SearchFormGroup extends React.Component {
 
   render() {
     let {disabled, id, label, onChange, required, value, valid, validationMessage} = this.props
+    let componentId = `SearchFormGroup-${id}`
     return (
-      <FormGroup id={'Search-' + id} label={label}  required={required} valid={valid} validationMessage={validationMessage}>
-        <FormControl disabled={disabled} id={id} onChange={onChange} type={'search'} valid={valid}
+      <FormGroup id={componentId} label={label}  required={required} valid={valid} validationMessage={validationMessage}>
+        <FormControl disabled={disabled} id={componentId} onChange={onChange} type={'search'} valid={valid}
                      validated={validationMessage} value={value}/>
       </FormGroup>
     )

@@ -22,14 +22,14 @@ export default class RangeFormGroup extends React.Component {
 
   render() {
     let {disabled, id, label, max, min, onChange, required, step, value, valid, validationMessage} = this.props
+    let componentId = `RangeFormGroup-${id}`
     return (
-      <FormGroup id={'Range-' + id} label={label} required={required} valid={valid}
+      <FormGroup id={componentId} label={label} required={required} valid={valid}
                  validationMessage={validationMessage}>
-        <FormControl disabled={disabled} id={id} onChange={onChange} max={max} min={min} step={step} type={'range'}
+        <FormControl disabled={disabled} id={icomponentIdd} onChange={onChange} max={max} min={min} step={step} type={'range'}
                      valid={valid}
                      validated={validationMessage} value={value}/>
       </FormGroup>
     )
   }
 }
-
