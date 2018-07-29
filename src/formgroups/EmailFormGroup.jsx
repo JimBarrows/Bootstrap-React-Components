@@ -21,12 +21,12 @@ export default class EmailFormGroup extends React.Component {
 
   render() {
     let {disabled, id, label, onChange, placeholder, required, value, valid, validationMessage} = this.props
+    let componentId = `EmailFormGroup-${id}`
     return (
-      <FormGroup id={'Email-' + id} label={label}  required={required} valid={valid} validationMessage={validationMessage}>
-        <FormControl disabled={disabled} id={id} onChange={onChange} type={'email'} valid={valid}
+      <FormGroup id={componentId} label={label}  required={required} valid={valid} validationMessage={validationMessage}>
+        <FormControl disabled={disabled} id={componentId} onChange={onChange} type={'email'} valid={valid}
                      validated={validationMessage} value={value}/>
       </FormGroup>
     )
   }
 }
-

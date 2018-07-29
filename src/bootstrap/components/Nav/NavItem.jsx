@@ -22,10 +22,9 @@ export default class NavItem extends React.Component {
     } else if (state === 'disabled') {
       cssClasses += ' disabled'
     }
-
+    let componentId = `NavItem-${id}`
     return (
-      <a className={cssClasses} onClick={onClick} href={'#'}>{label}</a>
+      <a id={componentId} className={cssClasses} onClick={onClick} href={'#'}>{label}</a>
     )
   }
 }
-

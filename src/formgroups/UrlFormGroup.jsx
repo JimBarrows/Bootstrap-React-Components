@@ -20,9 +20,10 @@ export default class UrlFormGroup extends React.Component {
 
   render() {
     let {disabled, id, label, onChange, required, value, valid, validationMessage} = this.props
+    let componentId = `UrlFormGroup-${id}`
     return (
-      <FormGroup id={'Color-' + id} label={label}  required={required} valid={valid} validationMessage={validationMessage}>
-        <FormControl disabled={disabled} id={id} onChange={onChange} type={'url'} valid={valid}
+      <FormGroup id={componentId} label={label}  required={required} valid={valid} validationMessage={validationMessage}>
+        <FormControl disabled={disabled} id={componentId} onChange={onChange} type={'url'} valid={valid}
                      validated={validationMessage} value={value}/>
       </FormGroup>
     )

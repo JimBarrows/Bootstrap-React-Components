@@ -19,9 +19,10 @@ export default class TelFormGroup extends React.Component {
   }
   render() {
     let {disabled, id, label, onChange, required, value, valid, validationMessage} = this.props
+    let componentId = `TelFormGroup-${id}`
     return (
-      <FormGroup id={'Tel-' + id} label={label}  required={required} valid={valid} validationMessage={validationMessage}>
-        <FormControl disabled={disabled} id={id} onChange={onChange} type={'tel'} valid={valid}
+      <FormGroup id={componentId} label={label}  required={required} valid={valid} validationMessage={validationMessage}>
+        <FormControl disabled={disabled} id={componentId} onChange={onChange} type={'tel'} valid={valid}
                      validated={validationMessage} value={value}/>
       </FormGroup>
     )

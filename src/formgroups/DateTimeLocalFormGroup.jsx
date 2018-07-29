@@ -20,17 +20,16 @@ export default class DateTimeLocalFormGroup extends React.Component {
   render() {
     let {disabled, id, label, onChange, required, value, valid, validationMessage} = this.props
     let className                                                                  = 'form-control'
+    let componentId = `DateTimeLocalFormGroup-${id}`
     if (validationMessage) {
       className += valid ? ' is-valid' : ' is-invalid'
     }
     return (
-      <FormGroup id={'DateTimeLocal-' + id} label={label} required={required} valid={valid}
+      <FormGroup id={componentId} label={label} required={required} valid={valid}
                  validationMessage={validationMessage}>
-        <FormControl disabled={disabled} id={id} onChange={onChange} type={'datetime-local'} valid={valid}
+        <FormControl disabled={disabled} id={componentId} onChange={onChange} type={'datetime-local'} valid={valid}
                      validated={validationMessage} value={value}/>
       </FormGroup>
     )
   }
 }
-
-

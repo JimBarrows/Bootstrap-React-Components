@@ -45,10 +45,9 @@ export default class index extends React.Component {
     }
 
     return (
-      <nav id={'nav-' + id} className={className}>
+      <nav id={'Nav-' + id} className={className}>
         {children}
       </nav>
     )
   }
 }
-

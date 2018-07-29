@@ -23,15 +23,11 @@ export default class ListGroup extends React.Component {
     if (flush) {
       className += ' list-group-flush'
     }
-    if (context) {
-
-    }
-    return <ul className={className}>
+    let componentId = `ListGroup-${id}`
+    return <ul id={componentId} className={className}>
       {React.Children.map(children, (i, idx) => <ListGroupItem key={idx} active={active === idx}
-                                                               id={`${id}-${idx}`}>{i}</ListGroupItem>)}
+                                                               id={`${componentId}-${idx}`}>{i}</ListGroupItem>)}
     </ul>
 
   }
 }
-
-

@@ -23,11 +23,11 @@ export default class NavbarItem extends React.Component {
 
   render() {
     let {children, id} = this.props
+    let componentId = `NavbarItem-${id}`
     return (
-      <li id={'NavbarItem-' + id} className='nav-item active'>
-        <a className='nav-link' href='#' onClick={this.onClick}>{children}</a>
+      <li id={componentId} className='nav-item active'>
+        <a id={`${componentId}-Link`}className='nav-link' href='#' onClick={this.onClick}>{children}</a>
       </li>
     )
   }
 }
-

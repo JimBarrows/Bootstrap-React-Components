@@ -19,9 +19,9 @@ export default class ListGroupItem extends React.Component {
     if (active) {
       className += ' active'
     }
+    let componentId = `ListGroupItem-${id}`
     return (
-      <li id={`list-group-item-${id}`} className={className}>{children}</li>
+      <li id={`${componentId}-${id}`} className={className}>{children}</li>
     )
   }
 }
-

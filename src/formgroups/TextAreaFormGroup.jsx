@@ -42,21 +42,20 @@ export default class TextAreaFormGroup extends React.Component {
 
   render() {
     let {disabled, id, label, onChange, required, value, valid, validationMessage} = this.props
+    let componentId = `TextAreaFormGroup-${id}`
     let className                                                                  = 'form-control'
     if( validationMessage) {
       className += valid ? " is-valid" : " is-invalid"
     }
-    return <FormGroup id={'TextArea-' + id} label={label} required={required} valid={valid}
+    return <FormGroup id={componentId} label={label} required={required} valid={valid}
                       validationMessage={validationMessage}>
       <RichTextEditor
         className={className}
         disabled={disabled}
         onChange={this.onChange}
         value={this.state.value}
-        webDriverTestID={id}
+        webDriverTestID={componentId}
       />
     </FormGroup>
   }
 }
-
-

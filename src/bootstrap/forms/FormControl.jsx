@@ -31,7 +31,7 @@ export default class FormControl extends React.Component {
 
   render() {
     let {cssClass, disabled, id, max, min, onChange, placeholder, readOnly, required, size, type, valid, validated, value} = this.props
-
+    let componentId = `FormControl-${type}-${id}`
     let className = 'form-control'
 
     switch (type) {
@@ -88,7 +88,7 @@ export default class FormControl extends React.Component {
       <input {...attributes}
              className={className}
              disabled={disabled}
-             id={'form-control-' + id}
+             id={componentId}
              name={'id'}
              placeholder={placeholder}
              readOnly={readOnly}
@@ -98,4 +98,3 @@ export default class FormControl extends React.Component {
     )
   }
 }
-

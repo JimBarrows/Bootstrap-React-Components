@@ -26,10 +26,11 @@ export default class SelectFormGroup extends React.Component {
     if (validationMessage) {
       className += valid ? ' is-valid' : ' is-invalid'
     }
+    let componentId = `SelectFormGroup-${id}`
     return (
-      <FormGroup id={'Select-' + id} label={label} required={required} valid={valid}
+      <FormGroup id={componentId} label={label} required={required} valid={valid}
                  validationMessage={validationMessage}>
-        <select className={className} disabled={disabled} id={id} onChange={onChange}
+        <select className={className} disabled={disabled} id={componentId} onChange={onChange}
                 required={required} value={value}>
           <option value='-1'/>
           {options.map(o => <option key={o.value}

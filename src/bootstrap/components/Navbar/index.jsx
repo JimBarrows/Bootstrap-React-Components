@@ -22,6 +22,7 @@ export default class index extends React.Component {
   render() {
     let {background, brandMessage, children, id, onBrandClick, position, theme} = this.props
     let className                                                               = 'navbar navbar-expand-lg'
+    let componentId = `Navbar-${id}`
     switch (background) {
       case 'dark':
         className += ' bg-dark'
@@ -52,9 +53,9 @@ export default class index extends React.Component {
         className += ' navbar-light'
     }
     let brand = brandMessage ?
-      <Brand onClick={onBrandClick} id={'brand'}>{brandMessage}</Brand> : ''
+      <Brand onClick={onBrandClick} id={'${componentId}'}>{brandMessage}</Brand> : ''
     return (
-      <nav id={'Navbar-' + id} className={className}>
+      <nav id={componentId} className={className}>
         {brand}
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav mr-auto">
@@ -65,4 +66,3 @@ export default class index extends React.Component {
     )
   }
 }
-
