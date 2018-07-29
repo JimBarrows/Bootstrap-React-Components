@@ -24,8 +24,9 @@ export default class Brand extends React.Component {
 
   render() {
     let {children, id} = this.props
+    let componentId = `Brand-${id}`
     return (
-      <span><a id={'Navbar-brand-' + id} className="navbar-brand" href="#" onClick={this.onClick}>{children}</a><button
+      <span><a id={componentId} className="navbar-brand" href="#" onClick={this.onClick}>{children}</a><button
         className="navbar-toggler" type="button"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -36,4 +37,3 @@ export default class Brand extends React.Component {
     )
   }
 }
-
