@@ -23,7 +23,7 @@ export default class NumberFormGroup extends React.Component {
 		return (
 			<FormGroup id={componentId} label={label} required={required} valid={valid} validationMessage={validationMessage}>
 				<FormControl disabled={disabled} id={componentId} onChange={onChange} type={'number'} valid={valid}
-				             validated={validationMessage} value={value.toString()}/>
+				             validated={validationMessage ? true : false} value={value.toString()}/>
 			</FormGroup>
 		)
 	}
