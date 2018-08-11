@@ -6,35 +6,43 @@ import Navbar from '../src/bootstrap/components/Navbar'
 import NavbarItem from '../src/bootstrap/components/Navbar/Item'
 
 storiesOf('bootstrap/components/Navbar', module)
-  .addDecorator((story) => <div className="container">       {story()}     </div>)
-  .add('Basic', () => <Navbar id={'basic'}>
-    <NavbarItem id={'basic'} onClick={action('navbar basic 1')}>Link 1</NavbarItem>
-  </Navbar>)
-  .add('Brand', () => <Navbar id={'brand'} onBrandClick={action('Clicked on brand click')}
-                              brandMessage={'This is a brand'}>
-    <NavbarItem id={'brand'} onClick={action('brand 1')}>Link 1</NavbarItem>
-  </Navbar>)
-  .add('Dark Background', () => <Navbar id={'brand'} theme={'dark'} background={'dark'}
-                                        onBrandClick={action('Clicked on brand click')}
-                                        brandMessage={'This is a brand'}>
-    <NavbarItem id={'brand'} onClick={action('brand 1')}>Link 1</NavbarItem>
-  </Navbar>)
-  .add('Primary Background', () => <Navbar id={'brand'} theme={'dark'} background={'primary'}
-                                           onBrandClick={action('Clicked on brand click')}
-                                           brandMessage={'This is a brand'}>
-    <NavbarItem id={'brand'} onClick={action('brand 1')}>Link 1</NavbarItem>
-  </Navbar>)
-  .add('Fixed top', () => <Navbar id={'fixedTop'} position={'fixed-top'} theme={'dark'} background={'primary'}
-                                  onBrandClick={action('Clicked on fixed top')} brandMessage={'This is a brand'}>
-    <NavbarItem id={'fixedTop'} onClick={action('fixed top 1')}>Link 1</NavbarItem>
-  </Navbar>)
-  .add('Fixed bottom', () => <Navbar id={'fixedBottom'} position={'fixed-bottom'} theme={'dark'} background={'primary'}
-                                     onBrandClick={action('Clicked on fixed bottom click')}
-                                     brandMessage={'This is a brand'}>
-    <NavbarItem id={'fixedBottom'} onClick={action('fixed bottom 1')}>Link 1</NavbarItem>
-  </Navbar>)
-  .add('Sticky top', () => <Navbar id={'stickyTop'} position={'sticky-top'} theme={'dark'} background={'primary'}
-                                   onBrandClick={action('Clicked on stickyTop click')} brandMessage={'This is a brand'}>
-    <NavbarItem id={'stickyTop'} onClick={action('fstickyTop 1')}>Link 1</NavbarItem>
-  </Navbar>)
+	.addDecorator((story) => <div className="container">       {story()}     </div>)
+	.add('Basic', () => <Navbar id={'basic'}>
+		<NavbarItem id={'basic'} onClick={action('navbar basic 1')}>Link 1</NavbarItem>
+	</Navbar>)
+	.add('Brand', () => <Navbar id={'brand'} onBrandClick={action('Clicked on brand click')}
+	                            brandMessage={'This is a brand'}>
+		<NavbarItem id={'brand'} onClick={action('brand 1')}>Link 1</NavbarItem>
+	</Navbar>)
+	.add('Dark Background', () => <Navbar id={'brand'} theme={'dark'} background={'dark'}
+	                                      onBrandClick={action('Clicked on brand click')}
+	                                      brandMessage={'This is a brand'}>
+		<NavbarItem id={'brand'} onClick={action('brand 1')}>Link 1</NavbarItem>
+	</Navbar>)
+	.add('Primary Background', () => <Navbar id={'brand'} theme={'dark'} background={'primary'}
+	                                         onBrandClick={action('Clicked on brand click')}
+	                                         brandMessage={'This is a brand'}>
+		<NavbarItem id={'brand'} onClick={action('brand 1')}>Link 1</NavbarItem>
+	</Navbar>)
+	.add('Fixed top', () => <Navbar id={'fixedTop'} position={'fixed-top'} theme={'dark'} background={'primary'}
+	                                onBrandClick={action('Clicked on fixed top')} brandMessage={'This is a brand'}>
+		<NavbarItem id={'fixedTop'} onClick={action('fixed top 1')}>Link 1</NavbarItem>
+	</Navbar>)
+	.add('Fixed bottom', () => <Navbar id={'fixedBottom'} position={'fixed-bottom'} theme={'dark'} background={'primary'}
+	                                   onBrandClick={action('Clicked on fixed bottom click')}
+	                                   brandMessage={'This is a brand'}>
+		<NavbarItem id={'fixedBottom'} onClick={action('fixed bottom 1')}>Link 1</NavbarItem>
+	</Navbar>)
+	.add('Sticky top', () => <Navbar id={'stickyTop'} position={'sticky-top'} theme={'dark'} background={'primary'}
+	                                 onBrandClick={action('Clicked on stickyTop click')} brandMessage={'This is a brand'}>
+		<NavbarItem id={'stickyTop'} onClick={action('fstickyTop 1')}>Link 1</NavbarItem>
+	</Navbar>)
+	.add('Active and Inactive Items', () => <Navbar id={'activeAndInactiveItems'}>
+		<NavbarItem id={'activeAndInactiveItems1'} active={true} onClick={action('Active and Inactive Items 1')}>Active
+		                                                                                                         Link</NavbarItem>
+		<NavbarItem id={'activeAndInactiveItems2'} active={false} onClick={action('Active and Inactive Items 2')}>Inactive
+		                                                                                                          Link</NavbarItem>
+		<NavbarItem id={'activeAndInactiveItems3'} onClick={action('Active and Inactive Items 3')}>Default Link</NavbarItem>
+	</Navbar>)
+
 
