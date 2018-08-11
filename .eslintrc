@@ -16,7 +16,7 @@
  "rules" : {
 	"indent" : [
 	 "error",
-	 2,
+	 "tab",
 	 {
 		"FunctionDeclaration" : {
 		 "parameters" : "first"
@@ -29,6 +29,10 @@
 		},
 		"ObjectExpression" : 1
 	 }
+	],
+	"no-mixed-spaces-and-tabs" : [
+	 "error",
+	 "smart-tabs"
 	]
  }
 }
