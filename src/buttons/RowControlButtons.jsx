@@ -8,28 +8,28 @@ import SaveButton from './SaveButton'
 
 export default class RowControlButtons extends React.Component {
 
-  static defaultProps = {
-    editing: false
-  }
+	static defaultProps = {
+		editing: false
+	}
 
-  static propTypes = {
-    cancel : PropTypes.func.isRequired,
-    editing: PropTypes.bool,
-    edit   : PropTypes.func.isRequired,
-    id     : PropTypes.string.isRequired,
-    save   : PropTypes.func.isRequired,
-    remove : PropTypes.func.isRequired
-  }
+	static propTypes = {
+		cancel : PropTypes.func.isRequired,
+		editing: PropTypes.bool,
+		edit   : PropTypes.func.isRequired,
+		id     : PropTypes.string.isRequired,
+		save   : PropTypes.func.isRequired,
+		remove : PropTypes.func.isRequired
+	}
 
-  render() {
-    let {cancel, editing, edit, id, save, remove} = this.props
-    let groupId                                   = 'row-control-buttons-' + id
-    return editing
-      ? <ButtonGroup id={groupId}><SaveButton id={groupId + '-save'} onClick={save}/><CancelButton
-        id={groupId + '-cacnel'} onClick={cancel}/></ButtonGroup>
-      : <ButtonGroup id={groupId}><EditButton id={groupId + '-edit'} onClick={edit}/><RemoveButton
-        id={groupId + '-remove'} onClick={remove}/></ButtonGroup>
-  }
+	render() {
+		let {cancel, editing, edit, id, save, remove} = this.props
+		let groupId                                   = 'RowControlButtons-' + id
+		return editing
+			? <ButtonGroup id={groupId}><SaveButton id={groupId + '-save'} onClick={save}/><CancelButton
+				id={groupId + '-cancel'} onClick={cancel}/></ButtonGroup>
+			: <ButtonGroup id={groupId}><EditButton id={groupId + '-edit'} onClick={edit}/><RemoveButton
+				id={groupId + '-remove'} onClick={remove}/></ButtonGroup>
+	}
 }
 
 
