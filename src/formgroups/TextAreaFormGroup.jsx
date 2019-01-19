@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import ReactQuill from 'react-quill'
+
+import 'react-quill/dist/quill.snow.css'
 import FormGroup from '../bootstrap/forms/FormGroup'
 
 export default class TextAreaFormGroup extends React.Component {
