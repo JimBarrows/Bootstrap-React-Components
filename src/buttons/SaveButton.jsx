@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-import FontAwesome from 'react-fontawesome'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import PropTypes         from 'prop-types'
+import React             from 'react'
 
 export default class SaveButton extends React.Component {
 	static propTypes = {
@@ -8,11 +8,11 @@ export default class SaveButton extends React.Component {
 		onClick: PropTypes.func.isRequired
 	}
 
-	render() {
+	render () {
 		let {id, onClick} = this.props
-		return <button id={'save-button-' + id} type='button' className='btn btn-light btn-small' onClick={onClick}>
-			<FontAwesome name={'save'}/>
-		</button>
+		return <button id={'save-button-' + id} type='button' className='btn btn-light btn-small' onClick={onClick} >
+			<FontAwesomeIcon icon={'save'} />
+		</button >
 	}
 }
 

@@ -1,4 +1,27 @@
-# Bootstrap-React-Components
+# Setup
+Because of the use of font-awesome you'll need to do the following
+in your code:
+```javascript
+import {library} from '@fortawesome/fontawesome-svg-core'
+import {
+	faBan,
+	faEdit,
+	faPlus,
+	faSave,
+	faSync,
+	faTrash
+}                from '@fortawesome/free-solid-svg-icons'
+
+
+library.add(
+	faBan,
+	faEdit,
+	faPlus,
+	faSave,
+	faSync,
+	faTrash
+)
+```
 
 ## Release Process
 #### Manual

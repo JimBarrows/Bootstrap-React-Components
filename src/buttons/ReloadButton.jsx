@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-import FontAwesome from 'react-fontawesome'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import PropTypes         from 'prop-types'
+import React             from 'react'
 
 export default class ReloadButton extends React.Component {
 
@@ -9,11 +9,11 @@ export default class ReloadButton extends React.Component {
 		onClick: PropTypes.func.isRequired
 	}
 
-	render() {
+	render () {
 		let {id, onClick} = this.props
-		return <button id={id} type='button' className='btn btn-light btn-small' onClick={onClick}>
-			<FontAwesome name={'sync'}/>
-		</button>
+		return <button id={id} type='button' className='btn btn-light btn-small' onClick={onClick} >
+			<FontAwesomeIcon icon={'sync'} />
+		</button >
 	}
 }
 

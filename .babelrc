@@ -1,13 +1,11 @@
 {
- "presets" : [
-	"env",
-	 "react"
- ],
- "plugins" : [
-	"css-modules-transform",
-	"css-modules-transform",
-	"transform-react-jsx",
-	"transform-class-properties",
-	"react-html-attrs"
- ]
+  "presets": [
+    "@babel/env",
+    "@babel/react"
+  ],
+  "plugins": [
+    "css-modules-transform",
+    "transform-class-properties",
+    "react-html-attrs"
+  ]
 }

@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-import ButtonGroup from '../bootstrap/components/ButtonGroup'
+import PropTypes    from 'prop-types'
+import React        from 'react'
+import ButtonGroup  from '../bootstrap/components/ButtonGroup'
 import CancelButton from './CancelButton'
-import EditButton from './EditButton'
+import EditButton   from './EditButton'
 import RemoveButton from './RemoveButton'
-import SaveButton from './SaveButton'
+import SaveButton   from './SaveButton'
 
 export default class RowControlButtons extends React.Component {
 
@@ -21,14 +21,14 @@ export default class RowControlButtons extends React.Component {
 		remove : PropTypes.func.isRequired
 	}
 
-	render() {
+	render () {
 		let {cancel, editing, edit, id, save, remove} = this.props
 		let groupId                                   = 'RowControlButtons-' + id
 		return editing
-			? <ButtonGroup id={groupId}><SaveButton id={groupId + '-save'} onClick={save}/><CancelButton
-				id={groupId + '-cancel'} onClick={cancel}/></ButtonGroup>
-			: <ButtonGroup id={groupId}><EditButton id={groupId + '-edit'} onClick={edit}/><RemoveButton
-				id={groupId + '-remove'} onClick={remove}/></ButtonGroup>
+					 ? <ButtonGroup id={groupId} ><SaveButton id={groupId + '-save'} onClick={save} /><CancelButton
+				id={groupId + '-cancel'} onClick={cancel} /></ButtonGroup >
+					 : <ButtonGroup id={groupId} ><EditButton id={groupId + '-edit'} onClick={edit} /><RemoveButton
+				id={groupId + '-remove'} onClick={remove} /></ButtonGroup >
 	}
 }
 
