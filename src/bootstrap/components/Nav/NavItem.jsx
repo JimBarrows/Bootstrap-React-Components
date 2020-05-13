@@ -11,7 +11,7 @@ export default class NavItem extends React.Component {
 		id     : PropTypes.string.isRequired,
 		label  : PropTypes.string.isRequired,
 		onClick: PropTypes.func.isRequired,
-		state  : PropTypes.oneOf(['active', 'enabled', 'disabled'])
+		state  : PropTypes.oneOf(['active', 'inactive', 'enabled', 'disabled'])
 	}
 
 	render () {
