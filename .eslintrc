@@ -1,38 +1,39 @@
 {
- "extends" : [
-	"eslint:recommended",
-	"plugin:react/recommended"
- ],
- "env" : {
-	"browser" : true
- },
- "parser" : "babel-eslint",
- "parserOptions" : {
-	"ecmaFeatures" : {
-	 "jsx" : true,
-	 "modules" : true
-	}
- },
- "rules" : {
-	"indent" : [
-	 "error",
-	 "tab",
-	 {
-		"FunctionDeclaration" : {
-		 "parameters" : "first"
-		},
-		"FunctionExpression" : {
-		 "parameters" : "first"
-		},
-		"CallExpression" : {
-		 "arguments" : "first"
-		},
-		"ObjectExpression" : 1
-	 }
-	],
-	"no-mixed-spaces-and-tabs" : [
-	 "error",
-	 "smart-tabs"
-	]
- }
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "env": {
+    "browser": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "rules": {
+    "indent": [
+      "error",
+      "tab",
+      {
+        "SwitchCase": 1,
+        "FunctionDeclaration": {
+          "parameters": "first"
+        },
+        "FunctionExpression": {
+          "parameters": "first"
+        },
+        "CallExpression": {
+          "arguments": "first"
+        },
+        "ObjectExpression": 1
+      }
+    ],
+    "no-mixed-spaces-and-tabs": [
+      "error",
+      "smart-tabs"
+    ]
+  }
 }
