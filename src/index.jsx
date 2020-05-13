@@ -35,28 +35,29 @@ import FormControl            from './bootstrap/forms/FormControl'
 import FormGroup              from './bootstrap/forms/FormGroup'
 import TextArea               from './bootstrap/forms/TextArea'
 import AppendAddon            from './bootstrap/inputGroup/AppendAddon'
-import InputGroup             from './bootstrap/inputGroup/index'
-import PrependAddon           from './bootstrap/inputGroup/PrependAddon'
-import Media                  from './bootstrap/media/Media'
-import MediaBody              from './bootstrap/media/MediaBody'
-import MediaHeading           from './bootstrap/media/MediaHeading'
-import MediaLeft              from './bootstrap/media/MediaLeft'
-import MediaList              from './bootstrap/media/MediaList'
-import MediaListItem          from './bootstrap/media/MediaListItem'
-import MediaObjectImage       from './bootstrap/media/MediaObjectImage'
-import MediaRight             from './bootstrap/media/MediaRight'
-import Table                  from './bootstrap/tables/Table'
-import TableHead              from './bootstrap/tables/TableHead'
-import TableRow               from './bootstrap/tables/TableRow'
-import ListInline             from './bootstrap/typography/ListInline'
-import AddButton              from './buttons/AddButton'
-import CancelButton           from './buttons/CancelButton'
-import EditButton             from './buttons/EditButton'
-import ReloadButton           from './buttons/ReloadButton'
-import RemoveButton           from './buttons/RemoveButton'
-import RowControlButtons      from './buttons/RowControlButtons'
-import SaveButton             from './buttons/SaveButton'
-import CheckboxFormGroup      from './formgroups/CheckboxFormGroup'
+import InputGroup        from './bootstrap/inputGroup/index'
+import PrependAddon      from './bootstrap/inputGroup/PrependAddon'
+import Media             from './bootstrap/media/Media'
+import MediaBody         from './bootstrap/media/MediaBody'
+import MediaHeading      from './bootstrap/media/MediaHeading'
+import MediaLeft         from './bootstrap/media/MediaLeft'
+import MediaList         from './bootstrap/media/MediaList'
+import MediaListItem     from './bootstrap/media/MediaListItem'
+import MediaObjectImage  from './bootstrap/media/MediaObjectImage'
+import MediaRight        from './bootstrap/media/MediaRight'
+import Table             from './bootstrap/tables/Table'
+import TableBody         from './bootstrap/tables/TableBody'
+import TableHead         from './bootstrap/tables/TableHead'
+import TableRow          from './bootstrap/tables/TableRow'
+import ListInline        from './bootstrap/typography/ListInline'
+import AddButton         from './buttons/AddButton'
+import CancelButton      from './buttons/CancelButton'
+import EditButton        from './buttons/EditButton'
+import ReloadButton      from './buttons/ReloadButton'
+import RemoveButton      from './buttons/RemoveButton'
+import RowControlButtons from './buttons/RowControlButtons'
+import SaveButton        from './buttons/SaveButton'
+import CheckboxFormGroup from './formgroups/CheckboxFormGroup'
 import ColorFormGroup         from './formgroups/ColorFormGroup'
 import DateRangeFormGroup     from './formgroups/DateRangeFormGroup'
 import DateTimeLocalFormGroup from './formgroups/DateTimeLocalFormGroup'
@@ -130,6 +131,7 @@ module.exports = {
 	MediaObjectImage,
 	MediaRight,
 	Table,
+	TableBody,
 	TableHead,
 	TableRow,
 	ListInline,
@@ -153,6 +155,7 @@ module.exports = {
 	SelectFormGroup,
 	TelFormGroup,
 	TextAreaFormGroup,
+	EditorFormGroup,
 	TextFormGroup,
 	UrlFormGroup,
 	PageHeader,
