@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types'
-import React     from 'react'
+import PropTypes  from 'prop-types'
+import React      from 'react'
+import ReactQuill from 'react-quill'
 
 import 'react-quill/dist/quill.snow.css'
-import FormGroup from '../bootstrap/forms/FormGroup'
-import TextArea  from '../bootstrap/forms/TextArea'
+import FormGroup  from '../bootstrap/forms/FormGroup'
 
-export default class TextAreaFormGroup extends React.Component {
+export default class EditorFormGroup extends React.Component {
 
 	static propTypes = {
 		disabled         : PropTypes.bool,
@@ -33,16 +33,21 @@ export default class TextAreaFormGroup extends React.Component {
 	}
 
 
-	render() {
+	render () {
 		let {id, label, required, valid, validationMessage, value} = this.props
-		let componentId                                            = `TextAreaFormGroup-${id}`
+		let componentId                                            = `EditorFormGroup-${id}`
 		let className                                              = 'form-control'
 		if (validationMessage) {
 			className += valid ? " is-valid" : " is-invalid"
 		}
 		return <FormGroup id={componentId} label={label} required={required} valid={valid}
 			validationMessage={validationMessage} >
-			<TextArea id={componentId} cssClass={className} onChange={this.onChange} value={value} />
+			<ReactQuill
+				id={componentId}
+				className={className}
+				onChange={this.onChange}
+				value={value}
+			/>
 		</FormGroup >
 	}
 }
