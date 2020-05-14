@@ -1,7 +1,7 @@
 import {library}                                        from '@fortawesome/fontawesome-svg-core'
 import {faBan, faEdit, faPlus, faSave, faSync, faTrash} from '@fortawesome/free-solid-svg-icons'
 import {configure}                                      from '@storybook/react'
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 library.add(
 	faBan,
