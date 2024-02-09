@@ -6,7 +6,6 @@ import ModalBody   from '../src/bootstrap/components/modal/Body'
 import ModalFooter from '../src/bootstrap/components/modal/Footer'
 import ModalHeader from '../src/bootstrap/components/modal/Header'
 
-
 storiesOf('bootstrap/components/Modal', module)
 	.addDecorator((story) => <div className="container" >       {story()}     </div >)
 	.add('Basic', () => <Modal id={'basic'} show={true} >
@@ -19,22 +18,13 @@ storiesOf('bootstrap/components/Modal', module)
 			<button type="button" className="btn btn-primary" >Save changes</button >
 		</ModalFooter >
 	</Modal >)
-	.add('bootstrap', () => <div className="modal show" tabIndex="-1" role="dialog" >
-		<div className="modal-dialog" >
-			<div className="modal-content" >
-				<div className="modal-header" >
-					<h5 className="modal-title" >Modal title</h5 >
-					<button type="button" className="close" data-dismiss="modal" aria-label="Close" >
-						<span aria-hidden="true" >&times;</span >
-					</button >
-				</div >
-				<div className="modal-body" >
-					<p >Modal body text goes here.</p >
-				</div >
-				<div className="modal-footer" >
-					<button type="button" className="btn btn-secondary" data-dismiss="modal" >Close</button >
-					<button type="button" className="btn btn-primary" >Save changes</button >
-				</div >
-			</div >
-		</div >
-	</div >)
+	.add('Button Activated', () => <Modal id={'basic'} show={true} >
+		<ModalHeader id={'basic'} title={'Modal title'} />
+		<ModalBody id={'basic'} >
+			<p >Modal body text goes here.</p >
+		</ModalBody >
+		<ModalFooter id={'basic'} >
+			<button type="button" className="btn btn-secondary" data-dismiss="modal" >Close</button >
+			<button type="button" className="btn btn-primary" >Save changes</button >
+		</ModalFooter >
+	</Modal >)
